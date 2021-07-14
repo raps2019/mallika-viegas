@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggleSwitch from '../../themeToggleSwitch/ThemeToggleSwitch';
 import * as Styled from './TopNavbar.styles';
 
 const TopNavbar = () => {
@@ -6,7 +7,7 @@ const TopNavbar = () => {
     <Styled.NavbarContainer>
       <Styled.Navbar>
         <Styled.LogoNavbarLink exact={true} to="/">
-          MV
+          mallika viegas
         </Styled.LogoNavbarLink>
         <Styled.NavbarLink to="/producing">
           PRODUCING
@@ -20,6 +21,7 @@ const TopNavbar = () => {
         <Styled.NavbarLink to="/contact">
           CONTACT
         </Styled.NavbarLink>
+        <ThemeToggleSwitch></ThemeToggleSwitch>
       </Styled.Navbar>
     </Styled.NavbarContainer>
   );
