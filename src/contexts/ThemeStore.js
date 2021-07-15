@@ -20,19 +20,22 @@ const ThemeStore = ({ children }) => {
 };
 
 export const themes = {
-
   light: {
     background1: "white", 
-    accent1: 'gold',
-    text1: 'black'
+    accent1: '#ffc300',
+    text1: 'black',
+    toggleNavbarButton1: 'black',
+    toggleNavbarButton2: '#ffc300'
+
    
   },
   dark: {
     background1: "black", 
-    accent1: 'gold',
-    text1: 'white'
+    accent1: '#ffdd00',
+    text1: 'white',
+    toggleNavbarButton1: 'white',
+    toggleNavbarButton2: '#ffdd00',
   },
- 
 };
 
 const Theme = ({ children }) => {

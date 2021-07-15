@@ -2,20 +2,20 @@ import styled from 'styled-components/macro';
 import { themes } from '../contexts/ThemeStore';
 
 //switch-button
+
 export const Span = styled.span`
   content: '';
   position: absolute;
   /* top: 4px; */
   left: 3px;
-  width: 25px;
-  height: 25px;
+  width: 14px;
+  height: 14px;
   border-radius: 100px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); */
   /* border: black solid 1px; */
 
   transition: 0.3s;
-  background: ${(props) =>
-    props.currentTheme === 'dark' ? themes.light.primary : themes.dark.primary};
+  background: ${props => props.theme.accent1}
 `;
 
 //switch-background
@@ -24,14 +24,15 @@ export const Label = styled.label`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  width: 60px;
-  height: 32px;
-  background: ${(props) =>
+  width: 50px;
+  height: 1.4rem;
+  /* background: ${(props) =>
     props.currentTheme === 'dark'
-      ? themes.light.background1
-      : themes.dark.background1};
-  /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); */
+      ? 'white'
+      : 'black'}; */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 100px;
+  border: 0.15rem solid ${props => props.theme.text1};
   position: relative;
   transition: background-color 0.3s;
 
