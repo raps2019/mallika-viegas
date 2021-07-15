@@ -25,16 +25,16 @@ export const Label = styled.label`
   justify-content: space-between;
   cursor: pointer;
   width: 50px;
-  height: 1.4rem;
+  height: 24px;
   /* background: ${(props) =>
     props.currentTheme === 'dark'
       ? 'white'
       : 'black'}; */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 100px;
-  border: 0.15rem solid ${props => props.theme.text1};
+  border: 3px solid ${props => props.theme.text1};
   position: relative;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
 
   &:active ${Span} {
     width: 30px;
@@ -44,10 +44,9 @@ export const Label = styled.label`
     background: ${(props) =>
     props.currentTheme === 'dark' ? themes.light.secondary : themes.dark.secondary};
   };
-  /* &:hover {
-      background: ${(props) =>
-    props.currentTheme === 'dark' ? themes.light.secondary : themes.dark.secondary};
-    } */
+  &:hover {
+    border: 3px solid ${props => props.theme.accent1};
+    }
 `;
 
 //switch-checkbox
