@@ -1,32 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
 
-// export const NavbarContainer = styled.div`
-// width: 100%;
-// height: 100px;
-// display: flex;
-// justify-content: center;
-// background: ${props => props.theme.background1};
-// transition: all 250ms ease-in;
 
-// /* @media screen and (max-width: 720px) {
-//     width: 100vw;
-//     height: 100vh;
-//   } */
-// `
-
-// export const Navbar = styled.nav`
-// width: 100%;
-// height: 100%;
-// display: flex;
-// align-items: center;
-// justify-content: space-around;
-// max-width: 1366px;
-
-// /* @media screen and (max-width: 720px) {
-//   flex-direction: column;
-//   } */
-// `
 
 export const NavbarLink = styled(NavLink)`
 color: ${props => props.theme.text1};
@@ -44,13 +19,14 @@ transition: all 250ms ease-in;
   width: 100%;
   height: 6px;
   display: block;
-  background: black;
+  background: ${props => props.theme.accent1};
   transform: scaleX(0);
   transition: all 250ms ease-in;
 }
 
 &:hover::after {
   transform: scaleX(1);
+  background: ${props => props.theme.accent1};
 }
 
 &.active::after {

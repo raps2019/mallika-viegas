@@ -20,6 +20,7 @@ export const SideNavbarContainer = styled.div`
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
 
+
   @media screen and (max-width: 540px) {
     width: 100vw;
     height: 100vh;

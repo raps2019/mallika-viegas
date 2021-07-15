@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useViewport } from '../contexts/ViewportProvider';
 import MenuToggleButton from '../menuToggleButton/MenuToggleButton';
-import * as Styled from './Navbar.styles';
-import NavbarItems from './NavbarItems';
+import TopNavbar from './TopNavbar';
+import SideNavbar from './SideNavbar';
+// import * as Styled from './Navbar.styles';
+// import NavbarItems from './NavbarItems';
 
 const Navbar = () => {
   const [sideNavbar, setSideNavbar] = useState(false);
@@ -14,25 +16,25 @@ const Navbar = () => {
   //   setSideNavbar(true)
   // }
 
-  const SideNavbar = () => {
-    return (
-      <Styled.SideNavbarContainer>
-        <Styled.SideNavbar>
-          <NavbarItems></NavbarItems>
-        </Styled.SideNavbar>
-      </Styled.SideNavbarContainer>
-    );
-  };
+  // const SideNavbar = () => {
+  //   return (
+  //     <Styled.SideNavbarContainer>
+  //       <Styled.SideNavbar>
+  //         <NavbarItems></NavbarItems>
+  //       </Styled.SideNavbar>
+  //     </Styled.SideNavbarContainer>
+  //   );
+  // };
 
-  const TopNavbar = () => {
-    return (
-      <Styled.TopNavbarContainer>
-        <Styled.TopNavbar>
-          <NavbarItems></NavbarItems>
-        </Styled.TopNavbar>
-      </Styled.TopNavbarContainer>
-    );
-  };
+  // const TopNavbar = () => {
+  //   return (
+  //     <Styled.TopNavbarContainer>
+  //       <Styled.TopNavbar>
+  //         <NavbarItems></NavbarItems>
+  //       </Styled.TopNavbar>
+  //     </Styled.TopNavbarContainer>
+  //   );
+  // };
 
   const toggleSideNavbar = () => {
     if (sideNavbarOpen) {
