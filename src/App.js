@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './globalStyles/GlobalStyles';
 import ViewportProvider from './contexts/ViewportProvider';
 import { ThemeStore, Theme } from './contexts/ThemeStore';
-import Home from './pages/home/Home';
-import Producing from './pages/producing/Producing';
-import Writing from './pages/writing/Writing';
-import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
-import Navbar from './navbar/Navbar';
+import Home from './components/pages/home/Home';
+import Producing from './components/pages/portfolio/producing/Producing';
+import Writing from './components/pages/portfolio/writing/Writing';
+import About from './components/pages/about/About';
+import Contact from './components/pages/contact/Contact';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (

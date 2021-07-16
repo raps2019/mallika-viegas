@@ -5,7 +5,7 @@ const MenuToggleButton = (props) => {
   const { sideNavbarOpen, toggleSideNavbar } = props;
 
   return (
-    <Styled.Button open={sideNavbarOpen} onClick={toggleSideNavbar}>
+    <Styled.Button open={sideNavbarOpen} onClick={() => toggleSideNavbar()}>
       <div></div>
       <div></div>
       <div></div>

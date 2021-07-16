@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro';
-import { themes } from '../contexts/ThemeStore';
-
+import { themes } from '../../contexts/ThemeStore';
 //switch-button
 
 export const Span = styled.span`

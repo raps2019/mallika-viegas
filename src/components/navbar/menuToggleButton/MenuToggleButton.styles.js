@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const Button = styled.button`
 position: absolute;
 top: 1rem;
-left: 1rem;
+left: 1.5rem;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
