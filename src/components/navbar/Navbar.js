@@ -1,43 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useViewport } from '../../contexts/ViewportProvider';
+import { useSideNavbar } from '../../contexts/SideNavbarProvider';
 import MenuToggleButton from './menuToggleButton/MenuToggleButton';
 import TopNavbar from './TopNavbar';
 import SideNavbar from './SideNavbar';
 
 const Navbar = () => {
-  const [sideNavbar, setSideNavbar] = useState(false);
-  const [sideNavbarOpen, setSideNavbarOpen] = useState(false);
-  const { width } = useViewport();
+  const {
+    sideNavbar,
+    sideNavbarOpen,
+    toggleSideNavbar,
+    handleNavLinkClick,
+    handleClickOutsideNav,
+  } = useSideNavbar();
 
-  const toggleSideNavbar = () => {
-    if (sideNavbarOpen) {
-      setSideNavbarOpen(false);
-    } else {
-      setSideNavbarOpen(true);
-    }
-  };
+  // const [sideNavbar, setSideNavbar] = useState(false);
+  // const [sideNavbarOpen, setSideNavbarOpen] = useState(false);
+  // const { width } = useViewport();
 
-  const handleNavLinkClick = () => {
-    if (sideNavbarOpen) {
-      setSideNavbarOpen(false);
-    } else {
-      return;
-    }
-  };
+  // const toggleSideNavbar = () => {
+  //   if (sideNavbarOpen) {
+  //     setSideNavbarOpen(false);
+  //   } else {
+  //     setSideNavbarOpen(true);
+  //   }
+  // };
 
-  const handleClickOutsideNav = () => {
-    if (sideNavbarOpen) {
-      setSideNavbarOpen(false);
-    }
-  };
+  // const handleNavLinkClick = () => {
+  //   if (sideNavbarOpen) {
+  //     setSideNavbarOpen(false);
+  //   } else {
+  //     return;
+  //   }
+  // };
 
-  useEffect(() => {
-    if (width <= 1024) {
-      setSideNavbar(true);
-    } else {
-      setSideNavbar(false);
-    }
-  }, [width]);
+  // const handleClickOutsideNav = () => {
+  //   if (sideNavbarOpen) {
+  //     setSideNavbarOpen(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (width <= 1024) {
+  //     setSideNavbar(true);
+  //   } else {
+  //     setSideNavbar(false);
+  //   }
+  // }, [width]);
 
   return (
     <>

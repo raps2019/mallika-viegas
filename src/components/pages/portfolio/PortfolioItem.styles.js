@@ -3,21 +3,19 @@ import styled from 'styled-components';
 const imgWidth = 1000;
 const imgHeight = 1000;
 
-export const Container = styled.div`
-display: flex;
-width: 100%;
-justify-content: center;
-`
-
+// export const Container = styled.div`
+//   display: flex;
+//   width: 100%;
+//   justify-content: center;
+// `;
 
 export const ImageWrapper = styled.div`
   position: relative;
-  /* height: ${imgWidth}px;
-  width: ${imgHeight}px; */
+  width: 100%;
+  /* max-width: ${imgWidth}px; */
 
   & > img {
     width: 100%;
-    max-width: 1000px;
     height: auto;
   }
 `;
@@ -33,15 +31,20 @@ export const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
-  /* background:red; */
 `;
 
-
 export const HeadingOne = styled.h3`
-font-size: 1.5rem;
-`
-export const HeadingTwo = styled.h4``
+  font-size: 1.1rem;
+`;
 
-export const TextOne = styled.p``
-export const TextTwo = styled.p``
+export const HeadingTwo = styled.h4`
+font-size: 0.8rem;
+`;
 
+export const TextOne = styled.p`
+font-size: 0.75rem;
+`;
+
+export const TextTwo = styled.p`
+font-size: 0.70rem;
+`;

@@ -3,7 +3,7 @@ import * as Styled from './PortfolioItem.styles';
 
 const PortfolioItem = ({ item }) => {
   return (
-    <Styled.Container>
+    // <Styled.Container>
     <Styled.ImageWrapper>
       <img src={item.img} alt=""></img>
       <Styled.TextWrapper>
@@ -13,7 +13,7 @@ const PortfolioItem = ({ item }) => {
         <Styled.TextTwo>{item.description}</Styled.TextTwo>
       </Styled.TextWrapper>
     </Styled.ImageWrapper>
-    </Styled.Container>
+    // </Styled.Container>
   );
 };
 

@@ -11,6 +11,9 @@ export const TopNavbarContainer = styled.div`
 `;
 
 export const SideNavbarContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 230px;
   height: 100vh;
   display: flex;
@@ -19,7 +22,7 @@ export const SideNavbarContainer = styled.div`
   transition: all 250ms ease-in;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
-
+  z-index: 10;
 
   @media screen and (max-width: 540px) {
     width: 100vw;

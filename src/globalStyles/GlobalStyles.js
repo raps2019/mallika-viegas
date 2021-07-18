@@ -13,10 +13,19 @@ const GlobalStyle = createGlobalStyle`
 export const GlobalPageContainer = styled.div`
 /* z-index: 1; */
 width: 100%;
-margin-right: auto;
+padding: 20px;
+/* margin-right: auto; */
+display: flex;
+align-items: center;
+justify-content: center;
 
 @media screen and (max-width: 991px) {
 }
+`
+
+export const GlobalContentContainer = styled.div`
+    width: 1300px;
+    padding: 50px;
 `
 
 export default GlobalStyle;
