@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useViewport } from '../../contexts/ViewportProvider';
-import { useSideNavbar } from '../../contexts/SideNavbarProvider';
+import { useSideNavbarContext } from '../../contexts/SideNavbarProvider';
 import MenuToggleButton from './menuToggleButton/MenuToggleButton';
 import TopNavbar from './TopNavbar';
 import SideNavbar from './SideNavbar';
@@ -12,7 +12,7 @@ const Navbar = () => {
     toggleSideNavbar,
     handleNavLinkClick,
     handleClickOutsideNav,
-  } = useSideNavbar();
+  } = useSideNavbarContext();
 
   // const [sideNavbar, setSideNavbar] = useState(false);
   // const [sideNavbarOpen, setSideNavbarOpen] = useState(false);

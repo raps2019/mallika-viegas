@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { writingData } from './writingData';
-import PortfolioItem from '../portfolio/PortfolioItem';
+import PortfolioItem from '../components/portfolioItem/PortfolioItem';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
 } from '../../../globalStyles/GlobalStyles';
+import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const Writing = () => {
+  const { sideNavbarOpen } = useSideNavbarContext();
+
   return (
-    <GlobalPageContainer>
+    <GlobalPageContainer sideNavbarOpen={sideNavbarOpen}>
       <GlobalContentContainer>
-        <PortfolioItem item={writingData[0]}></PortfolioItem>
+        {writingData.map((portfolioItem) => {
+          return (
+            <PortfolioItem
+              item={portfolioItem}
+            ></PortfolioItem>
+          );
+        })}
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

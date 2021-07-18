@@ -22,6 +22,7 @@ const ThemeStore = ({ children }) => {
 export const themes = {
   light: {
     background1: "white", 
+    background2: "white",
     accent1: '#ffc300',
     text1: 'black',
     toggleNavbarButton1: 'black',
@@ -30,7 +31,8 @@ export const themes = {
    
   },
   dark: {
-    background1: "black", 
+    background1: "#191917", 
+    background2: "#252422",
     accent1: '#ffdd00',
     text1: 'white',
     toggleNavbarButton1: 'white',

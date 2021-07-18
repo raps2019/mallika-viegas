@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import {
+  GlobalPageContainer,
+  GlobalContentContainer,
+} from '../../../globalStyles/GlobalStyles';
+import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const About = () => {
-  return (
-    <div>
-      About
-    </div>
-  )
-}
+  const { sideNavbarOpen } = useSideNavbarContext();
 
-export default About
+  return (
+    <GlobalPageContainer sideNavbarOpen={sideNavbarOpen}>
+      <GlobalContentContainer>
+      
+      </GlobalContentContainer>
+    </GlobalPageContainer>
+  );
+};
+
+export default About;

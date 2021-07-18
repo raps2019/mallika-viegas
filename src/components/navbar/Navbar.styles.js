@@ -5,9 +5,9 @@ export const TopNavbarContainer = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: ${(props) => props.theme.background1};
-  transition: all 250ms ease-in;
-  box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
+  transition: all 0.25s ease-out;
 `;
 
 export const SideNavbarContainer = styled.div`

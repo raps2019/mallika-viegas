@@ -54,7 +54,7 @@ const SideNavbarProvider = ({ children }) => {
   );
 };
 
-export const useSideNavbar = () => {
+export const useSideNavbarContext = () => {
   const {
     sideNavbar,
     sideNavbarOpen,
