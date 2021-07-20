@@ -12,9 +12,9 @@ const PortfolioItem = ({ item }) => {
     <Styled.ImageWrapper>
       <Styled.Image src={item.img} alt="" currentTheme={currentTheme}></Styled.Image>
       <Styled.TextWrapper>
-        <Styled.HeadingTwo> {item.type.toUpperCase()}</Styled.HeadingTwo>
-        <Styled.HeadingOne>{item.title}</Styled.HeadingOne>
-        <Styled.HeadingThree>{item.client.toUpperCase()}</Styled.HeadingThree>
+        <Styled.HeadingFive> {item.type.toUpperCase()}</Styled.HeadingFive>
+        <Styled.HeadingFour>{item.title}</Styled.HeadingFour>
+        <Styled.HeadingSix>{item.client.toUpperCase()}</Styled.HeadingSix>
       </Styled.TextWrapper>
     </Styled.ImageWrapper>
     // </Styled.Container>

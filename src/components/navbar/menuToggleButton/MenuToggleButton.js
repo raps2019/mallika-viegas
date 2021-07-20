@@ -7,9 +7,12 @@ const MenuToggleButton = (props) => {
   return (
     <Styled.ButtonContainer>
     <Styled.Button open={sideNavbarOpen} onClick={() => toggleSideNavbar()}>
+      {/* <div></div>
       <div></div>
-      <div></div>
-      <div></div>
+      <div></div> */}
+      <span></span>
+      <span></span>
+      <span></span>
     </Styled.Button>
     </Styled.ButtonContainer>
 

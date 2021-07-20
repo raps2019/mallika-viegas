@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import GlobalStyle from './globalStyles/GlobalStyles';
+import GlobalStyle, {
+  GlobalWindowContainer,
+} from './globalStyles/GlobalStyles';
 import ViewportProvider from './contexts/ViewportProvider';
 import { ThemeStore, Theme } from './contexts/ThemeStore';
 import Home from './components/pages/home/Home';
@@ -20,14 +22,16 @@ function App() {
             <Theme>
               <Router>
                 <GlobalStyle></GlobalStyle>
-                <Navbar></Navbar>
-                <Switch>
-                  <Route exact path="/" component={Home}></Route>
-                  <Route path="/producing" component={Producing}></Route>
-                  <Route path="/writing" component={Writing}></Route>
-                  <Route path="/about" component={About}></Route>
-                  <Route path="/contact" component={Contact}></Route>
-                </Switch>
+                <GlobalWindowContainer>
+                  <Navbar></Navbar>
+                  <Switch>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route path="/producing" component={Producing}></Route>
+                    <Route path="/writing" component={Writing}></Route>
+                    <Route path="/about" component={About}></Route>
+                    <Route path="/contact" component={Contact}></Route>
+                  </Switch>
+                </GlobalWindowContainer>
               </Router>
             </Theme>
           </ThemeStore>

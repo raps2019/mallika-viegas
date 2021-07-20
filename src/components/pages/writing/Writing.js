@@ -4,22 +4,25 @@ import PortfolioItem from '../components/portfolioItem/PortfolioItem';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
+  GlobalPortfolioItemsContainer,
 } from '../../../globalStyles/GlobalStyles';
+import * as Styled from './Writing.styles'
 import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const Writing = () => {
-  const { sideNavbarOpen } = useSideNavbarContext();
+  const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
 
   return (
-    <GlobalPageContainer sideNavbarOpen={sideNavbarOpen}>
+    <GlobalPageContainer
+      sideNavbarOpen={sideNavbarOpen}
+      sideNavbar={sideNavbar}
+    >
       <GlobalContentContainer>
-        {writingData.map((portfolioItem) => {
-          return (
-            <PortfolioItem
-              item={portfolioItem}
-            ></PortfolioItem>
-          );
-        })}
+        <Styled.ItemsContainer>
+          {writingData.map((portfolioItem) => {
+            return <PortfolioItem item={portfolioItem}></PortfolioItem>;
+          })}
+        </Styled.ItemsContainer>
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

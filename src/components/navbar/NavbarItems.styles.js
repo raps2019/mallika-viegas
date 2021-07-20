@@ -7,20 +7,20 @@ export const NavbarLink = styled(NavLink)`
 color: ${props => props.theme.text1};
 font-family: 'Roboto Mono', monospace;
 font-size: 0.9rem;
-font-weight: 500;
+font-weight: 400;
 text-decoration:none;
 transition: all 250ms ease-in;
 
 &:hover, &.active {
   /* text-shadow: 1px 1px 2px ${props => props.theme.accent1}; */
-  text-shadow: 0px 0px 3px ${props => props.theme.accent1};
+  /* text-shadow: 0px 0px 3px ${props => props.theme.accent1}; */
 
 }
 
 &::after {
   content: '';
   width: 100%;
-  height: 6px;
+  height: 0.15rem;
   display: block;
   background: ${props => props.theme.accent1};
   transform: scaleX(0);
@@ -38,22 +38,7 @@ transition: all 250ms ease-in;
 }
 `
 
-export const LogoNavbarLink = styled(NavbarLink)`
-font-size: 1.7rem;
-font-family: 'Megrim', cursive;
-/* text-shadow: 2px 2px 4px black; */
-transition: all 250ms ease-in;
-/* text-shadow: 0px 0px 5px inherit; */
 
-
-&:hover, &.active {
-  text-shadow: 0px 0px 5px ${props => props.theme.accent1};
-}
-
-&::after {
-  height: 8px;
-}
-`
 
 export const ThemeToggleSwitchContainer = styled.div`
 display: flex;

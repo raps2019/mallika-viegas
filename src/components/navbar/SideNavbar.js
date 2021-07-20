@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import * as Styled from './Navbar.styles';
+import * as Styled from './SideNavbar.styles';
 import NavbarItems from './NavbarItems';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 

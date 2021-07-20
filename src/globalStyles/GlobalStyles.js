@@ -6,21 +6,38 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     border: none;
     box-sizing:border-box;
+    font-family: 'Roboto Mono', monospace;
+
     ${'' /* font-family: 'Open Sans', sans-serif; */}
 }
+
+body {
+  background: ${props => props.theme.background2};
+}
 `;
+
+export const GlobalWindowContainer = styled.div`
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+`
+
 
 export const GlobalPageContainer = styled.div`
   /* z-index: 1; */
   width: 100%;
+  height: 100%;
   /* padding: 20px; */
   /* margin-right: auto; */
   display: flex;
+  gap: 2rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease-out;
   background: ${(props) => props.theme.background2};
-  filter: ${(props) => (props.sideNavbarOpen === true ? 'blur(5px);' : null)};
+  filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
+  transition: all 0.25s ease-out;
 
 
   @media screen and (max-width: 991px) {
@@ -28,13 +45,14 @@ export const GlobalPageContainer = styled.div`
 `;
 
 export const GlobalContentContainer = styled.div`
-  padding: 25px 0;
-  width: 95%;
+  /* padding: 25px 0; */
+  width: 90%;
   max-width: 1200px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  /* padding: 50px; */
 `;
+
+
 
 export default GlobalStyle;

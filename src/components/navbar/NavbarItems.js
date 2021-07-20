@@ -8,13 +8,10 @@ const NavbarItems = (props) => {
 
   return (
       <>
-        <Styled.LogoNavbarLink exact={true} to="/" onClick={handleNavLinkClick}>
-          mallika viegas
-        </Styled.LogoNavbarLink>
-        <Styled.NavbarLink to="/producing" onClick={handleNavLinkClick}>PRODUCING</Styled.NavbarLink>
-        <Styled.NavbarLink to="/writing" onClick={handleNavLinkClick}>WRITING</Styled.NavbarLink>
-        <Styled.NavbarLink to="/about" onClick={handleNavLinkClick}>ABOUT</Styled.NavbarLink>
-        <Styled.NavbarLink to="/contact" onClick={handleNavLinkClick}>CONTACT</Styled.NavbarLink>
+        <Styled.NavbarLink to="/producing" onClick={handleNavLinkClick}>Producing</Styled.NavbarLink>
+        <Styled.NavbarLink to="/writing" onClick={handleNavLinkClick}>Writing</Styled.NavbarLink>
+        <Styled.NavbarLink to="/about" onClick={handleNavLinkClick}>About</Styled.NavbarLink>
+        <Styled.NavbarLink to="/contact" onClick={handleNavLinkClick}>Contact</Styled.NavbarLink>
         <Styled.ThemeToggleSwitchContainer>
           <ThemeToggleSwitch></ThemeToggleSwitch>
         </Styled.ThemeToggleSwitchContainer>

@@ -1,14 +1,5 @@
 import styled from 'styled-components/macro';
 
-export const TopNavbarContainer = styled.div`
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.theme.background1};
-  transition: all 0.25s ease-out;
-`;
 
 export const SideNavbarContainer = styled.div`
   position: absolute;
@@ -19,6 +10,7 @@ export const SideNavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   background: ${(props) => props.theme.background1};
+  transition: all 0.25s ease-out;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
   z-index: 10;
@@ -27,16 +19,6 @@ export const SideNavbarContainer = styled.div`
     width: 100vw;
     height: 100vh;
   }
-`;
-
-export const TopNavbar = styled.nav`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  max-width: 1366px;
-  /* box-shadow: 5px 5px 10px #999; */
 `;
 
 export const SideNavbar = styled.nav`

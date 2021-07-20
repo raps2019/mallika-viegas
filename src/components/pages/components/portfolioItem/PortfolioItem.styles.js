@@ -7,11 +7,12 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
 
+
   &:hover > img {
     filter: blur(5px) brightness(50%);
   }
 
-  &:hover > div > h1 {
+  &:hover > div > h4 {
     opacity: 1;
     transition-delay: 1.5s;
 
@@ -23,14 +24,23 @@ export const ImageWrapper = styled.div`
     }
   }
 
-  &:hover > div > h2 {
+  &:hover > div > h5 {
     opacity: 1;
   }
 
-  &:hover > div > h3 {
+  &:hover > div > h6 {
     transition-delay: 0.75s;
     opacity: 1;
   }
+
+
+  /* @media screen and (max-width: 1024px) {
+    width: 95%;
+  } */
+  
+  /* @media screen and (max-width: 540px) {
+    width: 100%;
+  } */
 `;
 
 export const Image = styled.img`
@@ -57,8 +67,8 @@ export const TextWrapper = styled.div`
   color: white;
 `;
 
-export const HeadingOne = styled.h1`
-  font-size: 1.1rem;
+export const HeadingFour = styled.h4`
+  font-size: 0.8rem;
   transition: all 0.5s ease-in;
   opacity: 0;
   font-weight: 400;
@@ -66,26 +76,26 @@ export const HeadingOne = styled.h1`
   &::after {
     content: '';
     width: 100%;
-    height: 6px;
+    height: 0.15rem;
     display: block;
     background: white;
     opacity: 0.25;
     transform: scaleX(0);
     transform-origin: left;
-    background: ${(props) => props.theme.accent1};
+    /* background: ${(props) => props.theme.accent1}; */
     transition: all 750ms ease-in;
   }
 `;
 
-export const HeadingTwo = styled.h2`
-  font-size: 1rem;
+export const HeadingFive = styled.h5`
+  font-size: 0.7rem;
   opacity: 0;
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
 `;
 
-export const HeadingThree = styled.h3`
-  font-size: 1rem;
+export const HeadingSix = styled.h6`
+  font-size: 0.7rem;
   opacity: 0;
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
