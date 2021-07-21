@@ -49,9 +49,9 @@ export const GlobalContentContainer = styled.div`
   width: 90%;
   max-width: 1200px;
   height: 100%;
-  display: flex;
+  /* display: flex; */
   /* flex-direction: column; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 `;
 
 

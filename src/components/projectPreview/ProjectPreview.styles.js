@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
-
 export const ImageWrapperLink = styled(Link)`
   position: relative;
-  width: 100%;
+  width: 350px;
+  height: 350px;
 
 
   &:hover > img {
@@ -15,7 +14,6 @@ export const ImageWrapperLink = styled(Link)`
   &:hover > div > h4 {
     opacity: 1;
     transition-delay: 1.5s;
-
 
     &::after {
       transition-delay: 1.75s;
@@ -33,24 +31,26 @@ export const ImageWrapperLink = styled(Link)`
     opacity: 1;
   }
 
-
   /* @media screen and (max-width: 1024px) {
     width: 95%;
   } */
-  
+
   /* @media screen and (max-width: 540px) {
     width: 100%;
   } */
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
   transition: all 0.25s ease-out;
   border-radius: 20px;
   filter: ${(props) =>
-  props.currentTheme === 'dark' ? 'brightness(80%);' : null};
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;  `;
+    props.currentTheme === 'dark' ? 'brightness(80%);' : null};
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+`;
 
 export const TextWrapper = styled.div`
   position: absolute;
@@ -59,12 +59,14 @@ export const TextWrapper = styled.div`
   width: 100%;
   transform: translate(-50%, -50%);
   display: flex;
+  padding: 10px;
   gap: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
   color: white;
+  text-align: center;
 `;
 
 export const HeadingFour = styled.h4`
