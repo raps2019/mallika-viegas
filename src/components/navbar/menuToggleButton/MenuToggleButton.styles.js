@@ -21,14 +21,14 @@ export const Button = styled.div`
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  transform: scale(75%);
+  transform: scale(50%);
 
   span {
     display: block;
     position: absolute;
     height: 9px;
     width: 100%;
-    background: ${props => props.theme.text1};
+    background: ${props => props.theme.accent1};
     border-radius: 9px;
     opacity: 1;
     left: 0;

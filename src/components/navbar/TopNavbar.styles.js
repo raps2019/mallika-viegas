@@ -8,7 +8,6 @@ export const TopNavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${(props) => props.theme.background1};
   transition: all 0.25s ease-out;
 `;
 
@@ -26,10 +25,10 @@ export const TopNavbar = styled.nav`
 
 export const LogoNavbarLink = styled(NavLink)`
   color: ${(props) => props.theme.text1};
-  font-size: 1.2rem;
-  /* font-family: 'Megrim', cursive; */
-  font-family: 'Baloo 2', cursive;
-  font-weight: 500;
+  font-size: 2rem;
+  /* font-family: 'Tourney', cursive;   */
+  font-family: 'Assistant', sans-serif;
+  font-weight: 300;
   text-decoration: none;
   transition: all 250ms ease-in;
 
@@ -44,16 +43,15 @@ export const LogoNavbarLink = styled(NavLink)`
     display: block;
     background: ${(props) => props.theme.accent1};
     transform: scaleX(0);
+    transform-origin: left;
     transition: all 250ms ease-in;
   }
 
   &:hover::after {
     transform: scaleX(1);
-    background: ${(props) => props.theme.accent1};
   }
 
   &.active::after {
     transform: scaleX(1);
-    background: ${(props) => props.theme.accent1};
   }
 `;

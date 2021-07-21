@@ -24,17 +24,16 @@ transition: all 250ms ease-in;
   display: block;
   background: ${props => props.theme.accent1};
   transform: scaleX(0);
+  transform-origin: left;
   transition: all 250ms ease-in;
 }
 
 &:hover::after {
   transform: scaleX(1);
-  background: ${props => props.theme.accent1};
 }
 
 &.active::after {
   transform:scaleX(1);
-  background: ${props => props.theme.accent1};
 }
 `
 

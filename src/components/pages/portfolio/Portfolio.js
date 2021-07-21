@@ -1,17 +1,21 @@
 import React from 'react';
 import { data } from '../../../data';
+import ProjectPreview from '../../projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
 } from '../../../globalStyles/GlobalStyles';
-import * as Styled from './Producing.styles';
+import * as Styled from './Writing.styles';
 import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
-import ProjectPreview from '../../projectPreview/ProjectPreview';
 
-const Producing = () => {
+const Portfolio = (props) => {
+
+  const {category} = props;
+
   const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
 
-  const producingData = data.filter((items) => items.category === 'producing');
+  const filteredData = data.filter((items) => items.category === category);
+
 
   return (
     <GlobalPageContainer
@@ -20,7 +24,7 @@ const Producing = () => {
     >
       <GlobalContentContainer>
         <Styled.ItemsContainer>
-          {producingData.map((project) => {
+          {filteredData.map((project) => {
             return <ProjectPreview item={project}
             category={project.category}></ProjectPreview>;
           })}
@@ -30,4 +34,4 @@ const Producing = () => {
   );
 };
 
-export default Producing;
+export default Portfolio;

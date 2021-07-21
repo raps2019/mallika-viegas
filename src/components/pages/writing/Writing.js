@@ -1,16 +1,18 @@
-import React, { useContext } from 'react';
-import { writingData } from './writingData';
-import PortfolioItem from '../components/portfolioItem/PortfolioItem';
+import React from 'react';
+import { data } from '../../../data';
+import ProjectPreview from '../../projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
-  GlobalPortfolioItemsContainer,
 } from '../../../globalStyles/GlobalStyles';
-import * as Styled from './Writing.styles'
+import * as Styled from './Writing.styles';
 import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const Writing = () => {
   const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
+
+  const writingData = data.filter((items) => items.category === 'writing');
+
 
   return (
     <GlobalPageContainer
@@ -19,8 +21,9 @@ const Writing = () => {
     >
       <GlobalContentContainer>
         <Styled.ItemsContainer>
-          {writingData.map((portfolioItem) => {
-            return <PortfolioItem item={portfolioItem}></PortfolioItem>;
+          {writingData.map((project) => {
+            return <ProjectPreview item={project}
+            category={project.category}></ProjectPreview>;
           })}
         </Styled.ItemsContainer>
       </GlobalContentContainer>

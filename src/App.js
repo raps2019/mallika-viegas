@@ -11,6 +11,7 @@ import Writing from './components/pages/writing/Writing';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
+import Project from './components/pages/project/Project';
 import SideNavbarProvider from './contexts/SideNavbarProvider';
 
 function App() {
@@ -26,10 +27,20 @@ function App() {
                   <Navbar></Navbar>
                   <Switch>
                     <Route exact path="/" component={Home}></Route>
-                    <Route path="/producing" component={Producing}></Route>
-                    <Route path="/writing" component={Writing}></Route>
-                    <Route path="/about" component={About}></Route>
-                    <Route path="/contact" component={Contact}></Route>
+                    <Route exact path="/producing" component={Producing}></Route>
+                    <Route exact path="/writing" component={Writing}></Route>
+                    <Route exact path="/about" component={About}></Route>
+                    <Route exact path="/contact" component={Contact}></Route>
+                    <Route
+                      exact
+                      path="/writing/:projectId"
+                      component={Project}
+                    ></Route>
+                    <Route
+                      exact
+                      path="/producing/:projectId"
+                      component={Project}
+                    ></Route>
                   </Switch>
                 </GlobalWindowContainer>
               </Router>

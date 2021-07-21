@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const imgWidth = 1000;
 const imgHeight = 1000;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapperLink = styled(Link)`
   position: relative;
   width: 100%;
 
