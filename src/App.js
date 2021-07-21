@@ -13,8 +13,14 @@ import Contact from './components/pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
 import Project from './components/pages/project/Project';
 import SideNavbarProvider from './contexts/SideNavbarProvider';
+import { data } from './data';
 
 function App() {
+
+  const categoryList = [...new Set(data.map( item => item.category))];
+
+  console.log(categoryList)
+
   return (
     <>
       <ViewportProvider>

@@ -10,7 +10,7 @@ const Project = ({ match, location }) => {
   const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
 
   const {
-    params: { projectId },
+    params: { projectId, category },
   } = match;
 
   return (

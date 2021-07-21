@@ -33,7 +33,7 @@ export const GlobalPageContainer = styled.div`
   gap: 2rem;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   background: ${(props) => props.theme.background1};
   color: ${(props) => props.theme.text1};
   filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
@@ -50,7 +50,8 @@ export const GlobalContentContainer = styled.div`
   max-width: 1200px;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 `;
 
 
