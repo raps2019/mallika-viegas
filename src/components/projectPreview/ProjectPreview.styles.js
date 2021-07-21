@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const ImageWrapperLink = styled(Link)`
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 20rem;
+  height: 20rem;
 
 
   &:hover > img {
@@ -42,8 +42,8 @@ export const ImageWrapperLink = styled(Link)`
 
 export const Image = styled.img`
   object-fit: cover;
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   transition: all 0.25s ease-out;
   border-radius: 20px;
   filter: ${(props) =>

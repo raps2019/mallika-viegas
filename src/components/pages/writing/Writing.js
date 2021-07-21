@@ -4,8 +4,8 @@ import ProjectPreview from '../../projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
+  GlobalProjectListContainer,
 } from '../../../globalStyles/GlobalStyles';
-import * as Styled from './Writing.styles';
 import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const Writing = () => {
@@ -20,12 +20,12 @@ const Writing = () => {
       sideNavbar={sideNavbar}
     >
       <GlobalContentContainer>
-        <Styled.ItemsContainer>
+        <GlobalProjectListContainer>
           {writingData.map((project) => {
             return <ProjectPreview item={project}
             category={project.category}></ProjectPreview>;
           })}
-        </Styled.ItemsContainer>
+        </GlobalProjectListContainer>
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

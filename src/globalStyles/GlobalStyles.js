@@ -45,15 +45,18 @@ export const GlobalPageContainer = styled.div`
 `;
 
 export const GlobalContentContainer = styled.div`
-  /* padding: 25px 0; */
   width: 90%;
   max-width: 1200px;
   height: 100%;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
 `;
 
+export const GlobalProjectListContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap: 50px;
+`
 
 
 export default GlobalStyle;
