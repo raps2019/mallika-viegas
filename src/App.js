@@ -39,12 +39,12 @@ function App() {
                     <Route exact path="/contact" component={Contact}></Route>
                     <Route
                       exact
-                      path="/writing/:projectId"
+                      path="/writing/:pathName"
                       component={Project}
                     ></Route>
                     <Route
                       exact
-                      path="/producing/:projectId"
+                      path="/producing/:pathName"
                       component={Project}
                     ></Route>
                   </Switch>

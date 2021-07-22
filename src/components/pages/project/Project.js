@@ -10,7 +10,7 @@ const Project = ({ match, location }) => {
   const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
 
   const {
-    params: { projectId, category },
+    params: { pathName, category },
   } = match;
 
   return (
@@ -19,7 +19,7 @@ const Project = ({ match, location }) => {
       sideNavbar={sideNavbar}
     >
       <GlobalContentContainer>
-        <ProjectExpanded projectId={projectId}></ProjectExpanded>
+        <ProjectExpanded pathName={pathName}></ProjectExpanded>
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

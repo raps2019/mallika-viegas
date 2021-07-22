@@ -4,21 +4,21 @@ import { ThemeContext } from '../../contexts/ThemeStore';
 import { withRouter } from 'react-router';
 
 const ProjectPreview = (props) => {
-  const { item, category } = props;
+  const { project, category } = props;
   const { currentTheme } = useContext(ThemeContext);
 
   return (
     // <Styled.Container>
-    <Styled.ImageWrapperLink key={item.projectId} to={category + '/' + item.projectId}>
+    <Styled.ImageWrapperLink key={project.projectId} to={category + '/' + project.pathName}>
       <Styled.Image
-        src={item.img}
-        alt=""
+        src={project.img}
+        alt={project.alt}
         currentTheme={currentTheme}
       ></Styled.Image>
       <Styled.TextWrapper>
-        <Styled.HeadingFive> {item.type.toUpperCase()}</Styled.HeadingFive>
-        <Styled.HeadingFour>{item.title}</Styled.HeadingFour>
-        <Styled.HeadingSix>{item.client.toUpperCase()}</Styled.HeadingSix>
+        <Styled.HeadingFive> {project.type.toUpperCase()}</Styled.HeadingFive>
+        <Styled.HeadingFour>{project.title}</Styled.HeadingFour>
+        <Styled.HeadingSix>{project.client.toUpperCase()}</Styled.HeadingSix>
       </Styled.TextWrapper>
     </Styled.ImageWrapperLink>
     // </Styled.Container>

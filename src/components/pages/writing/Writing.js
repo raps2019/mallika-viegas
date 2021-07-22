@@ -22,7 +22,7 @@ const Writing = () => {
       <GlobalContentContainer>
         <GlobalProjectListContainer>
           {writingData.map((project) => {
-            return <ProjectPreview item={project}
+            return <ProjectPreview key={project.pathName} project={project}
             category={project.category}></ProjectPreview>;
           })}
         </GlobalProjectListContainer>

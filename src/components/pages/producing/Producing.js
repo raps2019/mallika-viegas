@@ -3,6 +3,8 @@ import { data } from '../../../data';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
+  GlobalProjectListContainer,
+
 } from '../../../globalStyles/GlobalStyles';
 import * as Styled from './Producing.styles';
 import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
@@ -19,12 +21,12 @@ const Producing = () => {
       sideNavbar={sideNavbar}
     >
       <GlobalContentContainer>
-        <Styled.ItemsContainer>
+        <GlobalProjectListContainer>
           {producingData.map((project) => {
-            return <ProjectPreview item={project}
+            return <ProjectPreview key={project.pathName} project={project}
             category={project.category}></ProjectPreview>;
           })}
-        </Styled.ItemsContainer>
+        </GlobalProjectListContainer>
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

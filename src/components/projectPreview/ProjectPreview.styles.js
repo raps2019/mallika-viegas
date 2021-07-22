@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const ImageWrapperLink = styled(Link)`
   position: relative;
-  width: 20rem;
-  height: 20rem;
-
+  width: 100%;
+  height: 100%;
 
   &:hover > img {
     filter: blur(5px) brightness(50%);
@@ -71,6 +70,7 @@ export const TextWrapper = styled.div`
 
 export const HeadingFour = styled.h4`
   font-size: 0.8rem;
+  font-weight: 600;
   transition: all 0.5s ease-in;
   opacity: 0;
   font-weight: 400;
@@ -83,7 +83,10 @@ export const HeadingFour = styled.h4`
     background: white;
     opacity: 0.25;
     transform: scaleX(0);
-    transform-origin: left;
+    margin: 0 auto;
+    transform-origin: center;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+
     /* background: ${(props) => props.theme.accent1}; */
     transition: all 750ms ease-in;
   }
@@ -91,6 +94,7 @@ export const HeadingFour = styled.h4`
 
 export const HeadingFive = styled.h5`
   font-size: 0.7rem;
+  font-weight: 400;
   opacity: 0;
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
@@ -99,6 +103,7 @@ export const HeadingFive = styled.h5`
 export const HeadingSix = styled.h6`
   font-size: 0.7rem;
   opacity: 0;
+  font-weight: 400;
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
   font-weight: 400;

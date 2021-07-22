@@ -8,7 +8,7 @@ export const TopNavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-in;
 `;
 
 export const TopNavbar = styled.nav`
