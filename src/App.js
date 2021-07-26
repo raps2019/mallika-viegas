@@ -20,8 +20,6 @@ function App() {
 
   const categoryList = [...new Set(data.map((item) => item.category))];
 
-  console.log(categoryList[0]);
-
   // if (!componentMounted) {
   //   return <div></div>
   // }
@@ -33,8 +31,8 @@ function App() {
       path: `/${category}`,
       category: `${category}`,
       Component: Showcase,
-    }
-  ));
+    })
+  );
 
   return (
     <>
@@ -45,8 +43,7 @@ function App() {
               <Router>
                 <GlobalStyle></GlobalStyle>
                 <GlobalWindowContainer>
-                  <Navbar
-                  categoryList={categoryList}></Navbar>
+                  <Navbar categoryList={categoryList}></Navbar>
                   <Switch>
                     <Route exact path="/" component={Home}></Route>
                     {CategoryRoutes.map(({ path, category, Component }) => (
@@ -56,9 +53,11 @@ function App() {
                     ))}
                     {CategoryRoutes.map(({ path }) => (
                       <Route
-                      exact
-                      path={`${path}/:pathName`}
-                      component={Project}></Route>
+                        exact
+                        key={`${path}/:pathName`}
+                        path={`${path}/:pathName`}
+                        component={Project}
+                      ></Route>
                     ))}
                     <Route exact path="/about" component={About}></Route>
                     <Route exact path="/contact" component={Contact}></Route>

@@ -7,8 +7,6 @@ const ProjectExpanded = (props) => {
 
   const project = data.find((item) => item.pathName === pathName);
 
-  console.log(project);
-
   return (
     <Styled.Container>
       <Styled.BannerImage

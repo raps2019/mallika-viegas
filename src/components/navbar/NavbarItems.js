@@ -11,7 +11,7 @@ const NavbarItems = (props) => {
         {/* <Styled.NavbarLink to="/producing" onClick={handleNavLinkClick}>Producing</Styled.NavbarLink>
         <Styled.NavbarLink to="/writing" onClick={handleNavLinkClick}>Writing</Styled.NavbarLink> */}
         {categoryList.map ( category => (
-          <Styled.NavbarLink to={`/${category}`} onClick={handleNavLinkClick}>{category.toUpperCase()}</Styled.NavbarLink>
+          <Styled.NavbarLink key={category} to={`/${category}`} onClick={handleNavLinkClick}>{category.toUpperCase()}</Styled.NavbarLink>
         ))}
         <Styled.NavbarLink to="/about" onClick={handleNavLinkClick}>ABOUT</Styled.NavbarLink>
         <Styled.NavbarLink to="/contact" onClick={handleNavLinkClick}>CONTACT</Styled.NavbarLink>
