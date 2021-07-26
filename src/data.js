@@ -12,7 +12,7 @@ import img10 from './images/in-valencia-passion-is-a-paella-ingredient.jpg'
 
 export const data = [
   {
-    category: 'writing',
+    category: 'work',
     type: 'Op-ed',
     title: 'Monday Must: How To Be An Indigenous Ally',
     client: 'Mary Young',
@@ -23,7 +23,7 @@ export const data = [
       pathName: 'monday-must-how-to-be-an-indigenous-ally',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Op-ed',
     title: 'Fear & Pride: The reality of raising a brown son',
     client: 'The Rebel Mama',
@@ -35,7 +35,7 @@ export const data = [
     pathName: 'fear-and-pride-the-reality-of-raising-a-brown-son',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Op-ed',
     title: 'Pandemic Parenting: Where Loss and Joy Coexist',
     client: 'The Rebel Mama',
@@ -46,7 +46,7 @@ export const data = [
     pathName: 'pandemic-parenting-where-loss-and-joy-coexist',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Op-ed',
     title: 'When is someone legally too drunk to consent?',
     client: 'Vice',
@@ -57,7 +57,7 @@ export const data = [
     pathName: 'when-is-someone-legally-too-drunk-to-consent',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Profile',
     title: 'One of the World’s Oldest Drag Queens Shares Memories of Life in Toronto in the 1950s',
     client: 'Fashion Magazine',
@@ -68,7 +68,7 @@ export const data = [
     pathName: 'one-of-the-worlds-oldest-drag-queens-shares-memories-of-life-in-toronto-in-the-1950s',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Podcast',
     title: `Pandora's Box : The Podcast`,
     client: 'Diva International Inc.',
@@ -79,7 +79,7 @@ export const data = [
     pathName: 'pandoras-box-the-podcast',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Food & Drink / Travel',
     title: `Churros in Madrid result in love at first bite`,
     client: 'Toronto Star',
@@ -90,7 +90,7 @@ export const data = [
     pathName: 'churros-in-madrid-result-in-love-at-first-bite',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Food & Drink / Travel',
     title: `Portugal’s history lies in its pastry`,
     client: 'Toronto Star',
@@ -101,7 +101,7 @@ export const data = [
     pathName: 'portugals-history-lies-in-its-pastry',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Food & Drink / Travel',
     title: `Portugal through the belly`,
     client: 'Toronto Star',
@@ -112,7 +112,7 @@ export const data = [
     pathName: 'portugal-through-the-belly',
   },
   {
-    category: 'writing',
+    category: 'work',
     type: 'Food & Drink / Travel',
     title: `In Valencia, passion is a paella ingredient`,
     client: 'Toronto Star',

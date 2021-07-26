@@ -6,8 +6,7 @@ import GlobalStyle, {
 import ViewportProvider from './contexts/ViewportProvider';
 import { ThemeStore, Theme } from './contexts/ThemeStore';
 import Home from './components/pages/home/Home';
-import Producing from './components/pages/producing/Producing';
-import Writing from './components/pages/writing/Writing';
+import Showcase from './components/pages/showcase/Showcase';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
@@ -33,9 +32,9 @@ function App() {
     CategoryRoutes.push({
       path: `/${category}`,
       category: `${category}`,
-      Component: Writing,
-    })
-  );
+      Component: Showcase,
+    }
+  ));
 
   return (
     <>
@@ -55,18 +54,14 @@ function App() {
                         <Component category={category}></Component>
                       </Route>
                     ))}
+                    {CategoryRoutes.map(({ path }) => (
+                      <Route
+                      exact
+                      path={`${path}/:pathName`}
+                      component={Project}></Route>
+                    ))}
                     <Route exact path="/about" component={About}></Route>
                     <Route exact path="/contact" component={Contact}></Route>
-                    <Route
-                      exact
-                      path="/writing/:pathName"
-                      component={Project}
-                    ></Route>
-                    <Route
-                      exact
-                      path="/producing/:pathName"
-                      component={Project}
-                    ></Route>
                   </Switch>
                 </GlobalWindowContainer>
               </Router>

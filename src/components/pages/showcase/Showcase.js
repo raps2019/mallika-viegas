@@ -8,14 +8,10 @@ import {
 } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
-const Writing = (props) => {
+const Showcase = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
-  const writingData = data.filter((items) => items.category === props.category);
-
-  
-  console.log(props.category)
-
+  const showcaseData = data.filter((items) => items.category.toLowerCase() === props.category.toLowerCase());
 
   return (
     <GlobalPageContainer
@@ -24,7 +20,7 @@ const Writing = (props) => {
     >
       <GlobalContentContainer>
         <GlobalProjectListContainer>
-          {writingData.map((project) => {
+          {showcaseData.map((project) => {
             return <ProjectPreview key={project.pathName} project={project}
             category={project.category}></ProjectPreview>;
           })}
@@ -34,4 +30,4 @@ const Writing = (props) => {
   );
 };
 
-export default Writing;
+export default Showcase;
