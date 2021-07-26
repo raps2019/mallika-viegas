@@ -4,10 +4,10 @@ import {
   GlobalContentContainer,
 } from '../../../globalStyles/GlobalStyles';
 import * as Styled from './About.styles';
-import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const About = () => {
-  const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
+  const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
   return (
     <GlobalPageContainer

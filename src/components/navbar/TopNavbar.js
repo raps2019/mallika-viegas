@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import * as Styled from './TopNavbar.styles';
 import NavbarItems from './NavbarItems';
-import { useSideNavbarContext } from '../../contexts/SideNavbarProvider';
+import { SideNavbarContext } from '../../contexts/SideNavbarProvider';
 import MenuToggleButton from './menuToggleButton/MenuToggleButton';
 
 const TopNavbar = (props) => {
-  const { handleNavLinkClick } = props;
+  const { handleNavLinkClick, categoryList } = props;
 
-  const { sideNavbar, sideNavbarOpen, toggleSideNavbar } = useSideNavbarContext();
+  const { sideNavbar, sideNavbarOpen, toggleSideNavbar } = useContext(SideNavbarContext);
 
   return (
     <Styled.TopNavbarContainer>
@@ -16,7 +16,7 @@ const TopNavbar = (props) => {
           mallika viegas
         </Styled.LogoNavbarLink>
         {sideNavbar === false ? (
-          <NavbarItems handleNavLinkClick={handleNavLinkClick}></NavbarItems>
+          <NavbarItems handleNavLinkClick={handleNavLinkClick} categoryList={categoryList}></NavbarItems>
         ) : null}
         {sideNavbar === true
       ? <MenuToggleButton

@@ -1,43 +1,43 @@
-import React, { useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
+import themes from '../globalStyles/themes';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 const ThemeContext = React.createContext();
 
 const ThemeStore = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState('light');
+  const [componentMounted, setComponentMounted] = useState(false);
 
-  const toggleTheme = () => {
-    currentTheme === 'light'
-      ? setCurrentTheme('dark')
-      : setCurrentTheme('light');
+  const setMode = (mode) => {
+    window.localStorage.setItem('theme', mode);
+    setCurrentTheme(mode);
   };
 
+  const toggleTheme = () => {
+    if (currentTheme === 'light') {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
+  };
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localTheme ?
+      setMode('dark') :
+      localTheme ?
+        setCurrentTheme(localTheme) :
+        setMode('light');
+    setComponentMounted(true);
+  }, []);
+
   return (
-    <ThemeContext.Provider value={{ toggleTheme, currentTheme }}>
+    <ThemeContext.Provider
+      value={{ toggleTheme, currentTheme, componentMounted }}
+    >
       {children}
     </ThemeContext.Provider>
   );
-};
-
-export const themes = {
-  light: {
-    background1: "white", 
-    background2: "white",
-    accent1: 'black',
-    text1: 'black',
-    toggleNavbarButton1: 'black',
-    toggleNavbarButton2: '#ffc300'
-
-   
-  },
-  dark: {
-    background1: "#0E141B", 
-    background2: "#0E141B",
-    accent1: 'white',
-    text1: 'white',
-    toggleNavbarButton1: 'white',
-    toggleNavbarButton2: '#ffdd00',
-  },
 };
 
 const Theme = ({ children }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useViewport } from './ViewportProvider';
 
-const SideNavbarContext = React.createContext({});
+export const SideNavbarContext = React.createContext({});
 
 const SideNavbarProvider = ({ children }) => {
   const { width } = useViewport();
@@ -54,22 +54,22 @@ const SideNavbarProvider = ({ children }) => {
   );
 };
 
-export const useSideNavbarContext = () => {
-  const {
-    sideNavbar,
-    sideNavbarOpen,
-    toggleSideNavbar,
-    handleNavLinkClick,
-    handleClickOutsideNav,
-  } = React.useContext(SideNavbarContext);
+// export const useSideNavbarContext = () => {
+//   const {
+//     sideNavbar,
+//     sideNavbarOpen,
+//     toggleSideNavbar,
+//     handleNavLinkClick,
+//     handleClickOutsideNav,
+//   } = React.useContext(SideNavbarContext);
 
-  return {
-    sideNavbar,
-    sideNavbarOpen,
-    toggleSideNavbar,
-    handleNavLinkClick,
-    handleClickOutsideNav,
-  };
-};
+//   return {
+//     sideNavbar,
+//     sideNavbarOpen,
+//     toggleSideNavbar,
+//     handleNavLinkClick,
+//     handleClickOutsideNav,
+//   };
+// };
 
 export default SideNavbarProvider;

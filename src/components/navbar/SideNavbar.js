@@ -4,7 +4,7 @@ import NavbarItems from './NavbarItems';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 
 const SideNavbar = (props) => {
-  const { handleNavLinkClick, handleClickOutsideNav } = props;
+  const { handleNavLinkClick, handleClickOutsideNav, categoryList } = props;
   const node = useRef();
 
   useOnClickOutside(node, handleClickOutsideNav);
@@ -14,7 +14,7 @@ const SideNavbar = (props) => {
   return (
     <Styled.SideNavbarContainer ref={node}>
       <Styled.SideNavbar>
-        <NavbarItems handleNavLinkClick={handleNavLinkClick}></NavbarItems>
+        <NavbarItems handleNavLinkClick={handleNavLinkClick} categoryList={categoryList}></NavbarItems>
       </Styled.SideNavbar>
     </Styled.SideNavbarContainer>
   );

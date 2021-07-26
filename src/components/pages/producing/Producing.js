@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { data } from '../../../data';
 import {
   GlobalPageContainer,
@@ -6,12 +6,11 @@ import {
   GlobalProjectListContainer,
 
 } from '../../../globalStyles/GlobalStyles';
-import * as Styled from './Producing.styles';
-import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import ProjectPreview from '../../projectPreview/ProjectPreview';
 
 const Producing = () => {
-  const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
+  const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
   const producingData = data.filter((items) => items.category === 'producing');
 

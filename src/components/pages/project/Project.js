@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import ProjectExpanded from '../../projectExpanded/ProjectExpanded';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
 } from '../../../globalStyles/GlobalStyles';
-import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
 const Project = ({ match, location }) => {
-  const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
+  const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
   const {
     params: { pathName, category },

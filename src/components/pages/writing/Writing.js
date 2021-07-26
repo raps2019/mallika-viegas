@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { data } from '../../../data';
 import ProjectPreview from '../../projectPreview/ProjectPreview';
 import {
@@ -6,12 +6,15 @@ import {
   GlobalContentContainer,
   GlobalProjectListContainer,
 } from '../../../globalStyles/GlobalStyles';
-import { useSideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 
-const Writing = () => {
-  const { sideNavbarOpen, sideNavbar } = useSideNavbarContext();
+const Writing = (props) => {
+  const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
-  const writingData = data.filter((items) => items.category === 'writing');
+  const writingData = data.filter((items) => items.category === props.category);
+
+  
+  console.log(props.category)
 
 
   return (

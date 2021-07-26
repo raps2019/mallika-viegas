@@ -14,12 +14,28 @@ import Navbar from './components/navbar/Navbar';
 import Project from './components/pages/project/Project';
 import SideNavbarProvider from './contexts/SideNavbarProvider';
 import { data } from './data';
+// import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
+  // const { componentMounted } = useDarkMode();
 
-  const categoryList = [...new Set(data.map( item => item.category))];
+  const categoryList = [...new Set(data.map((item) => item.category))];
 
-  console.log(categoryList)
+  console.log(categoryList[0]);
+
+  // if (!componentMounted) {
+  //   return <div></div>
+  // }
+
+  const CategoryRoutes = [];
+
+  categoryList.map((category) =>
+    CategoryRoutes.push({
+      path: `/${category}`,
+      category: `${category}`,
+      Component: Writing,
+    })
+  );
 
   return (
     <>
@@ -30,11 +46,15 @@ function App() {
               <Router>
                 <GlobalStyle></GlobalStyle>
                 <GlobalWindowContainer>
-                  <Navbar></Navbar>
+                  <Navbar
+                  categoryList={categoryList}></Navbar>
                   <Switch>
                     <Route exact path="/" component={Home}></Route>
-                    <Route exact path="/producing" component={Producing}></Route>
-                    <Route exact path="/writing" component={Writing}></Route>
+                    {CategoryRoutes.map(({ path, category, Component }) => (
+                      <Route key={path} exact path={path}>
+                        <Component category={category}></Component>
+                      </Route>
+                    ))}
                     <Route exact path="/about" component={About}></Route>
                     <Route exact path="/contact" component={Contact}></Route>
                     <Route
