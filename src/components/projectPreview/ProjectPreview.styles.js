@@ -12,10 +12,10 @@ export const ImageWrapperLink = styled(Link)`
 
   &:hover > div > h4 {
     opacity: 1;
-    transition-delay: 1.5s;
+    transition-delay: 1s;
 
     &::after {
-      transition-delay: 1.75s;
+      transition-delay: 1.5s;
       transform: scaleX(1);
       opacity: 1;
     }
@@ -26,7 +26,7 @@ export const ImageWrapperLink = styled(Link)`
   }
 
   &:hover > div > h6 {
-    transition-delay: 0.75s;
+    transition-delay: 0.5s;
     opacity: 1;
   }
 
@@ -85,7 +85,12 @@ export const HeadingFour = styled.h4`
     transform: scaleX(0);
     margin: 0 auto;
     transform-origin: center;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
 
     /* background: ${(props) => props.theme.accent1}; */
     transition: all 750ms ease-in;
