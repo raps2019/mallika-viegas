@@ -9,6 +9,7 @@ export const Container = styled(motion.div)`
 `;
 
 export const ImageWrapperLink = styled(Link)`
+
   &:hover > img {
     filter: blur(5px) brightness(65%);
   }
@@ -18,7 +19,7 @@ export const ImageWrapperLink = styled(Link)`
     transition-delay: 0s;
 
     &::after {
-      transition-delay: 0s;
+      transition-delay: 0.25s;
       transform: scaleX(1);
       opacity: 1;
     }
@@ -47,15 +48,14 @@ export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  transition: all 0.25s ease-out;
   border-radius: 20px;
   filter: ${(props) =>
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-    @media (hover:none) {
-      filter: blur(5px) brightness(65%);
+  @media (hover: none) {
+    filter: blur(5px) brightness(65%);
   }
 `;
 
@@ -104,7 +104,7 @@ export const HeadingFour = styled.h4`
     transition: all 750ms ease-in;
   }
 
-  @media (hover:none) {
+  @media (hover: none) {
     opacity: 1;
   }
 `;
@@ -116,7 +116,7 @@ export const HeadingFive = styled.h5`
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
 
-  @media (hover:none) {
+  @media (hover: none) {
     opacity: 1;
   }
 `;
@@ -129,7 +129,7 @@ export const HeadingSix = styled.h6`
   transition: all 0.5s ease-in;
   font-weight: 400;
 
-  @media (hover:none) {
+  @media (hover: none) {
     opacity: 1;
   }
 `;
