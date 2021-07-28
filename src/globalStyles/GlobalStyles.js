@@ -22,6 +22,8 @@ width: 100vw;
 height: 100vh;
 display: flex;
 flex-direction: column;
+background: ${(props) => props.theme.background1};
+
 `
 
 
@@ -35,10 +37,10 @@ export const GlobalPageContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  background: ${(props) => props.theme.background1};
+  /* background: ${(props) => props.theme.background1}; */
   color: ${(props) => props.theme.text1};
   filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-in;
 
 
   @media screen and (max-width: 991px) {
@@ -66,7 +68,7 @@ width: 100%;
 /* height: 100%; */
 font-size: 0.8em;
 color: ${props => props.theme.text1};
-transition: all 0.25s ease-out;
+transition: all 0.25s ease-in;
 display: flex;
 align-items: center;
 justify-content: center;

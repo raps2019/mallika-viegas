@@ -23,11 +23,11 @@ const ThemeStore = ({ children }) => {
   };
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localTheme ?
-      setMode('dark') :
+    window.matchMedia('(prefers-color-scheme:dark)').matches && !localTheme ?
+      setCurrentTheme('dark') :
       localTheme ?
         setCurrentTheme(localTheme) :
-        setMode('light');
+        setCurrentTheme('light');
     setComponentMounted(true);
   }, []);
 

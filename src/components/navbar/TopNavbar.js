@@ -15,6 +15,7 @@ const TopNavbar = (props) => {
         <Styled.LogoNavbarLink exact={true} to="/" onClick={handleNavLinkClick}>
           mallika viegas
         </Styled.LogoNavbarLink>
+        <Styled.NavbarRight>
         {sideNavbar === false ? (
           <NavbarItems handleNavLinkClick={handleNavLinkClick} categoryList={categoryList}></NavbarItems>
         ) : null}
@@ -25,6 +26,8 @@ const TopNavbar = (props) => {
         ></MenuToggleButton>
       : null
       }
+        </Styled.NavbarRight>
+
       </Styled.TopNavbar>
 
     </Styled.TopNavbarContainer>

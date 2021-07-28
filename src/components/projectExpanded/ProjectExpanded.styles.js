@@ -22,7 +22,7 @@ export const BannerImage = styled.img`
   object-fit: cover;
   width: 100%;
   height: 150px;
-  filter: blur(5px) brightness(75%);
+  /* filter: blur(5px) brightness(75%); */
 
   @media screen and (max-width: 1024px) {
     width: 100vw;

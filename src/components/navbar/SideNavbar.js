@@ -1,12 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import * as Styled from './SideNavbar.styles';
 import NavbarItems from './NavbarItems';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 import { useViewport } from '../../contexts/ViewportProvider';
+import { ThemeContext } from '../../contexts/ThemeStore';
 
 const SideNavbar = (props) => {
   const { handleNavLinkClick, handleClickOutsideNav, categoryList } = props;
   const { width } = useViewport();
+  const { currentTheme } = useContext(ThemeContext)
+  console.log(currentTheme)
 
   const node = useRef();
   useOnClickOutside(node, handleClickOutsideNav);
@@ -35,6 +38,7 @@ const SideNavbar = (props) => {
       initial="hidden"
       animate="visible"
       exit="exit"
+      currentTheme={currentTheme}
     >
       <Styled.SideNavbar>
         <NavbarItems

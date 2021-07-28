@@ -34,6 +34,7 @@ const SideNavbarProvider = ({ children }) => {
   useEffect(() => {
     if (width <= 768) {
       setSideNavbar(true);
+      setSideNavbarOpen(false);
     } else {
       setSideNavbar(false);
     }

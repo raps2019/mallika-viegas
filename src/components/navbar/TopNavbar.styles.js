@@ -9,9 +9,11 @@ export const TopNavbarContainer = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.25s ease-in;
+  background-color: transparent;
 `;
 
 export const TopNavbar = styled.nav`
+
   width: 90%;
   height: 100%;
   display: flex;
@@ -30,7 +32,7 @@ export const LogoNavbarLink = styled(NavLink)`
   font-family: 'Assistant', sans-serif;
   font-weight: 300;
   text-decoration: none;
-  transition: all 250ms ease-in;
+  transition: all .25s ease-in;
 
   /* &:hover, &.active {
   text-shadow: 0px 0px 5px ${(props) => props.theme.accent1};
@@ -44,7 +46,7 @@ export const LogoNavbarLink = styled(NavLink)`
     background: ${(props) => props.theme.accent1};
     transform: scaleX(0);
     transform-origin: left;
-    transition: all 250ms ease-in;
+    transition: all .25s ease-in;
   }
 
   &:hover::after {
@@ -55,3 +57,10 @@ export const LogoNavbarLink = styled(NavLink)`
     transform: scaleX(1);
   }
 `;
+
+
+export const NavbarRight = styled.div`
+display: flex;
+align-items: flex-end;
+gap: 50px;
+`

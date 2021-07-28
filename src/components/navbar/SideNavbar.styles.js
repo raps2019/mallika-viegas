@@ -10,15 +10,19 @@ export const SideNavbarContainer = styled(motion.div)`
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: ${(props) => props.theme.background1};
+  background: ${(props) => props.theme.background2};
   transition: all 0.25s ease-out;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
   z-index: 10;
+  /* border-right: ${props => props.currentTheme === 'dark' ? `1px ${props.theme.text1} solid` : null}; */
+  
 
   @media screen and (max-width: 540px) {
     width: 100vw;
     height: 100vh;
+    border-right: 0;
+
   }
 `;
 

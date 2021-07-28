@@ -11,7 +11,7 @@ const themes = {
   },
   dark: {
     background1: "#0E141B", 
-    background2: "#0E141B",
+    background2: "#17202c",
     accent1: 'white',
     text1: 'white',
     toggleNavbarButton1: 'white',
