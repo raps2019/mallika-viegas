@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import {
   GlobalPageContainer,
   GlobalContentContainer,
+  GlobalTextContainer,
 } from '../../../globalStyles/GlobalStyles';
 import * as Styled from './About.styles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { pageContainerVariants } from '../../variants';
 
 const About = () => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
@@ -13,9 +15,12 @@ const About = () => {
     <GlobalPageContainer
       sideNavbarOpen={sideNavbarOpen}
       sideNavbar={sideNavbar}
+      variants= {pageContainerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <GlobalContentContainer>
-        <Styled.TextContainer>
+        <GlobalTextContainer>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
           repudiandae atque consequuntur nisi molestiae accusamus dicta cumque,
           a sit necessitatibus obcaecati aliquam doloribus, magnam ex. Id quae
@@ -47,7 +52,7 @@ const About = () => {
           necessitatibus sint sed consequuntur repellendus, tempore commodi
           deserunt temporibus laudantium sequi harum! Porro itaque iste tempore
           officia dicta amet!
-        </Styled.TextContainer>
+        </GlobalTextContainer>
       </GlobalContentContainer>
     </GlobalPageContainer>
   );

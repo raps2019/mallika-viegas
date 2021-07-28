@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, {useContext } from 'react';
 import { SideNavbarContext } from '../../contexts/SideNavbarProvider';
 import TopNavbar from './TopNavbar';
 import SideNavbar from './SideNavbar';
+import { AnimatePresence } from 'framer-motion';
 
 const Navbar = (props) => {
   const {
@@ -11,17 +12,15 @@ const Navbar = (props) => {
     handleClickOutsideNav,
   } = useContext(SideNavbarContext);
 
-  const {categoryList} = props
+  const { categoryList } = props;
 
   return (
     <>
-      {/* {sideNavbar === true ? (
-        <MenuToggleButtonz
-          sideNavbarOpen={sideNavbarOpen}
-          toggleSideNavbar={toggleSideNavbar}
-        ></MenuToggleButton>
-      ) : null} */}
-        <TopNavbar handleNavLinkClick={handleNavLinkClick} categoryList={categoryList}></TopNavbar>
+      <TopNavbar
+        handleNavLinkClick={handleNavLinkClick}
+        categoryList={categoryList}
+      ></TopNavbar>
+      <AnimatePresence>
       {sideNavbar === true && sideNavbarOpen === true ? (
         <SideNavbar
           handleNavLinkClick={handleNavLinkClick}
@@ -29,6 +28,7 @@ const Navbar = (props) => {
           categoryList={categoryList}
         ></SideNavbar>
       ) : null}
+      </AnimatePresence>
     </>
   );
 };

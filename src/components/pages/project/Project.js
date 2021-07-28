@@ -5,18 +5,22 @@ import {
   GlobalContentContainer,
 } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
+import { pageContainerVariants } from '../../variants';
 
-const Project = ({ match, location }) => {
+const Project = ({ match }) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
   const {
-    params: { pathName, category },
+    params: { pathName },
   } = match;
 
   return (
     <GlobalPageContainer
       sideNavbarOpen={sideNavbarOpen}
       sideNavbar={sideNavbar}
+      variants= {pageContainerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <GlobalContentContainer>
         <ProjectExpanded pathName={pathName}></ProjectExpanded>

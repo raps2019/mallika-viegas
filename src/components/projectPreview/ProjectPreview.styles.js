@@ -1,32 +1,36 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export const ImageWrapperLink = styled(Link)`
+export const Container = styled(motion.div)`
   position: relative;
   width: 100%;
   height: 100%;
+`;
 
+export const ImageWrapperLink = styled(Link)`
   &:hover > img {
-    filter: blur(5px) brightness(50%);
+    filter: blur(5px) brightness(65%);
   }
 
   &:hover > div > h4 {
     opacity: 1;
-    transition-delay: 1s;
+    transition-delay: 0s;
 
     &::after {
-      transition-delay: 1.5s;
+      transition-delay: 0s;
       transform: scaleX(1);
       opacity: 1;
     }
   }
 
   &:hover > div > h5 {
+    transition-delay: 0.75s;
     opacity: 1;
   }
 
   &:hover > div > h6 {
-    transition-delay: 0.5s;
+    transition-delay: 1.25s;
     opacity: 1;
   }
 
@@ -49,6 +53,10 @@ export const Image = styled.img`
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    @media (hover:none) {
+      filter: blur(5px) brightness(65%);
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -95,6 +103,10 @@ export const HeadingFour = styled.h4`
     /* background: ${(props) => props.theme.accent1}; */
     transition: all 750ms ease-in;
   }
+
+  @media (hover:none) {
+    opacity: 1;
+  }
 `;
 
 export const HeadingFive = styled.h5`
@@ -103,6 +115,10 @@ export const HeadingFive = styled.h5`
   opacity: 0;
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
+
+  @media (hover:none) {
+    opacity: 1;
+  }
 `;
 
 export const HeadingSix = styled.h6`
@@ -112,4 +128,8 @@ export const HeadingSix = styled.h6`
   /* transform: scale(0);   */
   transition: all 0.5s ease-in;
   font-weight: 400;
+
+  @media (hover:none) {
+    opacity: 1;
+  }
 `;

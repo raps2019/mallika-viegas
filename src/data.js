@@ -9,6 +9,14 @@ import img8 from './images/portugals-history-lies-in-its-pastry.jpg'
 import img9 from './images/portugal-through-the-belly.jpg'
 import img10 from './images/in-valencia-passion-is-a-paella-ingredient.jpg'
 
+export const categoryDescriptions = [
+
+  {
+    category: 'work',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptate rem dolorem quibusdam nihil unde eaque excepturi, perspiciatis natus neque.'
+  }
+
+]
 
 export const data = [
   {

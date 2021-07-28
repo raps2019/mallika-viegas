@@ -1,11 +1,12 @@
 import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 
-export const SideNavbarContainer = styled.div`
+export const SideNavbarContainer = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 230px;
+  width: 300px;
   height: 100vh;
   display: flex;
   justify-content: center;

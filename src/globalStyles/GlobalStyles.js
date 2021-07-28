@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
@@ -24,7 +25,7 @@ flex-direction: column;
 `
 
 
-export const GlobalPageContainer = styled.div`
+export const GlobalPageContainer = styled(motion.div)`
   /* z-index: 1; */
   width: 100%;
   height: 100%;
@@ -37,6 +38,8 @@ export const GlobalPageContainer = styled.div`
   background: ${(props) => props.theme.background1};
   color: ${(props) => props.theme.text1};
   filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
+  transition: all 0.25s ease-out;
+
 
   @media screen and (max-width: 991px) {
   }
@@ -48,7 +51,7 @@ export const GlobalContentContainer = styled.div`
   height: 100%;
 `;
 
-export const GlobalProjectListContainer = styled.div`
+export const GlobalProjectListContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-auto-rows: 20rem;
@@ -57,6 +60,16 @@ export const GlobalProjectListContainer = styled.div`
   justify-items: center;
   grid-gap: 50px;
 `
-
+export const GlobalTextContainer = styled.div`
+margin: 5% 0;
+width: 100%;
+/* height: 100%; */
+font-size: 0.8em;
+color: ${props => props.theme.text1};
+transition: all 0.25s ease-out;
+display: flex;
+align-items: center;
+justify-content: center;
+`
 
 export default GlobalStyle;
