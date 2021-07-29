@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import themes from '../globalStyles/themes';
-import { useDarkMode } from '../hooks/useDarkMode';
 
 const ThemeContext = React.createContext();
 

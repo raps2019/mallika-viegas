@@ -10,8 +10,11 @@ export const Container = styled(motion.div)`
 
 export const ImageWrapperLink = styled(Link)`
 
+
+
   &:hover > img {
     filter: blur(5px) brightness(65%);
+    transition: all 0.15s ease-in;
   }
 
   &:hover > div > h4 {

@@ -13,6 +13,7 @@ import Navbar from './components/navbar/Navbar';
 import Project from './components/pages/project/Project';
 import SideNavbarProvider from './contexts/SideNavbarProvider';
 import { data } from './data';
+import Footer from './components/footer/Footer';
 // import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
                     <Route exact path="/about" component={About}></Route>
                     <Route exact path="/contact" component={Contact}></Route>
                   </Switch>
+                  <Footer></Footer>
                 </GlobalWindowContainer>
               </Router>
             </Theme>
