@@ -2,21 +2,24 @@ import img1 from './images/hwo-to-be-an-indigenous-ally.jpeg';
 import img2 from './images/fear-and-pride.jpeg';
 import img3 from './images/pandemic-parenting.jpg';
 import img4 from './images/too-drunk-to-consent.jpg';
-import img5 from './images/oldest-drag-queen.jpg'
-import img6 from './images/pandoras-box-the-podcast.jpg'
-import img7 from './images/churros-in-madrid-result-in-love-at-first-bite.jpg'
-import img8 from './images/portugals-history-lies-in-its-pastry.jpg'
-import img9 from './images/portugal-through-the-belly.jpg'
-import img10 from './images/in-valencia-passion-is-a-paella-ingredient.jpg'
+import img5 from './images/oldest-drag-queen.jpg';
+import img6 from './images/pandoras-box-the-podcast.jpg';
+import img7 from './images/churros-in-madrid-result-in-love-at-first-bite.jpg';
+import img8 from './images/portugals-history-lies-in-its-pastry.jpg';
+import img9 from './images/portugal-through-the-belly.jpg';
+import img10 from './images/in-valencia-passion-is-a-paella-ingredient.jpg';
 
 export const categoryDescriptions = [
-
   {
     category: 'work',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptate rem dolorem quibusdam nihil unde eaque excepturi, perspiciatis natus neque.'
-  }
-
-]
+    description:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptate rem dolorem quibusdam nihil unde eaque excepturi, perspiciatis natus neque.',
+  },
+  // {
+  //   category: 'writing',
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum aut mollitia saepe modi aliquid voluptate magnam velit corporis nesciunt unde eligendi corrupti perspiciatis voluptatem quis repellat dolorem minima voluptatibus, debitis incidunt id ea. Voluptatibus, impedit, necessitatibus iusto pariatur vel non tenetur, maxime voluptate molestias excepturi facere nam unde! Nesciunt?'
+  // }
+];
 
 export const data = [
   {
@@ -28,7 +31,8 @@ export const data = [
     description: `The confirmation of more than 750 unmarked graves on the grounds of a former residential school in Saskatchewan is verification of what Indigenous people have long known and has many of us Canadians wondering what to do next — and how to help.`,
     website:
       'https://maryyoung.com/blogs/self-love-club/how-to-be-an-indigenous-ally',
-      pathName: 'monday-must-how-to-be-an-indigenous-ally',
+    pathName: 'monday-must-how-to-be-an-indigenous-ally',
+    feature: true,
   },
   {
     category: 'work',
@@ -41,6 +45,7 @@ export const data = [
     website:
       'https://therebelmama.com/2021/05/20/fear-and-pride-the-reality-of-raising-a-brown-son/',
     pathName: 'fear-and-pride-the-reality-of-raising-a-brown-son',
+    feature: false,
   },
   {
     category: 'work',
@@ -52,6 +57,7 @@ export const data = [
     website:
       'https://therebelmama.com/2021/04/14/pandemic-parenting-where-loss-and-joy-coexist/',
     pathName: 'pandemic-parenting-where-loss-and-joy-coexist',
+    feature: true,
   },
   {
     category: 'work',
@@ -63,18 +69,22 @@ export const data = [
     website:
       'https://www.vice.com/en/article/9kd433/when-is-someone-legally-too-drunk-to-consent',
     pathName: 'when-is-someone-legally-too-drunk-to-consent',
+    feature: true,
   },
   {
     category: 'work',
     type: 'Profile',
-    title: 'One of the World’s Oldest Drag Queens Shares Memories of Life in Toronto in the 1950s',
+    title:
+      'One of the World’s Oldest Drag Queens Shares Memories of Life in Toronto in the 1950s',
     client: 'Fashion Magazine',
     img: img5,
     description: `A profile on Canada's Oldest Drag Queen`,
     website:
       'https://fashionmagazine.com/culture/michelle-dubarry-oldest-drag-queen-canada/',
-    pathName: 'one-of-the-worlds-oldest-drag-queens-shares-memories-of-life-in-toronto-in-the-1950s',
-  },
+    pathName:
+      'one-of-the-worlds-oldest-drag-queens-shares-memories-of-life-in-toronto-in-the-1950s',
+      feature: true,
+},
   {
     category: 'work',
     type: 'Podcast',
@@ -82,9 +92,9 @@ export const data = [
     client: 'Diva International Inc.',
     img: img6,
     description: `A podcast that is on a mission to uncover how periods affect the lives of those that experience them around the globe. Join filmmakers Aine and Cait as they travel the world to find real stories by real people who are championing change and bringing light to the global impact of menstruation.`,
-    website:
-      'https://www.pandorasboxthefilm.com/podcast',
+    website: 'https://www.pandorasboxthefilm.com/podcast',
     pathName: 'pandoras-box-the-podcast',
+    feature: true,
   },
   {
     category: 'work',
@@ -96,6 +106,7 @@ export const data = [
     website:
       'https://www.thestar.com/life/travel/2017/01/18/churros-in-madrid-result-in-love-at-first-bite.html',
     pathName: 'churros-in-madrid-result-in-love-at-first-bite',
+    feature: true,
   },
   {
     category: 'work',
@@ -107,6 +118,7 @@ export const data = [
     website:
       'https://www.thestar.com/life/travel/2017/01/27/portugals-history-lies-in-its-pastry.html',
     pathName: 'portugals-history-lies-in-its-pastry',
+    homePage: false,
   },
   {
     category: 'work',
@@ -118,6 +130,7 @@ export const data = [
     website:
       'https://www.thestar.com/life/travel/2017/01/27/portugal-through-the-belly.html',
     pathName: 'portugal-through-the-belly',
+    homePage: false,
   },
   {
     category: 'work',
@@ -129,5 +142,6 @@ export const data = [
     website:
       'https://www.thestar.com/life/travel/2017/01/18/in-valencia-passion-is-a-paella-ingredient.html',
     pathName: 'in-valencia-passion-is-a-paella-ingredient',
+    homePage: false,
   },
 ];

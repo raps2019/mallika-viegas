@@ -1,9 +1,6 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import ProjectExpanded from '../../projectExpanded/ProjectExpanded';
-import {
-  GlobalPageContainer,
-  GlobalContentContainer,
-} from '../../../globalStyles/GlobalStyles';
+import { GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
 
@@ -18,13 +15,11 @@ const Project = ({ match }) => {
     <GlobalPageContainer
       sideNavbarOpen={sideNavbarOpen}
       sideNavbar={sideNavbar}
-      variants= {pageContainerVariants}
+      variants={pageContainerVariants}
       initial="hidden"
       animate="visible"
     >
-      <GlobalContentContainer>
-        <ProjectExpanded pathName={pathName}></ProjectExpanded>
-      </GlobalContentContainer>
+      <ProjectExpanded pathName={pathName}></ProjectExpanded>
     </GlobalPageContainer>
   );
 };

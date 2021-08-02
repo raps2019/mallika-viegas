@@ -3,19 +3,17 @@ import { data, categoryDescriptions } from '../../../data';
 import ProjectPreview from '../../projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
-  GlobalContentContainer,
   GlobalProjectListContainer,
   GlobalTextContainer,
 } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
-import * as Styled from './Showcase.styles';
 
-const Showcase = (props) => {
+const CategoryShowcase = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
-  const showcaseData = data.filter(
-    (items) => items.category.toLowerCase() === props.category.toLowerCase()
+  const showcaseList = data.filter(
+    (item) => item.category.toLowerCase() === props.category.toLowerCase()
   );
 
   const categoryDescription = categoryDescriptions.find(
@@ -45,26 +43,28 @@ const Showcase = (props) => {
       initial="hidden"
       animate="visible"
     >
-      <GlobalContentContainer>
-          <GlobalTextContainer>{categoryDescription}</GlobalTextContainer>
-          <GlobalProjectListContainer
-            variants={listContainerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {showcaseData.map((project) => {
-              return (
-                <ProjectPreview
-                  key={project.pathName}
-                  project={project}
-                  category={project.category}
-                ></ProjectPreview>
-              );
-            })}
-          </GlobalProjectListContainer>
-      </GlobalContentContainer>
+      <GlobalTextContainer>{categoryDescription}</GlobalTextContainer>
+      <GlobalProjectListContainer
+        variants={listContainerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {showcaseList.map((project) => {
+          return (
+            <ProjectPreview
+              category={project.category}
+              type={project.type}
+              title={project.title}
+              client={project.client}
+              img={project.img}
+              pathName={project.pathName}
+              alt={project.alt}
+            ></ProjectPreview>
+          );
+        })}
+      </GlobalProjectListContainer>
     </GlobalPageContainer>
   );
 };
 
-export default Showcase;
+export default CategoryShowcase;

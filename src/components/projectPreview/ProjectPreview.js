@@ -4,7 +4,8 @@ import { ThemeContext } from '../../contexts/ThemeStore';
 import { withRouter } from 'react-router';
 
 const ProjectPreview = (props) => {
-  const { project, category, key } = props;
+  // const { project, category, key } = props;
+  const { category, type, title, client, img, pathName, alt } = props;
   const { currentTheme } = useContext(ThemeContext);
 
   const listChildVariants = {
@@ -25,24 +26,21 @@ const ProjectPreview = (props) => {
 
   return (
     <Styled.Container
-    variants={listChildVariants}
-    // initial="hidden"
-    // animate="visible"
-    key={key}
+      variants={listChildVariants}
+      // initial="hidden"
+      // animate="visible"
+      key={pathName}
     >
-      <Styled.ImageWrapperLink
-        key={project.projectId}
-        to={category + '/' + project.pathName}
-      >
+      <Styled.ImageWrapperLink key={pathName} to={category + '/' + pathName}>
         <Styled.Image
-          src={project.img}
-          alt={project.alt}
+          src={img}
+          alt={alt}
           currentTheme={currentTheme}
         ></Styled.Image>
         <Styled.TextWrapper>
-          <Styled.HeadingFive> {project.type.toUpperCase()}</Styled.HeadingFive>
-          <Styled.HeadingFour>{project.title}</Styled.HeadingFour>
-          <Styled.HeadingSix>{project.client.toUpperCase()}</Styled.HeadingSix>
+          <Styled.HeadingFive> {type.toUpperCase()}</Styled.HeadingFive>
+          <Styled.HeadingFour>{title}</Styled.HeadingFour>
+          <Styled.HeadingSix>{client.toUpperCase()}</Styled.HeadingSix>
         </Styled.TextWrapper>
       </Styled.ImageWrapperLink>
     </Styled.Container>

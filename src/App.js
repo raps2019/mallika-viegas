@@ -6,7 +6,7 @@ import GlobalStyle, {
 import ViewportProvider from './contexts/ViewportProvider';
 import { ThemeStore, Theme } from './contexts/ThemeStore';
 import Home from './components/pages/home/Home';
-import Showcase from './components/pages/showcase/Showcase';
+import CategoryShowcase from './components/pages/categoryShowcase/CategoryShowcase';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
@@ -31,10 +31,12 @@ function App() {
     CategoryRoutes.push({
       path: `/${category}`,
       category: `${category}`,
-      Component: Showcase,
+      Component: CategoryShowcase,
     })
   );
 
+  console.log(categoryList);
+  console.log(CategoryRoutes);
   return (
     <>
       <ViewportProvider>
@@ -46,7 +48,14 @@ function App() {
                 <GlobalWindowContainer>
                   <Navbar categoryList={categoryList}></Navbar>
                   <Switch>
-                    <Route exact path="/" component={Home}></Route>
+                    <Route
+                      exact
+                      path="/"
+                      component={() => (
+                        <Home categoryList={categoryList}></Home>
+                      )}
+                    ></Route>
+
                     {CategoryRoutes.map(({ path, category, Component }) => (
                       <Route key={path} exact path={path}>
                         <Component category={category}></Component>

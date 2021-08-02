@@ -6,7 +6,7 @@ import styled from "styled-components/macro";
 export const NavbarLink = styled(NavLink)`
 color: ${props => props.theme.text1};
 font-family: 'Roboto Mono', monospace;
-font-size: 0.9rem;
+font-size: 0.8rem;
 font-weight: 400;
 text-decoration:none;
 transition: all 250ms ease-in;

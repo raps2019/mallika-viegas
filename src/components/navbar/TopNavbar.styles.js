@@ -27,7 +27,7 @@ export const TopNavbar = styled.nav`
 
 export const LogoNavbarLink = styled(NavLink)`
   color: ${(props) => props.theme.text1};
-  font-size: 2rem;
+  font-size: 1.2rem;
   /* font-family: 'Tourney', cursive;   */
   font-family: 'Assistant', sans-serif;
   font-weight: 300;
