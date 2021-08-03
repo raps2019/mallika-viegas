@@ -21,7 +21,12 @@ const ProjectExpanded = (props) => {
         </Styled.RowContainer>
       </Styled.Header>
       <Styled.Paragraph>{project.description}</Styled.Paragraph>
-      <Styled.Anchor href={project.website}>More...</Styled.Anchor>
+      <Styled.QuoteParagraphContainer>
+        <Styled.OpenQuoteStrong></Styled.OpenQuoteStrong>
+        <Styled.QuoteParagraph>{project.quote}</Styled.QuoteParagraph>
+        <Styled.CloseQuoteStrong></Styled.CloseQuoteStrong>
+      </Styled.QuoteParagraphContainer>
+      <Styled.Anchor href={project.website}>Read More...</Styled.Anchor>
     </Styled.Container>
   );
 };

@@ -34,7 +34,7 @@ export const ImageWrapperLink = styled(Link)`
   }
 
   &:hover > div > h6 {
-    transition-delay: 1.75s;
+    transition-delay: 1s;
     opacity: 1;
   }
 

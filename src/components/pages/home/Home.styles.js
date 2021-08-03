@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 
 
 export const Header = styled.header`
-width: 75%;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
+text-align:justify;
 `
 
 export const HeadingThree = styled.h3`
 font-weight: 600;
-font-size: 2rem;
+font-size: 1.4rem;
+
 `
 
 export const Strong = styled.strong`

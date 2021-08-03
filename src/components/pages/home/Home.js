@@ -39,8 +39,6 @@ const Home = (props) => {
     >
       <Styled.Header>
         <Styled.HeadingThree>
-          Hi, <br></br>
-          I'm <Styled.Strong>Mallika Viegas</Styled.Strong>. <br></br>
           Writer, Editor and Digital Content do‑it‑all‑'er.
         </Styled.HeadingThree>
       </Styled.Header>
@@ -58,16 +56,16 @@ const Home = (props) => {
             ></FeatureProject>
           );
         })}
-        <Styled.MoreLinkContainer>
-          {categoryList.map((category) => {
-            return (
-              <Styled.MoreLink to={'/' + category}>
-                {`See more ${category}`}
-              </Styled.MoreLink>
-            );
-          })}
-        </Styled.MoreLinkContainer>
       </Styled.ListContainer>
+      <Styled.MoreLinkContainer>
+        {categoryList.map((category) => {
+          return (
+            <Styled.MoreLink to={'/' + category}>
+              {`See more ${category}`}
+            </Styled.MoreLink>
+          );
+        })}
+      </Styled.MoreLinkContainer>
     </GlobalPageContainer>
   );
 };
