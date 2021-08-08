@@ -8,7 +8,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
-transition: all 0.25s ease-in;
+/* transition: all 0.25s ease-in; */
+z-index: 100;
+background-color: ${props => props.theme.background1};
 `
 
 export const LogoContainer = styled.a`

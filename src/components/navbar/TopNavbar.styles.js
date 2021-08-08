@@ -8,8 +8,11 @@ export const TopNavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.25s ease-in;
-  /* background-color: transparent; */
+  /* transition: all 0.25s ease-in; */
+  position: ${props => props.onHomePage === true ? 'absolute' : null};
+  top: ${props => props.onHomePage === true ? '0' : null};
+  z-index: 100;
+  background-color: ${props => props.theme.background1};
 `;
 
 export const TopNavbar = styled.nav`

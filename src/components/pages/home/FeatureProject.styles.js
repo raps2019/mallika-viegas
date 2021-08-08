@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   grid-column: ${(props) =>
-    props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
+  props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
+
 
   @media screen and (max-width: 991px) {
     grid-column: span 1;
@@ -19,6 +20,7 @@ export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 `;
 
 export const TextWrapper = styled.div`

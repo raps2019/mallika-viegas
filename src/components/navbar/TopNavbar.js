@@ -5,13 +5,13 @@ import { SideNavbarContext } from '../../contexts/SideNavbarProvider';
 import MenuToggleButton from './menuToggleButton/MenuToggleButton';
 
 const TopNavbar = (props) => {
-  const { handleNavLinkClick, categoryList } = props;
+  const { handleNavLinkClick, categoryList, onHomePage } = props;
 
   const { sideNavbar, sideNavbarOpen, toggleSideNavbar } =
     useContext(SideNavbarContext);
 
   return (
-    <Styled.TopNavbarContainer>
+    <Styled.TopNavbarContainer onHomePage={onHomePage}>
       <Styled.TopNavbar sideNavbar={sideNavbar}>
         <Styled.NavbarLeft
           sideNavbarOpen={sideNavbarOpen}

@@ -1,7 +1,45 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
+export const SectionContainer = styled.div`
+position: fixed;
+top: 0;
+width: 100vw;
+height: 100vh;
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+background-color: transparent;
+`
 
+export const SectionOne = styled.section`
+height: 100%;
+width: 95%;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+scroll-snap-align: start;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 8rem 0;
+/* background-color: lightblue; */
+`
+
+export const SectionTwo = styled.section`
+height: 100%;
+width: 95%;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+scroll-snap-align: start;
+padding: 10rem 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 1rem;
+/* background-color: lightcoral; */
+`
 
 export const Header = styled.header`
 width: 100%;
@@ -9,12 +47,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-align:justify;
+height: calc(100vh - 12rem);
+padding-bottom: 12rem;
 `
 
 export const HeadingThree = styled.h3`
 font-weight: 600;
 font-size: 1.4rem;
-
 `
 
 export const Strong = styled.strong`
@@ -26,18 +65,27 @@ word-break: keep-all;
 
 export const ListContainer = styled.div`
 display: grid;
-grid-template-columns: repeat(2, minmax(16rem, 1fr));
+grid-auto-flow: dense;
+width: 100%;
+height: 100%;
+grid-template-columns: repeat(1, 48%);
+/* grid-template-rows: repeat(2, 1fr); */
+
 /* align-items: center;
 justify-items: center; */
-grid-auto-rows: 24rem;
-grid-gap: 1rem;
-grid-auto-flow: dense;
+grid-auto-rows: 48%;
+gap: 3%;
+
 
 @media screen and (max-width: 991px) {
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3,31%);
   }
 `
 
-export const MoreLinkContainer = styled.div``
+export const MoreLinkContainer = styled.div`
+`
 
-export const MoreLink = styled(Link)``
+export const MoreLink = styled(Link)`
+
+`

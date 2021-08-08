@@ -23,7 +23,7 @@ export const GlobalWindowContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  gap: 4rem;
+  /* gap: 4rem; */
   background: ${(props) => props.theme.background1};
 `;
 
@@ -36,7 +36,7 @@ export const GlobalPageContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  gap: 4rem;
+  gap: ${props => props.noGap && props.noGap=== true ? '0rem' : '4rem'};
   /* background: ${(props) => props.theme.background1}; */
   color: ${(props) => props.theme.text1};
   filter: ${(props) =>
@@ -45,9 +45,6 @@ export const GlobalPageContainer = styled(motion.div)`
       : null};
   transition: all 0.25s ease-in;
   flex-grow: 1;
-
-  @media screen and (max-width: 991px) {
-  }
 `;
 
 export const GlobalProjectListContainer = styled(motion.div)`

@@ -37,35 +37,39 @@ const Home = (props) => {
       initial="hidden"
       animate="visible"
     >
-      <Styled.Header>
-        <Styled.HeadingThree>
-          Writer, Editor and Digital Content do‑it‑all‑'er.
-        </Styled.HeadingThree>
-      </Styled.Header>
-      <Styled.ListContainer>
-        {featureList.map((project) => {
-          return (
-            <FeatureProject
-              category={project.category}
-              img={project.img}
-              pathName={project.pathName}
-              alt={project.alt}
-              gridType={project.gridType}
-              title={project.title}
-              client={project.client}
-            ></FeatureProject>
-          );
-        })}
-      </Styled.ListContainer>
-      <Styled.MoreLinkContainer>
-        {categoryList.map((category) => {
-          return (
-            <Styled.MoreLink to={'/' + category}>
-              {`See more ${category}`}
-            </Styled.MoreLink>
-          );
-        })}
-      </Styled.MoreLinkContainer>
+      <Styled.SectionContainer>
+        <Styled.SectionOne>
+          <Styled.HeadingThree>
+            Writer, Editor and Digital Content do‑it‑all‑'er.
+          </Styled.HeadingThree>
+        </Styled.SectionOne>
+        <Styled.SectionTwo>
+          <Styled.ListContainer>
+            {featureList.map((project) => {
+              return (
+                <FeatureProject
+                  category={project.category}
+                  img={project.img}
+                  pathName={project.pathName}
+                  alt={project.alt}
+                  gridType={project.gridType}
+                  title={project.title}
+                  client={project.client}
+                ></FeatureProject>
+              );
+            })}
+          </Styled.ListContainer>
+          <Styled.MoreLinkContainer>
+            {categoryList.map((category) => {
+              return (
+                <Styled.MoreLink to={'/' + category}>
+                  {`See more ${category}`}
+                </Styled.MoreLink>
+              );
+            })}
+          </Styled.MoreLinkContainer>
+        </Styled.SectionTwo>
+      </Styled.SectionContainer>
     </GlobalPageContainer>
   );
 };
