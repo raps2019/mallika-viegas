@@ -2,20 +2,18 @@ import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
 export const SectionContainer = styled.div`
-position: absolute;
+position: fixed;
 top: 0;
 width: 100vw;
 height: 100vh;
-padding-left: calc(100vw - 100% + 34px);
 scroll-snap-type: y mandatory;
 overflow-y: scroll;
-overflow-x: hidden;
 background-color: transparent;
 `
 
 export const Section = styled.section`
 height: 100%;
-min-height: 100%;
+min-height: 75%;
 width: 95%;
 max-width: 1200px;
 margin-left: auto;

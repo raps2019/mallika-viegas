@@ -17,13 +17,15 @@ const TopNavbar = (props) => {
           sideNavbarOpen={sideNavbarOpen}
           sideNavbar={sideNavbar}
         >
-          <Styled.LogoNavbarLink
-            exact={true}
-            to="/"
-            onClick={handleNavLinkClick}
-          >
-            mallika viegas
-          </Styled.LogoNavbarLink>
+          {sideNavbarOpen === true ? null : (
+            <Styled.LogoNavbarLink
+              exact={true}
+              to="/"
+              onClick={handleNavLinkClick}
+            >
+              mallika viegas
+            </Styled.LogoNavbarLink>
+          )}
         </Styled.NavbarLeft>
         <Styled.NavbarRight>
           {sideNavbar === false ? (

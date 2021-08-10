@@ -23,6 +23,7 @@ export const BannerImage = styled.img`
   width: 100%;
   height: 150px;
   border-radius: 10px;
+  object-position: ${props => props.objectPosition ? props.objectPosition : null};
   /* filter: blur(5px) brightness(75%); */
 
   @media screen and (max-width: 1024px) {
@@ -41,42 +42,42 @@ export const Paragraph = styled.p`
   text-align:justify;
 `;
 
-export const QuoteParagraphContainer = styled.div`
-display: flex;
-justify-content: center;
-border-left: 1px solid ${props => props.theme.text1};
-width: 80%;
-padding: 0 1rem;
-`
+// export const QuoteParagraphContainer = styled.div`
+// display: flex;
+// justify-content: center;
+// border-left: 1px solid ${props => props.theme.text1};
+// width: 80%;
+// padding: 0 1rem;
+// `
 
-export const OpenQuoteStrong = styled.strong`
-font-style: italic;
-font-size: 2.5rem;
-align-self: flex-start;
+// export const OpenQuoteStrong = styled.strong`
+// font-style: italic;
+// font-size: 2.5rem;
+// align-self: flex-start;
 
 
-&::before {
-  content: open-quote;
-}
-`
+// &::before {
+//   content: open-quote;
+// }
+// `
 
-export const CloseQuoteStrong = styled.strong`
-font-style: italic;
-font-size: 2.5rem;
-align-self: flex-end;
+// export const CloseQuoteStrong = styled.strong`
+// font-style: italic;
+// font-size: 2.5rem;
+// align-self: flex-end;
 
-&::after {
-  content: close-quote;
-}
-`
+// &::after {
+//   content: close-quote;
+// }
+// `
 
-export const QuoteParagraph = styled(Paragraph)`
-display: flex;
-font-size: 0.9rem;
-font-style: italic;
-text-align:justify;
-padding: 1rem;
-`
+// export const QuoteParagraph = styled(Paragraph)`
+// display: flex;
+// font-size: 0.9rem;
+// font-style: italic;
+// text-align:justify;
+// padding: 1rem;
+// `
 
 export const HeadingFour = styled.h4`
   font-size: 0.8rem;

@@ -99,6 +99,7 @@ export const data = [
     pathName:
       'one-of-the-worlds-oldest-drag-queens-shares-memories-of-life-in-toronto-in-the-1950s',
     feature: false,
+    objectPosition: '50% 20%',
   },
   {
     category: 'work',
@@ -128,6 +129,7 @@ export const data = [
       'https://www.thestar.com/life/travel/2017/01/18/churros-in-madrid-result-in-love-at-first-bite.html',
     pathName: 'churros-in-madrid-result-in-love-at-first-bite',
     feature: false,
+    objectPosition: '50% 25%',
   },
   {
     category: 'work',
@@ -143,6 +145,7 @@ export const data = [
       'https://www.thestar.com/life/travel/2017/01/27/portugals-history-lies-in-its-pastry.html',
     pathName: 'portugals-history-lies-in-its-pastry',
     homePage: false,
+    objectPosition: '50% 35%',
   },
   {
     category: 'work',
@@ -173,5 +176,6 @@ export const data = [
       'https://www.thestar.com/life/travel/2017/01/18/in-valencia-passion-is-a-paella-ingredient.html',
     pathName: 'in-valencia-passion-is-a-paella-ingredient',
     homePage: false,
+    objectPosition: '50% 70%',
   },
 ];

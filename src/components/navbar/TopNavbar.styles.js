@@ -8,10 +8,12 @@ export const TopNavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
   /* transition: all 0.25s ease-in; */
-  position: ${props => props.onHomePage === true ? 'absolute' : null};
-  top: ${props => props.onHomePage === true ? '0' : null};
-  z-index: 100;
+  /* position: ${props => props.onHomePage === true ? 'fixed' : null}; */
+  /* top: ${props => props.onHomePage === true ? '0' : null}; */
+  z-index: 2;
   background-color: ${props => props.theme.background1};
 `;
 

@@ -48,10 +48,10 @@ const Home = (props) => {
             Writer, Editor and Digital Content do‑it‑all‑'er.
           </Styled.HeadingThree>
         </Styled.Section>
-        {/* <Styled.ListContainer> */}
-          {featureList.map((project) => {
-            return (
-              <Styled.Section>
+        <Styled.Section>
+          <Styled.ListContainer>
+            {featureList.map((project) => {
+              return (
                 <FeatureProject
                   category={project.category}
                   img={project.img}
@@ -60,13 +60,28 @@ const Home = (props) => {
                   gridType={project.gridType}
                   title={project.title}
                   client={project.client}
-                  quote={project.quote}
                 ></FeatureProject>
-              </Styled.Section>
-            );
-          })}
-        {/* </Styled.ListContainer> */}
-      
+              );
+            })}
+          </Styled.ListContainer>
+        </Styled.Section>
+        <Styled.Section>
+          <Styled.ListContainer>
+            {featureList.map((project) => {
+              return (
+                <FeatureProject
+                  category={project.category}
+                  img={project.img}
+                  pathName={project.pathName}
+                  alt={project.alt}
+                  gridType={project.gridType}
+                  title={project.title}
+                  client={project.client}
+                ></FeatureProject>
+              );
+            })}
+          </Styled.ListContainer>
+        </Styled.Section>
         <Styled.Section>
           <Styled.MoreLinkContainer>
             {categoryList.map((category) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { data } from '../../data';
+import QuoteText from '../utils/QuoteText';
 import * as Styled from './ProjectExpanded.styles';
 
 const ProjectExpanded = (props) => {
@@ -12,6 +13,7 @@ const ProjectExpanded = (props) => {
       <Styled.BannerImage
         src={project.img}
         alt={project.alt}
+        objectPosition = {project.objectPosition}
       ></Styled.BannerImage>
       <Styled.Header>
         <Styled.HeadingThree>{project.title}</Styled.HeadingThree>
@@ -21,11 +23,14 @@ const ProjectExpanded = (props) => {
         </Styled.RowContainer>
       </Styled.Header>
       <Styled.Paragraph>{project.description}</Styled.Paragraph>
-      <Styled.QuoteParagraphContainer>
+      <QuoteText quote={project.quote}>
+
+      </QuoteText>
+      {/* <Styled.QuoteParagraphContainer>
         <Styled.OpenQuoteStrong></Styled.OpenQuoteStrong>
         <Styled.QuoteParagraph>{project.quote}</Styled.QuoteParagraph>
         <Styled.CloseQuoteStrong></Styled.CloseQuoteStrong>
-      </Styled.QuoteParagraphContainer>
+      </Styled.QuoteParagraphContainer> */}
       <Styled.Anchor href={project.website}>Read More...</Styled.Anchor>
     </Styled.Container>
   );
