@@ -15,12 +15,17 @@ const Home = (props) => {
   const featureList = data.filter((item) => item.feature === true);
 
   featureList.forEach((item, index) => {
+    // if ((index + 1) % 3 === 0) {
+    //   item.gridType = 'rectangle';
+    // } else if (
+    //   featureList.length % 2 === 0 &&
+    //   index === featureList.length - 1
+    // ) {
+    //   item.gridType = 'rectangle';
+    // } else {
+    //   item.gridType = 'square';
+    // }
     if ((index + 1) % 3 === 0) {
-      item.gridType = 'rectangle';
-    } else if (
-      featureList.length % 2 === 0 &&
-      index === featureList.length - 1
-    ) {
       item.gridType = 'rectangle';
     } else {
       item.gridType = 'square';
@@ -38,12 +43,12 @@ const Home = (props) => {
       animate="visible"
     >
       <Styled.SectionContainer>
-        <Styled.SectionOne>
+        <Styled.Section>
           <Styled.HeadingThree>
             Writer, Editor and Digital Content do‑it‑all‑'er.
           </Styled.HeadingThree>
-        </Styled.SectionOne>
-        <Styled.SectionTwo>
+        </Styled.Section>
+        <Styled.Section>
           <Styled.ListContainer>
             {featureList.map((project) => {
               return (
@@ -59,6 +64,25 @@ const Home = (props) => {
               );
             })}
           </Styled.ListContainer>
+        </Styled.Section>
+        <Styled.Section>
+          <Styled.ListContainer>
+            {featureList.map((project) => {
+              return (
+                <FeatureProject
+                  category={project.category}
+                  img={project.img}
+                  pathName={project.pathName}
+                  alt={project.alt}
+                  gridType={project.gridType}
+                  title={project.title}
+                  client={project.client}
+                ></FeatureProject>
+              );
+            })}
+          </Styled.ListContainer>
+        </Styled.Section>
+        <Styled.Section>
           <Styled.MoreLinkContainer>
             {categoryList.map((category) => {
               return (
@@ -68,7 +92,7 @@ const Home = (props) => {
               );
             })}
           </Styled.MoreLinkContainer>
-        </Styled.SectionTwo>
+        </Styled.Section>
       </Styled.SectionContainer>
     </GlobalPageContainer>
   );

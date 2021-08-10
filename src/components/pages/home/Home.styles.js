@@ -11,35 +11,38 @@ overflow-y: scroll;
 background-color: transparent;
 `
 
-export const SectionOne = styled.section`
+export const Section = styled.section`
 height: 100%;
+min-height: 75%;
 width: 95%;
 max-width: 1200px;
 margin-left: auto;
 margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
 scroll-snap-align: start;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 8rem 0;
+padding: 8rem 0 8rem 0;
 /* background-color: lightblue; */
 `
 
-export const SectionTwo = styled.section`
-height: 100%;
-width: 95%;
-max-width: 1200px;
-margin-left: auto;
-margin-right: auto;
-scroll-snap-align: start;
-padding: 10rem 0;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-gap: 1rem;
-/* background-color: lightcoral; */
-`
+// export const SectionTwo = styled.section`
+// height: 100%;
+// width: 95%;
+// max-width: 1200px;
+// margin-left: auto;
+// margin-right: auto;
+// scroll-snap-align: start;
+// padding: 10rem 0;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// flex-direction: column;
+// gap: 1rem;
+// /* background-color: lightcoral; */
+// `
 
 export const Header = styled.header`
 width: 100%;
