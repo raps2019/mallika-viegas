@@ -22,7 +22,7 @@ export const GlobalWindowContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   /* gap: 4rem; */
   background: ${(props) => props.theme.background1};
 `;

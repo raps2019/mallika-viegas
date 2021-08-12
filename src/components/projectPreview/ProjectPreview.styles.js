@@ -58,7 +58,7 @@ export const Image = styled.img`
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   @media (hover: none) {
-    filter: blur(5px) brightness(65%);
+    filter: blur(5px) brightness(50%);
   }
 `;
 

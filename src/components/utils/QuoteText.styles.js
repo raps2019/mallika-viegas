@@ -1,15 +1,10 @@
 import styled from 'styled-components/macro';
 
-export const Paragraph = styled.p`
-
-`;
-
 export const QuoteParagraphContainer = styled.div`
   display: flex;
   justify-content: center;
-  border-left: 1px solid white;
-  width: 98%;
-  padding: 0 1rem;
+  /* border-left: 1px solid white; */
+  width: 85%;
 `;
 
 export const OpenQuoteStrong = styled.strong`
@@ -33,10 +28,9 @@ export const CloseQuoteStrong = styled.strong`
 `;
 
 export const QuoteParagraph = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align:justify;
   display: flex;
-  font-size: 0.9rem;
   font-style: italic;
   text-align: justify;
   padding: 1rem;

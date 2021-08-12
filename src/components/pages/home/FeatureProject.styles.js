@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -40,10 +40,11 @@ export const TextWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   background-color: black;
   color: white;
-  gap: 2rem;
-  padding: 0.5rem 1rem;
+  gap: 1rem;
+  padding: 1rem 1rem;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
@@ -51,14 +52,28 @@ export const TextWrapper = styled(motion.div)`
     rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.45) 100%
   );
+
+  @media screen and (max-height: 823px),
+  screen and (max-width: 540px) {
+    height: 100%;
+    padding: 0.25rem 0.25rem;
+  }
 `;
 
 export const HeadingFive = styled.h5`
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  @media screen and (max-height: 823px) {
+    /* height: 100%; */
+    padding: 0.25rem 0.25rem;
+  }
 `;
 
 export const HeadingSix = styled.h6`
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  @media screen and (max-height: 823px) {
+    /* height: 100%; */
+    padding: 0.25rem 0.25rem;
+  }
 `;

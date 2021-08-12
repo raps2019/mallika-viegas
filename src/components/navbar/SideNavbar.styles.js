@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 
 export const SideNavbarContainer = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 160px;
   height: 100vh;
   min-height: 100vh;
   display: flex;
@@ -19,8 +19,8 @@ export const SideNavbarContainer = styled(motion.div)`
   /* border-right: ${props => props.currentTheme === 'dark' ? `1px ${props.theme.text1} solid` : null}; */
   
 
-  @media screen and (max-width: 540px) {
-    width: 100vw;
+  @media screen and (max-width: 360px) {
+    width: 120px;
     border-right: 0;
   }
 `;
@@ -32,4 +32,6 @@ export const SideNavbar = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
+
 `;
