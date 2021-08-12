@@ -1,10 +1,10 @@
 import React, { useEffect} from 'react';
-import QuoteText from '../../utils/QuoteText';
-import * as Styled from './FeatureProject.styles';
+import QuoteText from '../quoteText/QuoteText';
+import * as Styled from './ProjectFeature.styles';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
-const FeatureProject = (props) => {
+const ProjectFeature = (props) => {
   const { category, img, alt, pathName, gridType, title, client, quote } = props;
 
   const animation = useAnimation();
@@ -66,4 +66,4 @@ const FeatureProject = (props) => {
   );
 };
 
-export default FeatureProject;
+export default ProjectFeature;

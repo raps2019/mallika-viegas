@@ -1,6 +1,6 @@
 import React from 'react';
-import { data } from '../../data';
-import QuoteText from '../utils/QuoteText';
+import { data } from '../../../data';
+import QuoteText from '../quoteText/QuoteText';
 import * as Styled from './ProjectExpanded.styles';
 
 const ProjectExpanded = (props) => {

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ProjectExpanded from '../../projectExpanded/ProjectExpanded';
+import ProjectExpanded from '../../utils/projectExpanded/ProjectExpanded';
 import { GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';

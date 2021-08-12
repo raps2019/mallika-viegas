@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { data, categoryDescriptions } from '../../../data';
-import ProjectPreview from '../../projectPreview/ProjectPreview';
+import ProjectPreview from '../../utils/projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalProjectListContainer,

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import * as Styled from './ProjectPreview.styles';
-import { ThemeContext } from '../../contexts/ThemeStore';
+import { ThemeContext } from '../../../contexts/ThemeStore';
 import { withRouter } from 'react-router';
 
 const ProjectPreview = (props) => {

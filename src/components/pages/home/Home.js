@@ -4,7 +4,7 @@ import { pageContainerVariants } from '../../variants';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import * as Styled from './Home.styles';
 import { data } from '../../../data';
-import FeatureProject from './FeatureProject';
+import ProjectFeature from '../../utils/projectFeature/ProjectFeature';
 
 const Home = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
@@ -52,7 +52,7 @@ const Home = (props) => {
           {featureList.map((project) => {
             return (
               <Styled.Section>
-                <FeatureProject
+                <ProjectFeature
                   category={project.category}
                   img={project.img}
                   pathName={project.pathName}
@@ -61,7 +61,7 @@ const Home = (props) => {
                   title={project.title}
                   client={project.client}
                   quote={project.quote}
-                ></FeatureProject>
+                ></ProjectFeature>
               </Styled.Section>
             );
           })}
