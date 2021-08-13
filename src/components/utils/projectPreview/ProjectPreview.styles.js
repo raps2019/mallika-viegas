@@ -13,7 +13,7 @@ export const ImageWrapperLink = styled(Link)`
 
 
   &:hover > img {
-    filter: blur(5px) brightness(65%);
+    filter: blur(5px) brightness(50%);
     transition: all 0.15s ease-in;
   }
 
@@ -29,12 +29,12 @@ export const ImageWrapperLink = styled(Link)`
   }
 
   &:hover > div > h5 {
-    transition-delay: 1s;
+    transition-delay: 0.5s;
     opacity: 1;
   }
 
   &:hover > div > h6 {
-    transition-delay: 1s;
+    transition-delay: 0.5s;
     opacity: 1;
   }
 
@@ -82,7 +82,7 @@ export const TextWrapper = styled.div`
 export const HeadingFour = styled.h4`
   font-size: 0.8rem;
   font-weight: 600;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
   opacity: 0;
   font-weight: 400;
 
@@ -117,7 +117,7 @@ export const HeadingFive = styled.h5`
   font-weight: 400;
   opacity: 0;
   /* transform: scale(0);   */
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 
   @media (hover: none) {
     opacity: 1;
@@ -129,7 +129,7 @@ export const HeadingSix = styled.h6`
   opacity: 0;
   font-weight: 400;
   /* transform: scale(0);   */
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
   font-weight: 400;
 
   @media (hover: none) {

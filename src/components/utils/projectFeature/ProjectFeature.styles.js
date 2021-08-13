@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export const Container = styled(motion.div)`
   position: relative;
   width: 100%;
+  max-width: 1366px;
   height: 100%;
   grid-column: ${(props) =>
     props.gridType === 'rectangle' ? 'span 2' : 'span 1'};

@@ -9,7 +9,8 @@ left: 0; */
 width: 100vw;
 height: calc(100vh - 16rem);
 min-width: 100vw; 
-/* padding-left: calc(100vw - 100% + 34px); */
+/* padding-left: calc(100vw - 100% + 16px); */
+padding-left: 16px;
 scroll-snap-type: y mandatory;
 overflow-y: scroll;
 overflow-x: hidden;
@@ -21,7 +22,7 @@ height: 100%;
 min-height: 100%;
 width: 95%;
 min-width: 95%;
-max-width: 1200px;
+max-width: 1366px;
 margin-left: auto;
 margin-right: auto;
 /* margin-top: auto;
