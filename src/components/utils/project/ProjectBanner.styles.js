@@ -1,37 +1,45 @@
 import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-export const Container = styled(motion.div)`
+// export const Container = styled(motion.div)`
+//   position: relative;
+//   width: 100%;
+//   max-width: 1366px;
+//   height: 100%;
+//   grid-column: ${(props) =>
+//     props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
+//     border-radius: 20px;
+//     overflow: hidden;
+
+
+//   @media screen and (max-width: 991px) {
+//     grid-column: span 1;
+//   }
+// `;
+
+export const ImageWrapper = styled.div`
+  display: flex;
   position: relative;
   width: 100%;
-  max-width: 1366px;
-  height: 100%;
-  grid-column: ${(props) =>
-    props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
-    border-radius: 20px;
-    overflow: hidden;
-
-
-  @media screen and (max-width: 991px) {
-    grid-column: span 1;
-  }
-`;
-
-export const ImageWrapperLink = styled(Link)`
-  display: flex;
-  width: 100%;
-  height: 100%;
+  height: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    border-radius: 0;
+  }
 `;
 
 export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  /* border-radius: 20px; */
+  object-position: ${props => props.objectPosition ? props.objectPosition : null};
+  /* filter: blur(5px) brightness(75%); */
 `;
 
 export const TextWrapper = styled(motion.div)`
@@ -39,9 +47,8 @@ export const TextWrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  align-items: flex-start;
+  /* justify-items: left; */
   background-color: black;
   color: white;
   gap: 1rem;
@@ -54,28 +61,34 @@ export const TextWrapper = styled(motion.div)`
     rgba(0, 0, 0, 0.45) 100%
   );
   backdrop-filter: blur(8px);
+  border-radius: 20px 20px 0 0;
 
-  @media screen and (max-height: 823px),
+  /* @media screen and (max-height: 823px),
   screen and (max-width: 540px) {
     height: 100%;
     padding: 0.25rem 0.25rem;
+  } */
+
+  @media screen and (max-width: 1024px) {
+    /* width: 100vw; */
+    border-radius: 0;
   }
 `;
 
 export const HeadingFive = styled.h5`
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   @media screen and (max-height: 823px) {
     /* height: 100%; */
-    padding: 0.25rem 0.25rem;
+    /* padding: 0.25rem 0.25rem; */
   }
 `;
 
 export const HeadingSix = styled.h6`
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   @media screen and (max-height: 823px) {
     /* height: 100%; */
-    padding: 0.25rem 0.25rem;
+    /* padding: 0.25rem 0.25rem; */
   }
 `;

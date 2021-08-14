@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ProjectExpanded from '../../utils/projectExpanded/ProjectExpanded';
+import ProjectDetails from '../../utils/project/ProjectDetails';
 import { GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
@@ -19,7 +19,7 @@ const Project = ({ match }) => {
       initial="hidden"
       animate="visible"
     >
-      <ProjectExpanded pathName={pathName}></ProjectExpanded>
+      <ProjectDetails pathName={pathName}></ProjectDetails>
     </GlobalPageContainer>
   );
 };

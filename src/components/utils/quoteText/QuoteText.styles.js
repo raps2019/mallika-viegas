@@ -4,7 +4,7 @@ export const QuoteParagraphContainer = styled.div`
   display: flex;
   justify-content: center;
   /* border-left: 1px solid white; */
-  width: 85%;
+  width: 100%;
 `;
 
 export const OpenQuoteStrong = styled.strong`

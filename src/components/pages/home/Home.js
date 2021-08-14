@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
+import { GlobalButton, GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
 import { pageContainerVariants } from '../../variants';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import * as Styled from './Home.styles';
@@ -72,7 +72,9 @@ const Home = (props) => {
             {categoryList.map((category) => {
               return (
                 <Styled.MoreLink to={'/' + category}>
-                  {`See more ${category}`}
+                  <GlobalButton>
+                  {`See more ${category}...`}
+                  </GlobalButton>
                 </Styled.MoreLink>
               );
             })}

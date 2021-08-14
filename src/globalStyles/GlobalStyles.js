@@ -35,7 +35,7 @@ export const GlobalPageContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: flex-start;
   gap: ${props => props.noGap && props.noGap=== true ? '0rem' : '4rem'};
   /* background: ${(props) => props.theme.background1}; */
   color: ${(props) => props.theme.text1};
@@ -69,5 +69,21 @@ export const GlobalTextContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const GlobalButton = styled.button`
+font-weight: 600;
+font-size: 1rem;
+text-decoration: none;
+background-color: ${props => props.theme.buttonBackground};
+color: ${props => props.theme.buttonText};
+padding: 0.75rem;
+border-radius: 0.5rem;
+transition: all 0.25s ease-out;
+cursor: pointer;
+
+&:hover {
+  background-color: ${props => props.theme.buttonHoverBackground};
+}
+`
 
 export default GlobalStyle;

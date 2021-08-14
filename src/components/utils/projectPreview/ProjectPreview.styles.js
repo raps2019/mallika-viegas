@@ -29,12 +29,12 @@ export const ImageWrapperLink = styled(Link)`
   }
 
   &:hover > div > h5 {
-    transition-delay: 0.5s;
+    transition-delay: 0.75s;
     opacity: 1;
   }
 
   &:hover > div > h6 {
-    transition-delay: 0.5s;
+    transition-delay: 0.75s;
     opacity: 1;
   }
 

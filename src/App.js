@@ -14,6 +14,7 @@ import Project from './components/pages/project/Project';
 import SideNavbarProvider from './contexts/SideNavbarProvider';
 import { data } from './data';
 import Footer from './components/footer/Footer';
+import ScrollToTop from './components/utils/ScrollToTop';
 // import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <ThemeStore>
             <Theme>
               <Router>
+              <ScrollToTop />
                 <GlobalStyle></GlobalStyle>
                 <GlobalWindowContainer>
                   <Navbar categoryList={categoryList}></Navbar>

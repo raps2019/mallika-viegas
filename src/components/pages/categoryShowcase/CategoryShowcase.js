@@ -14,7 +14,7 @@ const CategoryShowcase = (props) => {
 
   const showcaseList = data.filter(
     (item) => item.category.toLowerCase() === props.category.toLowerCase()
-  );
+  ).sort( (a,b) =>  new Date(b.date) - new Date(a.date));
 
   const categoryDescription = categoryDescriptions.find(
     (category) => category.category === props.category
