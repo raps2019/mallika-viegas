@@ -42,8 +42,8 @@ const ProjectFeature = (props) => {
       opacity: 1,
       // scaleX: 1,
       transition: {
-        delay: 0.75,
-        duration: 0.75,
+        delay: 0.5,
+        duration: 0.5,
       },
     },
   }
