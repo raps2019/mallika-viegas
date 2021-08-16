@@ -36,8 +36,6 @@ function App() {
     })
   );
 
-  console.log(categoryList);
-  console.log(CategoryRoutes);
   return (
     <>
       <ViewportProvider>

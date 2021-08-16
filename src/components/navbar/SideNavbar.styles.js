@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 
 export const SideNavbarContainer = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 160px;
@@ -15,7 +15,7 @@ export const SideNavbarContainer = styled(motion.div)`
   transition: all 0.25s ease-out;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
-  z-index: 3;
+  z-index: 12;
   /* border-right: ${props => props.currentTheme === 'dark' ? `1px ${props.theme.text1} solid` : null}; */
   
 
@@ -33,5 +33,4 @@ export const SideNavbar = styled.nav`
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
-
 `;

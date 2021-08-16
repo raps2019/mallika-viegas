@@ -22,7 +22,7 @@ const ProjectFeature = (props) => {
     
       hidden: {
         // scaleX: 0.5,
-        opacity: 0,
+        opacity: 1,
       },
       visible: {
         // y: 0,
@@ -42,8 +42,8 @@ const ProjectFeature = (props) => {
       opacity: 1,
       // scaleX: 1,
       transition: {
-        delay: 0.5,
-        duration: 0.35,
+        delay: 0.75,
+        duration: 0.75,
       },
     },
   }

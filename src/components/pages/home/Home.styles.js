@@ -1,5 +1,8 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
+import ArrowDown from "./ArrowDownIcon";
+import ArrowUp from "./ArrowUpIcon";
+import { motion } from "framer-motion";
 
 export const SectionContainer = styled.div`
 /* position: fixed; */
@@ -8,9 +11,10 @@ left: 0; */
 /* width: 100vw; */
 width: 100vw;
 height: calc(100vh - 16rem);
+min-height: calc(100vh - 16rem);;
 min-width: 100vw; 
 /* padding-left: calc(100vw - 100% + 16px); */
-padding-left: 16px;
+/* padding-left: 16px; */
 scroll-snap-type: y mandatory;
 overflow-y: scroll;
 overflow-x: hidden;
@@ -18,8 +22,8 @@ background-color: transparent;
 `
 
 export const Section = styled.section`
-height: 100%;
-min-height: 100%;
+height: 80%;
+min-height: 95%;
 width: 95%;
 min-width: 95%;
 max-width: 1366px;
@@ -98,4 +102,37 @@ export const MoreLinkContainer = styled.div`
 
 export const MoreLink = styled(Link)`
 
+`
+
+export const ScrollUpButton = styled(motion.button)`
+position:absolute;
+top:8rem;
+z-index: 11;
+background-color: ${props => props.theme.buttonBackground};
+text-decoration: none;
+cursor: pointer;
+height: 2.5rem;
+width: 2.5rem;
+border-radius: 50%;
+`
+
+export const ScrollDownButton = styled(motion.button)`
+position:absolute;
+bottom:8rem;
+z-index: 11;
+background-color: ${props => props.theme.buttonBackground};
+text-decoration: none;
+cursor: pointer;
+height: 2.5rem;
+width: 2.5rem;
+border-radius: 50%;
+`
+
+export const ArrowUpIcon = styled(ArrowUp)`
+stroke: ${props => props.theme.buttonText};
+height: 100%;
+`
+export const ArrowDownIcon = styled(ArrowDown)`
+stroke: ${props => props.theme.buttonText};
+height: 100%;
 `
