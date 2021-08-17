@@ -22,7 +22,7 @@ const ProjectFeature = (props) => {
     
       hidden: {
         // scaleX: 0.5,
-        opacity: 1,
+        opacity: 0.5,
       },
       visible: {
         // y: 0,

@@ -6,6 +6,8 @@ export const Container = styled(motion.div)`
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
 `;
 
 export const ImageWrapperLink = styled(Link)`
@@ -21,11 +23,11 @@ export const ImageWrapperLink = styled(Link)`
     opacity: 1;
     transition-delay: 0s;
 
-    &::after {
+    /* &::after {
       transition-delay: 0.25s;
       transform: scaleX(1);
       opacity: 1;
-    }
+    } */
   }
 
   &:hover > div > h5 {
@@ -51,7 +53,6 @@ export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   filter: ${(props) =>
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,

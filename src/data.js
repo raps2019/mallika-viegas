@@ -120,7 +120,7 @@ export const data = [
     date: '2017-01-18',
     type: 'Food & Drink / Travel',
     title: `Churros in Madrid result in love at first bite`,
-    client: 'Toronto Star',
+    client: 'The Toronto Star',
     img: img7,
     description: `Landing in Madrid at 4am — no better time to hit up Chocolateria San Gines; a 127 year old, 24-hour chocolate-and-churros joint.`,
     quote:
@@ -136,7 +136,7 @@ export const data = [
     date: '2017-01-27',
     type: 'Food & Drink / Travel',
     title: `Portugal’s history lies in its pastry`,
-    client: 'Toronto Star',
+    client: 'The Toronto Star',
     img: img8,
     description: `Many of Portugal’s pastries can be traced back to the country’s once-vast network of convents and monasteries. We take on the difficult task of finding the best.`,
     quote:
@@ -152,7 +152,7 @@ export const data = [
     date: '2017-01-27',
     type: 'Food & Drink / Travel',
     title: `Portugal through the belly`,
-    client: 'Toronto Star',
+    client: 'The Toronto Star',
     img: img9,
     description: `Gastronomic tours and hands-on experiences shows you into a Lisbon like no other. Bring you appetite.`,
     quote:
@@ -167,7 +167,7 @@ export const data = [
     date: '2017-01-18',
     type: 'Food & Drink / Travel',
     title: `In Valencia, passion is a paella ingredient`,
-    client: 'Toronto Star',
+    client: 'The Toronto Star',
     img: img10,
     description: `Italy has pasta. France has croissants. Vietnam has pho. Spain has paella, where locals in its birthplace, Valencia, feel the utmost passion for the golden rice dish.`,
     quote:

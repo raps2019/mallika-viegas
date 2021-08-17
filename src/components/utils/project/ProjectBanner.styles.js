@@ -23,7 +23,7 @@ export const ImageWrapper = styled.div`
   width: 100%;
   height: 300px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   border-radius: 20px;
   overflow: hidden;
@@ -44,15 +44,15 @@ export const Image = styled.img`
 
 export const TextWrapper = styled(motion.div)`
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   /* justify-items: left; */
   background-color: black;
   color: white;
-  gap: 1rem;
-  padding: 1rem 1rem;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
@@ -61,7 +61,7 @@ export const TextWrapper = styled(motion.div)`
     rgba(0, 0, 0, 0.45) 100%
   );
   backdrop-filter: blur(8px);
-  border-radius: 20px 20px 0 0;
+  border-radius: 0 1.5rem 0 0;
 
   /* @media screen and (max-height: 823px),
   screen and (max-width: 540px) {

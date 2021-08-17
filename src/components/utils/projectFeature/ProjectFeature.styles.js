@@ -9,9 +9,8 @@ export const Container = styled(motion.div)`
   height: 100%;
   grid-column: ${(props) =>
     props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
-    border-radius: 20px;
-    overflow: hidden;
-
+  border-radius: 1.5rem;
+  overflow: hidden;
 
   @media screen and (max-width: 991px) {
     grid-column: span 1;
@@ -55,11 +54,11 @@ export const TextWrapper = styled(motion.div)`
   );
   backdrop-filter: blur(8px);
 
-  @media screen and (max-height: 823px),
-  screen and (max-width: 540px) {
+  @media screen and (max-height: 823px), screen and (max-width: 540px) {
     height: 100%;
     padding: 0.25rem 0.25rem;
   }
+  border-radius: 1.5rem;
 `;
 
 export const HeadingFive = styled.h5`

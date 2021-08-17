@@ -22,8 +22,8 @@ background-color: transparent;
 `
 
 export const Section = styled.section`
-height: 80%;
-min-height: 95%;
+height: 90%;
+min-height: 90%;
 width: 95%;
 min-width: 95%;
 max-width: 1366px;

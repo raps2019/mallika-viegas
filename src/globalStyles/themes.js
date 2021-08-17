@@ -4,6 +4,7 @@ const themes = {
   light: {
     background1: "white", 
     background2: "white",
+    background3: "rgba(254, 250, 224,0.75)",
     accent1: 'black',
     text1: 'black',
     toggleNavbarButton1: 'black',
@@ -15,6 +16,7 @@ const themes = {
   dark: {
     background1: "#0E141B", 
     background2: "#17202c",
+    background3: "rgba(25, 30, 35,0.75)",
     accent1: 'white',
     text1: 'white',
     toggleNavbarButton1: 'white',

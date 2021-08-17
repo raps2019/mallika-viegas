@@ -4,6 +4,7 @@ import Linkedin from "./LinkedinLogo";
 export const Footer = styled.div`
 width: 100%;
 height: 8rem;
+min-height: 8rem;
 display: flex;
 align-items: center;
 justify-content: center;
