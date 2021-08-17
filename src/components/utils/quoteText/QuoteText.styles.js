@@ -28,7 +28,7 @@ export const CloseQuoteStrong = styled.strong`
 `;
 
 export const QuoteParagraph = styled.p`
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-align:justify;
   display: flex;
   font-style: italic;

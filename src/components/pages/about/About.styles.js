@@ -81,4 +81,4 @@ export const TextContainer = styled.div`
 `;
 
 export const Paragraph = styled.p`
-font-size:1.25rem`;
+font-size: 1rem`;
