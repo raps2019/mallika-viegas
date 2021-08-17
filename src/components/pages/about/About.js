@@ -29,6 +29,16 @@ const About = () => {
             outlets. She was awarded a Hillman honourable mention for her work
             on Canada’s Indigenous water crisis for Vice News.
           </Styled.Paragraph>
+          <Styled.Paragraph>
+            Mallika Viegas is a content producer based in Toronto. Her work has
+            been featured by VICE, CBC, CTV, and other international media
+            outlets. She was awarded a Hillman honourable mention for her work
+            on Canada’s Indigenous water crisis for Vice News.
+          </Styled.Paragraph>
+          <Styled.Paragraph>
+            Mallika Viegas is a content producer based in Toronto. Her work has
+            been featured by VICE, CBC, CTV.
+          </Styled.Paragraph>
         </Styled.TextContainer>
       {/* </Styled.GridContainer> */}
         

@@ -42,22 +42,17 @@ export const TextWrapper = styled(motion.div)`
   justify-content: center;
   justify-items: center;
   background-color: black;
-  /* color: white; */
+  color: white;
   gap: 1rem;
   padding: 1rem 1rem;
-  font-size: 1rem;
-  /* background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.45) 0%,
     rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.45) 100%
   );
-  backdrop-filter: blur(8px); */
-  background-color: ${(props) => props.theme.background3};
-  color: ${(props) => props.theme.text1};
-  /* backdrop-filter: blur(2px); */
-
+  backdrop-filter: blur(8px);
 
   @media screen and (max-height: 823px), screen and (max-width: 540px) {
     height: 100%;
@@ -68,7 +63,7 @@ export const TextWrapper = styled(motion.div)`
 
 export const HeadingFive = styled.h5`
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   @media screen and (max-height: 823px) {
     /* height: 100%; */
     padding: 0.25rem 0.25rem;
@@ -77,7 +72,7 @@ export const HeadingFive = styled.h5`
 
 export const HeadingSix = styled.h6`
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.9rem;
   @media screen and (max-height: 823px) {
     /* height: 100%; */
     padding: 0.25rem 0.25rem;

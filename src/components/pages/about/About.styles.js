@@ -15,7 +15,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   /* background-color: lightblue; */
   width: 100%;
-  height: calc(100vh - 16rem);
+  height: calc(100vh - 12rem);
   /* margin-top: 8rem; */
   display: flex;
   justify-content: center;
@@ -59,9 +59,11 @@ export const TextContainer = styled.div`
   border-radius: 1.5rem 1.5rem 1.5rem 3rem;
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
+  gap: 1rem;
+  width: 45%;
   right: 0;
   bottom: 10%;
   background-color: ${(props) => props.theme.background3};
@@ -81,4 +83,4 @@ export const TextContainer = styled.div`
 `;
 
 export const Paragraph = styled.p`
-font-size: 1rem`;
+font-size: 0.8rem`;

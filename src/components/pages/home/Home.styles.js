@@ -10,7 +10,7 @@ export const SectionContainer = styled.div`
 left: 0; */
 /* width: 100vw; */
 width: 100vw;
-height: calc(100vh - 16rem);
+height: calc(100vh - 12rem);
 min-height: calc(100vh - 16rem);;
 min-width: 100vw; 
 /* padding-left: calc(100vw - 100% + 16px); */
@@ -22,8 +22,8 @@ background-color: transparent;
 `
 
 export const Section = styled.section`
-height: 90%;
-min-height: 90%;
+height: 95%;
+min-height: 95%;
 width: 95%;
 min-width: 95%;
 max-width: 1366px;
@@ -35,7 +35,7 @@ scroll-snap-align: start;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 1rem 0 1rem 0;
+padding: 0rem 0 0.5rem 0;
 /* background-color: lightblue; */
 `
 

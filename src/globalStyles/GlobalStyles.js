@@ -56,7 +56,7 @@ export const GlobalProjectListContainer = styled(motion.div)`
   /* grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr)); */
   align-items: center;
   justify-items: center;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 `;
 
 export const GlobalTextContainer = styled.div`
