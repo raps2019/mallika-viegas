@@ -6,12 +6,12 @@ export const SideNavbarContainer = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 160px;
+  width: 200px;
   height: 100vh;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: ${(props) => props.theme.background2};
+  background: ${(props) => props.theme.background3};
   transition: all 0.25s ease-out;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;

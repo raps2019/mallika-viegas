@@ -4,18 +4,10 @@ export const HeadingFour = styled.h4`
 
 `
 export const ShowcaseContainer =  styled.div`
-/* position: fixed; */
-/* top: 0;
-left: 0; */
-/* width: 100vw; */
 width: 100vw;
 height: calc(100vh - 12rem);
 min-height: calc(100vh - 12rem);
-/* padding-left: calc(100vw - 100% + 16px); */
-/* padding-left: 16px; */
-scroll-snap-type: y mandatory;
 overflow-y: scroll;
-overflow-x: hidden;
 background-color: transparent;
 display: flex;
 justify-content: center;

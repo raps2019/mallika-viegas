@@ -45,14 +45,14 @@ export const TextWrapper = styled(motion.div)`
   color: white;
   gap: 1rem;
   padding: 1rem 1rem;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
+  background-color: ${props => props.theme.background4};
+  /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.45) 0%,
     rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.45) 100%
-  );
-  backdrop-filter: blur(8px);
+  ); */
+  /* backdrop-filter: blur(8px); */
 
   @media screen and (max-height: 823px), screen and (max-width: 540px) {
     height: 100%;

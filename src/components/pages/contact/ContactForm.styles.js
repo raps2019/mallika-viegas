@@ -33,6 +33,7 @@ export const Form = styled.form`
     padding: 0;
     border-radius: 0px;
     box-shadow: none;
+    background-color: transparent;
   }
 `;
 

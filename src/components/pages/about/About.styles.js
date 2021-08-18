@@ -16,13 +16,15 @@ export const Container = styled.div`
   /* background-color: lightblue; */
   width: 100%;
   height: calc(100vh - 12rem);
+  min-height: calc(100vh - 12rem);
   /* margin-top: 8rem; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   /* background-color: red; */
-  padding: 2rem;
+  /* padding: 2rem; */
   position: relative;
+  /* overflow-y: scroll; */
 `;
 
 // export const GridContainer = styled.div`
@@ -66,7 +68,7 @@ export const TextContainer = styled.div`
   width: 45%;
   right: 0;
   bottom: 10%;
-  background-color: ${(props) => props.theme.background3};
+  background-color: ${(props) => props.theme.background2};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* backdrop-filter: blur(5px); */
   /* backdrop-filter: brightness(50%); */
