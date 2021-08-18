@@ -4,10 +4,12 @@ import ProjectPreview from '../../utils/projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalProjectListContainer,
+  GlobalShowcaseContainer,
   GlobalTextContainer,
 } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
+import * as Styled from './CategoryShowcase.styles'
 
 const CategoryShowcase = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
@@ -43,7 +45,8 @@ const CategoryShowcase = (props) => {
       initial="hidden"
       animate="visible"
     >
-      <GlobalTextContainer>{categoryDescription}</GlobalTextContainer>
+      {/* <GlobalTextContainer>{categoryDescription}</GlobalTextContainer> */}
+      <Styled.ShowcaseContainer>
       <GlobalProjectListContainer
         variants={listContainerVariants}
         initial="hidden"
@@ -63,6 +66,8 @@ const CategoryShowcase = (props) => {
           );
         })}
       </GlobalProjectListContainer>
+      </Styled.ShowcaseContainer>
+     
     </GlobalPageContainer>
   );
 };

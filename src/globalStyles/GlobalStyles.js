@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     border: none;
     box-sizing:border-box;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Inter', sans-serif;
     ${'' /* font-family: 'Open Sans', sans-serif; */}
 }
 
@@ -29,13 +29,13 @@ export const GlobalWindowContainer = styled.div`
 
 export const GlobalPageContainer = styled(motion.div)`
   /* z-index: 1; */
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: ${props => props.noGap && props.noGap=== true ? '0rem' : '4rem'};
   /* background: ${(props) => props.theme.background1}; */
   color: ${(props) => props.theme.text1};
@@ -48,8 +48,9 @@ export const GlobalPageContainer = styled(motion.div)`
 `;
 
 export const GlobalProjectListContainer = styled(motion.div)`
-  width: 100%;
-  height: 100;
+  width: 95%;
+  max-width: 1200px;
+  /* height: 100%; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-auto-rows: 20rem;
@@ -76,7 +77,7 @@ font-size: 1rem;
 text-decoration: none;
 background-color: ${props => props.theme.buttonBackground};
 color: ${props => props.theme.buttonText};
-padding: 0.75rem;
+padding: 0.5rem 0.75rem;
 border-radius: 0.5rem;
 transition: all 0.25s ease-out;
 cursor: pointer;

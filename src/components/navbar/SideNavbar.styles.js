@@ -15,7 +15,7 @@ export const SideNavbarContainer = styled(motion.div)`
   transition: all 0.25s ease-out;
   box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);
   padding: 3rem 0;
-  z-index: 12;
+  z-index: 1000;
   /* border-right: ${props => props.currentTheme === 'dark' ? `1px ${props.theme.text1} solid` : null}; */
   
 

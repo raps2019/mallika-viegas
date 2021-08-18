@@ -65,12 +65,15 @@ export const Image = styled.img`
 
 export const TextWrapper = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
   display: flex;
-  padding: 10px;
+  top: 0;
+  left: 0;
+  /* left: 50%; */
+  height: 100%;
+  width: 100%;
+  /* height: 100%; */
+  /* transform: translate(-50%, -50%);  */
+  padding: 2rem;
   gap: 10px;
   flex-direction: column;
   align-items: center;

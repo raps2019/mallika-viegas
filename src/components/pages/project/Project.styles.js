@@ -1,9 +1,6 @@
 import styled from "styled-components/macro";
 
-export const HeadingFour = styled.h4`
-
-`
-export const ShowcaseContainer =  styled.div`
+export const Container = styled.div`
 /* position: fixed; */
 /* top: 0;
 left: 0; */

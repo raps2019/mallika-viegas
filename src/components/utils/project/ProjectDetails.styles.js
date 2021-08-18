@@ -1,9 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { GlobalButton } from '../../../globalStyles/GlobalStyles';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 50%;
+  width: 95%;
+  max-width: 1200px;
+  /* min-height: calc(100vh - 12rem); */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;

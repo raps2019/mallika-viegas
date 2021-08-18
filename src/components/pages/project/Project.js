@@ -3,6 +3,7 @@ import ProjectDetails from '../../utils/project/ProjectDetails';
 import { GlobalPageContainer } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
+import * as Styled from './Project.styles';
 
 const Project = ({ match }) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
@@ -19,7 +20,9 @@ const Project = ({ match }) => {
       initial="hidden"
       animate="visible"
     >
-      <ProjectDetails pathName={pathName}></ProjectDetails>
+      <Styled.Container>
+        <ProjectDetails pathName={pathName}></ProjectDetails>
+      </Styled.Container>
     </GlobalPageContainer>
   );
 };
