@@ -58,7 +58,9 @@ export const TextWrapper = styled(motion.div)`
     height: 100%;
     padding: 0.25rem 0.25rem;
   }
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
+  border-top: 1rem solid ${props => props.theme.accent1};
+  border-bottom: 0.5rem solid ${props => props.theme.accent1};
 `;
 
 export const HeadingFive = styled.h5`

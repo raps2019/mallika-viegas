@@ -114,17 +114,17 @@ export const HeadingFour = styled.h4`
     width: 100%;
     height: 0.15rem;
     display: block;
-    background: white;
+    background: ${props => props.theme.accent1};
     opacity: 0.5;
     /* transform: scaleX(0); */
     margin: 0 auto;
     transform-origin: center;
-    background: linear-gradient(
+    /* background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 50%,
       rgba(255, 255, 255, 0) 100%
-    );
+    ); */
 
     /* background: ${(props) => props.theme.accent1}; */
     transition: all 750ms ease-in;
