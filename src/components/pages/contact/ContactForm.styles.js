@@ -25,7 +25,8 @@ export const Form = styled.form`
   border-radius: 1.5rem;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.1);
   transition: all 150ms ease-out;
-  background-color: ${props => props.theme.background2};
+  background-color: ${props => props.theme.formBackground};
+  color: ${props => props.theme.formText};
 
   @media screen and (max-width: 560px), screen and (max-height: 760px) {
     width: 100%;
@@ -61,7 +62,7 @@ export const TextAreaContainer = styled.div`
 
 export const Input = styled.input`
   border: none;
-  border-bottom: 1px solid ${props => props.theme.text1};
+  border-bottom: 1px solid ${props => props.theme.formText};
   padding: 10px 0;
   width: 100%;
   outline: none;
@@ -91,7 +92,7 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   border: none;
-  border-bottom: 1px solid black;
+  border: 1px solid ${props => props.theme.formText};
   padding: 10px 0;
   /* font-size: 14px; */
   width: 100%;
@@ -99,7 +100,6 @@ export const TextArea = styled.textarea`
   background-color: inherit;
   transition: all 150ms ease-out;
   resize: none;
-  border: 1px solid ${props=>props.theme.text1};
   width: 100%;
   height: 8rem;
   padding: 0.6rem;

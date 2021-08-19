@@ -57,7 +57,13 @@ export const GlobalProjectListContainer = styled(motion.div)`
   /* grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr)); */
   align-items: center;
   justify-items: center;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
+
+  @media screen and (max-width:600px) {
+    width: 100%;
+    grid-auto-rows: 14rem;
+    grid-gap: 0.5rem;
+  }
 `;
 
 export const GlobalTextContainer = styled.div`

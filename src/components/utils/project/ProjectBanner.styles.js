@@ -49,7 +49,7 @@ export const TextWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   /* justify-items: left; */
-  background-color: black;
+  background-color: ${props => props.theme.background4};
   color: white;
   gap: 0.5rem;
   padding: 1rem 2rem;
@@ -60,7 +60,7 @@ export const TextWrapper = styled(motion.div)`
     rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.45) 100%
   );
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   border-radius: 0 1.5rem 0 0;
 
   /* @media screen and (max-height: 823px),

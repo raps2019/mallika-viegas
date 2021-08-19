@@ -8,27 +8,35 @@ export const Container = styled(motion.div)`
   height: 100%;
   border-radius: 1.25rem;
   overflow: hidden;
+
+  @media screen and (max-width: 681px) {
+    border-radius: 0;
+  }
 `;
 
 export const ImageWrapperLink = styled(Link)`
 
-
+&:hover > div {
+  opacity: 1;
+    background-color: ${props => props.theme.background4};
+    transition: all 0.5s ease-in;
+}
 
   &:hover > img {
-    filter: blur(5px) brightness(50%);
-    transition: all 0.15s ease-in;
+    filter: brightness(75%);
+    transition: all 0.5s ease-in;
   }
 
-  &:hover > div > h4 {
+  /* &:hover > div > h4 {
     opacity: 1;
-    transition-delay: 0s;
+    transition-delay: 0s; */
 
     /* &::after {
       transition-delay: 0.25s;
       transform: scaleX(1);
       opacity: 1;
     } */
-  }
+  /* }
 
   &:hover > div > h5 {
     transition-delay: 0.75s;
@@ -38,7 +46,7 @@ export const ImageWrapperLink = styled(Link)`
   &:hover > div > h6 {
     transition-delay: 0.75s;
     opacity: 1;
-  }
+  } */
 
   /* @media screen and (max-width: 1024px) {
     width: 95%;
@@ -59,21 +67,21 @@ export const Image = styled.img`
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   @media (hover: none) {
-    filter: blur(5px) brightness(50%);
+    /* filter: blur(5px) brightness(50%); */
   }
 `;
 
 export const TextWrapper = styled.div`
   position: absolute;
   display: flex;
-  top: 0;
+  bottom: 0;
   left: 0;
   /* left: 50%; */
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   /* height: 100%; */
   /* transform: translate(-50%, -50%);  */
-  padding: 2rem;
+  padding: 1rem;
   gap: 10px;
   flex-direction: column;
   align-items: center;
@@ -81,13 +89,24 @@ export const TextWrapper = styled.div`
   font-family: 'Roboto Mono', monospace;
   color: white;
   text-align: center;
+  opacity: 0;
+  border-radius: 1.5rem 1.5rem 0 0;
+
+
+
+  @media (hover: none) {
+    /* filter: blur(5px) brightness(50%); */
+    opacity: 1;
+
+    background-color: ${props => props.theme.background4};
+  }
 `;
 
 export const HeadingFour = styled.h4`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.25s ease-in;
-  opacity: 0;
+  /* opacity: 0; */
   font-weight: 400;
 
   &::after {
@@ -96,8 +115,8 @@ export const HeadingFour = styled.h4`
     height: 0.15rem;
     display: block;
     background: white;
-    opacity: 0.25;
-    transform: scaleX(0);
+    opacity: 0.5;
+    /* transform: scaleX(0); */
     margin: 0 auto;
     transform-origin: center;
     background: linear-gradient(
@@ -119,7 +138,7 @@ export const HeadingFour = styled.h4`
 export const HeadingFive = styled.h5`
   font-size: 0.7rem;
   font-weight: 400;
-  opacity: 0;
+  /* opacity: 0; */
   /* transform: scale(0);   */
   transition: all 0.25s ease-in;
 
@@ -130,7 +149,7 @@ export const HeadingFive = styled.h5`
 
 export const HeadingSix = styled.h6`
   font-size: 0.7rem;
-  opacity: 0;
+  /* opacity: 0; */
   font-weight: 400;
   /* transform: scale(0);   */
   transition: all 0.25s ease-in;

@@ -6,6 +6,6 @@ export const pageContainerVariants = {
   },
   visible: {
     opacity:1,
-    transition: {duration: 0.5,ease: "easeIn"}
+    transition: {duration: 0.25,ease: "easeIn"}
   }
 }

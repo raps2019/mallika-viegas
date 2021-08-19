@@ -68,7 +68,8 @@ export const TextContainer = styled.div`
   width: 45%;
   right: 0;
   bottom: 10%;
-  background-color: ${(props) => props.theme.background2};
+  background-color: ${(props) => props.theme.aboutCardBackground};
+  color:  ${(props) => props.theme.aboutText};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* backdrop-filter: blur(5px); */
   /* backdrop-filter: brightness(50%); */
