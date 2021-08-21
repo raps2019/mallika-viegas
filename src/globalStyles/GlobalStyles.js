@@ -23,6 +23,7 @@ export const GlobalWindowContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   /* gap: 4rem; */
   background: ${(props) => props.theme.background1};
 `;
@@ -45,6 +46,7 @@ export const GlobalPageContainer = styled(motion.div)`
       : null};
   transition: all 0.25s ease-in;
   flex-grow: 1;
+  /* overflow-x: hidden; */
 `;
 
 export const GlobalProjectListContainer = styled(motion.div)`
@@ -57,12 +59,12 @@ export const GlobalProjectListContainer = styled(motion.div)`
   /* grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr)); */
   align-items: center;
   justify-items: center;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
 
   @media screen and (max-width:600px) {
     width: 100%;
     grid-auto-rows: 14rem;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
   }
 `;
 
@@ -81,7 +83,7 @@ export const GlobalButton = styled.button`
 font-weight: 600;
 font-size: 1rem;
 text-decoration: none;
-background-color: ${props => props.theme.buttonBackground};
+background-color: ${props => props.theme.accent1};
 color: ${props => props.theme.buttonText};
 padding: 0.5rem 0.75rem;
 border-radius: 0.5rem;
@@ -89,7 +91,7 @@ transition: all 0.25s ease-out;
 cursor: pointer;
 
 &:hover {
-  background-color: ${props => props.theme.buttonHoverBackground};
+  background-color: ${props => props.theme.accent2};
 }
 `
 

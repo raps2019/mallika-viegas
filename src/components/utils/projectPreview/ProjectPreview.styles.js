@@ -15,23 +15,24 @@ export const Container = styled(motion.div)`
 `;
 
 export const ImageWrapperLink = styled(Link)`
-
-&:hover > div {
-  opacity: 1;
-    background-color: ${props => props.theme.background4};
-    transition: all 0.5s ease-in;
-}
+  &:hover > div {
+    opacity: 1;
+    /* transform: scaleY(1); */
+    transform: translateY(0);
+    background-color: ${(props) => props.theme.background4};
+    transition: all 0.3s ease-in;
+  }
 
   &:hover > img {
     filter: brightness(75%);
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   /* &:hover > div > h4 {
     opacity: 1;
     transition-delay: 0s; */
 
-    /* &::after {
+  /* &::after {
       transition-delay: 0.25s;
       transform: scaleX(1);
       opacity: 1;
@@ -90,15 +91,19 @@ export const TextWrapper = styled.div`
   color: white;
   text-align: center;
   opacity: 0;
-  border-radius: 1.5rem 1.5rem 0 0;
+  /* transform: scaleY(0); */
+  transform: translateY(100%);
+  transform-origin: bottom;
+  border-bottom: 0.5rem solid ${(props) => props.theme.accent1};
+  /* border-bottom: 0.1rem solid ${(props) => props.theme.accent1}; */
 
-
+  /* border-radius: 1.5rem 1.5rem 0 0; */
 
   @media (hover: none) {
     /* filter: blur(5px) brightness(50%); */
     opacity: 1;
-
-    background-color: ${props => props.theme.background4};
+    background-color: ${(props) => props.theme.background4};
+    transform: scaleY(1);
   }
 `;
 
@@ -114,7 +119,7 @@ export const HeadingFour = styled.h4`
     width: 100%;
     height: 0.15rem;
     display: block;
-    background: ${props => props.theme.accent1};
+    background: ${(props) => props.theme.accent1};
     opacity: 0.5;
     /* transform: scaleX(0); */
     margin: 0 auto;

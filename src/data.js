@@ -39,7 +39,7 @@ export const data = [
   },
   {
     category: 'work',
-    date: '2021-05-20',
+    date: '2021-05-01',
     type: 'Op-ed',
     title: 'Fear & Pride: The reality of raising a brown son',
     client: 'The Rebel Mama',

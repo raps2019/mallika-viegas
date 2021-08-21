@@ -19,6 +19,10 @@ scroll-snap-type: y mandatory;
 overflow-y: scroll;
 overflow-x: hidden;
 background-color: transparent;
+
+/* @media screen and (max-width: 480px) {
+  width: 50%;
+} */
 `
 
 export const Section = styled.section`
@@ -35,7 +39,12 @@ scroll-snap-align: start;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 0rem 0 0.5rem 0;
+padding: 0rem 0 1rem 0;
+
+/* @media screen and (max-width: 480px) {
+  width: 100vw;
+} */
+
 /* background-color: lightblue; */
 `
 
@@ -65,7 +74,7 @@ height: calc(100vh - 12rem);
 padding-bottom: 12rem;
 `
 
-export const HeadingThree = styled.h3`
+export const HeadingThree = styled(motion.h3)`
 font-weight: 600;
 font-size: 1.4rem;
 `

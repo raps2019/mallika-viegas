@@ -69,8 +69,8 @@ export const TextWrapper = styled(motion.div)`
     padding: 0.25rem 0.25rem;
   } */
 
-  @media screen and (max-width: 1024px) {
-    /* width: 100vw; */
+  @media screen and (max-width: 540px) {
+    width: 100vw;
     border-radius: 0;
   }
 `;

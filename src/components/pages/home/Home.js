@@ -38,17 +38,19 @@ const Home = (props) => {
     }
   };
 
-  // const buttonVariants ={
+  const headingVariants ={
 
-  //   hidden:{
-  //     opacity:0,
-  //   },
-  //   visible: {
-  //     opacity:1,
-  //     transition: {delay: 1, duration: 1}
-  //   }
+    hidden:{
+      scale: 0,
+      opacity:0,
+    },
+    visible: {
+      opacity:1,
+      scale: 1,
+      transition: {type: 'spring', delay: 0.25, duration: 0.75}
+    }
 
-  // }
+  }
 
   // const handleScrollUp = () => {
   //   console.log(sectionContainerRef)
@@ -86,7 +88,7 @@ const Home = (props) => {
 
       <Styled.SectionContainer onScroll={handleScroll} ref={sectionContainerRef}>
         <Styled.Section>
-          <Styled.HeadingThree>
+          <Styled.HeadingThree variants={headingVariants}>
             Writer, Editor and Digital Content do‑it‑all‑'er.
           </Styled.HeadingThree>
         </Styled.Section>

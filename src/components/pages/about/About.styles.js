@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 // export const TextContainer = styled.div`
 // padding: 5%;
@@ -43,6 +44,7 @@ export const ImageContainer = styled.div`
   left: 0;
   border-radius: 3rem 10rem 1.5rem 5rem;
   overflow: hidden;
+  border: 1rem solid ${props => props.theme.accent2};
 
   @media screen and (max-width: 911px) {
     width: 100%;
@@ -53,10 +55,12 @@ export const Image = styled.img`
   width: 100%;
   height: 100%; /* height:100%; */
   object-fit: cover;
-  object-position: 100% 20%;
+  object-position: 50% 20%;
+  filter: ${(props) =>
+    props.currentTheme === 'dark' ? 'brightness(80%);' : null};
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   padding: 2rem;
   border-radius: 1.5rem 1.5rem 1.5rem 3rem;
   position: absolute;
@@ -69,8 +73,9 @@ export const TextContainer = styled.div`
   right: 0;
   bottom: 10%;
   background-color: ${(props) => props.theme.aboutCardBackground};
-  color:  ${(props) => props.theme.aboutText};
+  color: ${props => props.theme.text1};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1rem solid ${props => props.theme.accent1};
   /* backdrop-filter: blur(5px); */
   /* backdrop-filter: brightness(50%); */
 
@@ -81,7 +86,6 @@ export const TextContainer = styled.div`
     box-shadow: none;
     backdrop-filter: blur(0px);
     /* backdrop-filter: brightness(25%); */
-
   }
 `;
 

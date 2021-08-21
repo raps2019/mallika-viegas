@@ -1,10 +1,29 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import * as Styled from './ContactForm.styles';
+import { ThemeContext } from '../../../contexts/ThemeStore';
 
 const ContactForm = () => {
+
+const { currentTheme } = useContext(ThemeContext);
+console.log(currentTheme)
+
+const formContainerVariants = {
+  hidden:{
+    opacity:0,
+    x: '-100%',
+  },
+  visible: {
+    opacity:1,
+    x: 0,
+    transition: { type:'spring', delay: 0.25,duration: 0.75, }
+  }
+}
+
+
   return (
-    <Styled.FormContainer>
+    <Styled.FormContainer variants={formContainerVariants}>
       <Styled.Form
+      currentTheme = {currentTheme}
       // accentColor={'blue'}
       // onSubmit={handleSubmit}
       // disabled={loading}

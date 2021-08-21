@@ -7,13 +7,16 @@ export const Container = styled(motion.div)`
   width: 100%;
   max-width: 1366px;
   height: 100%;
-  grid-column: ${(props) =>
-    props.gridType === 'rectangle' ? 'span 2' : 'span 1'};
   border-radius: 1.5rem;
   overflow: hidden;
 
-  @media screen and (max-width: 991px) {
+  /* @media screen and (max-width: 991px) {
     grid-column: span 1;
+  } */
+
+  @media screen and (max-width: 480px) {
+  min-width: 100vw;
+  border-radius: 0;
   }
 `;
 
@@ -30,6 +33,8 @@ export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
+  filter: ${(props) =>
+    props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   /* border-radius: 20px; */
 `;
 

@@ -18,6 +18,7 @@ export const DetailsContainer = styled.header`
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 0 1rem;
 `;
