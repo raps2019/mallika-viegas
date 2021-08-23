@@ -25,7 +25,9 @@ export const data = [
   {
     category: 'work',
     date: '2021-05-05',
-    type: 'Op-eds',
+    typeCategory: 'op-eds',
+    type: 'op-ed',
+
     title: 'Monday Must: How To Be An Indigenous Ally',
     client: 'Mary Young',
     img: img1,
@@ -40,7 +42,9 @@ export const data = [
   {
     category: 'work',
     date: '2021-05-01',
-    type: 'Op-eds',
+    typeCategory: 'op-eds',
+    type: 'op-ed',
+
     title: 'Fear & Pride: The reality of raising a brown son',
     client: 'The Rebel Mama',
     img: img2,
@@ -56,7 +60,9 @@ export const data = [
   {
     category: 'work',
     date: '2021-04-14',
-    type: 'Op-eds',
+    typeCategory: 'op-eds',
+    type: 'op-ed',
+
     title: 'Pandemic Parenting: Where Loss and Joy Coexist',
     client: 'The Rebel Mama',
     img: img3,
@@ -71,7 +77,8 @@ export const data = [
   {
     category: 'work',
     date: '2017-03-03',
-    type: 'Op-eds',
+    typeCategory: 'op-eds',
+    type: 'op-ed',
     title: 'When is someone legally too drunk to consent?',
     client: 'Vice',
     img: img4,
@@ -86,7 +93,8 @@ export const data = [
   {
     category: 'work',
     date: '2019-06-26',
-    type: 'Profiles',
+    typeCategory: 'profiles',
+    type: 'profile',
     title:
       'One of the World’s Oldest Drag Queens Shares Memories of Life in Toronto in the 1950s',
     client: 'Fashion Magazine',
@@ -104,7 +112,8 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-18',
-    type: 'Writing',
+    typeCategory: 'writing',
+    type:'writing',
     title: `Churros in Madrid result in love at first bite`,
     client: 'The Toronto Star',
     img: img7,
@@ -120,7 +129,8 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-27',
-    type: 'Writing',
+    typeCategory: 'writing',
+    type:'writing',
     title: `Portugal’s history lies in its pastry`,
     client: 'The Toronto Star',
     img: img8,
@@ -136,7 +146,8 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-27',
-    type: 'Writing',
+    typeCategory: 'writing',
+    type:'writing',
     title: `Portugal through the belly`,
     client: 'The Toronto Star',
     img: img9,
@@ -151,7 +162,8 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-18',
-    type: 'Writing',
+    typeCategory: 'writing',
+    type:'writing',
     title: `In Valencia, passion is a paella ingredient`,
     client: 'The Toronto Star',
     img: img10,

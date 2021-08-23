@@ -28,7 +28,7 @@ const CategoryShowcase = (props) => {
     (category) => category.category === props.category
   ).description;
 
-  const typeList = [...new Set(data.map((item) => item.type))];
+  const typeList = [...new Set(data.map((item) => item.typeCategory))];
 
   const listContainerVariants = {
     hidden: {},
@@ -76,7 +76,7 @@ const CategoryShowcase = (props) => {
           animate="visible"
         >
           {showcaseList.map((project) => 
-            typeFilter === 'all' || project.type === typeFilter ? 
+            typeFilter === 'all' || project.typeCategory === typeFilter ? 
               
                 <ProjectPreview
                   category={project.category}
