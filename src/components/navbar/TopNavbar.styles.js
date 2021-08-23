@@ -11,7 +11,9 @@ export const TopNavbarContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: ${props => props.theme.background1};
+  background-color: transparent;
+  position: absolute;
+  top: 0;
 `;
 
 export const TopNavbar = styled.nav`

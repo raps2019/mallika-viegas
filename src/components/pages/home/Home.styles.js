@@ -10,8 +10,8 @@ export const SectionContainer = styled.div`
 left: 0; */
 /* width: 100vw; */
 width: 100vw;
-height: calc(100vh - 12rem);
-min-height: calc(100vh - 12rem);;
+height: calc(100vh - 8rem);
+min-height: calc(100vh - 8rem);
 min-width: 100vw; 
 /* padding-left: calc(100vw - 100% + 16px); */
 /* padding-left: 16px; */

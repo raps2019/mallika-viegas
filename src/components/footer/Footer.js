@@ -11,6 +11,9 @@ const Footer = () => {
     <Styled.LogoContainer href="https://www.linkedin.com/in/mallikaviegas/">
     <Styled.LinkedinLogo></Styled.LinkedinLogo>
     </Styled.LogoContainer>
+    <Styled.LogoContainer href="https://www.instagram.com/mviegas/">
+    <Styled.InstagramLogo></Styled.InstagramLogo>
+    </Styled.LogoContainer>
     </Styled.Footer>
   );
 };

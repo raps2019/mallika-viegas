@@ -16,8 +16,8 @@ import { motion } from 'framer-motion';
 export const Container = styled.div`
   /* background-color: lightblue; */
   width: 100%;
-  height: calc(100vh - 12rem);
-  min-height: calc(100vh - 12rem);
+  height: calc(100vh - 8rem);
+  min-height: calc(100vh - 8rem);
   /* margin-top: 8rem; */
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   width: 80%;
-  height: 100%;
+  max-height: calc(100% - 5rem);
   position: absolute;
   left: 0;
   border-radius: 3rem 10rem 1.5rem 5rem;
@@ -71,7 +71,7 @@ export const TextContainer = styled(motion.div)`
   gap: 1rem;
   width: 45%;
   right: 0;
-  bottom: 10%;
+  bottom: 15rem;
   background-color: ${(props) => props.theme.aboutCardBackground};
   color: ${props => props.theme.text1};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -81,7 +81,7 @@ export const TextContainer = styled(motion.div)`
 
   @media screen and (max-width: 911px) {
     width: 100%;
-    bottom: 0;
+    bottom: 5rem;
     border-radius: 1.5rem 1.5rem 1.5rem 5rem;
     box-shadow: none;
     backdrop-filter: blur(0px);

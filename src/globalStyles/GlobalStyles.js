@@ -46,6 +46,9 @@ export const GlobalPageContainer = styled(motion.div)`
       : null};
   transition: all 0.25s ease-in;
   flex-grow: 1;
+  padding-top: 8rem;
+  /* padding-bottom: 6rem; */
+
   /* overflow-x: hidden; */
 `;
 

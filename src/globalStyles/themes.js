@@ -3,7 +3,7 @@ import { withTheme } from "styled-components";
 const themes = {
   light: {
     background1: "rgba(255,255,255)", 
-    background2: "rgba(242,242,242,0.75)",
+    background2: "rgba(255,255,255,0.75)",
     background3: "rgba(242,242,242)",
     background4: "rgba(0,0,0,0.75)",
     formBackground: "rgba(242, 242, 242,1)",

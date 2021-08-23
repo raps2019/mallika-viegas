@@ -6,8 +6,8 @@ export const Container = styled.div`
 left: 0; */
 /* width: 100vw; */
 width: 100vw;
-height: calc(100vh - 12rem);
-min-height: calc(100vh - 12rem);
+height: calc(100vh - 8rem);
+max-height: calc(100vh - 8rem);
 /* padding-left: calc(100vw - 100% + 16px); */
 /* padding-left: 16px; */
 scroll-snap-type: y mandatory;
@@ -17,4 +17,5 @@ background-color: transparent;
 display: flex;
 justify-content: center;
 align-items: flex-start;
+padding-bottom: 5rem;
 `

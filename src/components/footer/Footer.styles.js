@@ -1,18 +1,34 @@
 import styled from "styled-components/macro";
 import Linkedin from "./LinkedinLogo";
+import Instagram from "./InstagramLogo"
 
 export const Footer = styled.div`
-width: 100%;
-height: 4rem;
-min-height: 4rem;
+position: absolute;
+/* width: 6rem; */
+height: 3rem;
+min-height: 3rem;
 display: flex;
 align-items: center;
 justify-content: center;
 filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
 /* transition: all 0.25s ease-in; */
 z-index: 2;
-background-color: ${props => props.theme.background1};
-`
+background-color: ${props => props.theme.background2};
+border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border: 0.25rem solid ${props => props.theme.accent1};
+border-bottom: none;
+transition: all 0.25s ease-in;
+padding: 0 2rem;
+gap: 1rem;
+bottom: 0;
+
+
+
+&:hover {
+  background-color: ${props => props.theme.background1};
+}
+`;
 
 export const LogoContainer = styled.a`
   height: 1.5rem;
@@ -27,5 +43,16 @@ transition: all 0.25s ease-in;
 
 &:hover {
   fill: #0077B5;
+}
+`
+
+export const InstagramLogo = styled(Instagram)`
+height: 100%;
+width: 100%;
+fill: ${props => props.theme.text1};
+transition: all 0.25s ease-in;
+
+&:hover {
+  fill: #8a3ab9;
 }
 `
