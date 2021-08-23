@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 import { GlobalButton } from '../../../globalStyles/GlobalStyles';
 import { motion } from 'framer-motion';
 
-export const FormContainer = styled(motion.div)`
+export const FormContainer = styled.div`
   width: 100vw;
   height: calc(100vh - 8rem);
   max-height: calc(100vh - 8rem);
@@ -18,7 +18,7 @@ export const Form = styled.form`
   display: flex;
   /* gap: 0.4rem; */
   max-width: 560px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;

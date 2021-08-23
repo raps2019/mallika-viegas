@@ -84,7 +84,7 @@ export const GlobalTextContainer = styled.div`
 
 export const GlobalButton = styled.button`
 font-weight: 600;
-font-size: 1rem;
+font-size: 0.8rem;
 text-decoration: none;
 background-color: ${props => props.theme.accent1};
 color: ${props => props.theme.buttonText};

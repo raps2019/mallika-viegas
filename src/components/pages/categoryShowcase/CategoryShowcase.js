@@ -1,26 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { data, categoryDescriptions } from '../../../data';
 import ProjectPreview from '../../utils/projectPreview/ProjectPreview';
 import {
   GlobalPageContainer,
   GlobalProjectListContainer,
-  GlobalShowcaseContainer,
-  GlobalTextContainer,
 } from '../../../globalStyles/GlobalStyles';
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
-import * as Styled from './CategoryShowcase.styles'
+import * as Styled from './CategoryShowcase.styles';
 
 const CategoryShowcase = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
 
-  const showcaseList = data.filter(
-    (item) => item.category.toLowerCase() === props.category.toLowerCase()
-  ).sort( (a,b) =>  new Date(b.date) - new Date(a.date));
+  const [typeFilter, setTypeFilter] = useState('all');
+
+  const handleFilterButtonClick = (filter) => {
+    setTypeFilter(filter);
+  };
+
+  const showcaseList = data
+    .filter(
+      (item) => item.category.toLowerCase() === props.category.toLowerCase()
+    )
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const categoryDescription = categoryDescriptions.find(
     (category) => category.category === props.category
   ).description;
+
+  const typeList = [...new Set(data.map((item) => item.type))];
 
   const listContainerVariants = {
     hidden: {},
@@ -47,27 +55,42 @@ const CategoryShowcase = (props) => {
     >
       {/* <GlobalTextContainer>{categoryDescription}</GlobalTextContainer> */}
       <Styled.ShowcaseContainer>
-      <GlobalProjectListContainer
-        variants={listContainerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {showcaseList.map((project) => {
-          return (
-            <ProjectPreview
-              category={project.category}
-              type={project.type}
-              title={project.title}
-              client={project.client}
-              img={project.img}
-              pathName={project.pathName}
-              alt={project.alt}
-            ></ProjectPreview>
-          );
-        })}
-      </GlobalProjectListContainer>
+        <Styled.FilterButtonContainer>
+          <Styled.Button onClick={() => handleFilterButtonClick('all')}
+          active = {typeFilter === 'all' ? true : false} >
+            ALL
+          </Styled.Button>
+          {typeList.map((type) => {
+            return (
+              <Styled.Button onClick={() => handleFilterButtonClick(type)}
+              active={type === typeFilter ? true : false}>
+                {type.toUpperCase()}
+              </Styled.Button>
+            );
+          })}
+        </Styled.FilterButtonContainer>
+
+        <GlobalProjectListContainer
+          variants={listContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {showcaseList.map((project) => 
+            typeFilter === 'all' || project.type === typeFilter ? 
+              
+                <ProjectPreview
+                  category={project.category}
+                  type={project.type}
+                  title={project.title}
+                  client={project.client}
+                  img={project.img}
+                  pathName={project.pathName}
+                  alt={project.alt}
+                ></ProjectPreview>
+              : null )}
+
+        </GlobalProjectListContainer>
       </Styled.ShowcaseContainer>
-     
     </GlobalPageContainer>
   );
 };

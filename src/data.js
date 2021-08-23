@@ -25,7 +25,7 @@ export const data = [
   {
     category: 'work',
     date: '2021-05-05',
-    type: 'Op-ed',
+    type: 'Op-eds',
     title: 'Monday Must: How To Be An Indigenous Ally',
     client: 'Mary Young',
     img: img1,
@@ -40,7 +40,7 @@ export const data = [
   {
     category: 'work',
     date: '2021-05-01',
-    type: 'Op-ed',
+    type: 'Op-eds',
     title: 'Fear & Pride: The reality of raising a brown son',
     client: 'The Rebel Mama',
     img: img2,
@@ -56,7 +56,7 @@ export const data = [
   {
     category: 'work',
     date: '2021-04-14',
-    type: 'Op-ed',
+    type: 'Op-eds',
     title: 'Pandemic Parenting: Where Loss and Joy Coexist',
     client: 'The Rebel Mama',
     img: img3,
@@ -71,7 +71,7 @@ export const data = [
   {
     category: 'work',
     date: '2017-03-03',
-    type: 'Op-ed',
+    type: 'Op-eds',
     title: 'When is someone legally too drunk to consent?',
     client: 'Vice',
     img: img4,
@@ -86,7 +86,7 @@ export const data = [
   {
     category: 'work',
     date: '2019-06-26',
-    type: 'Profile',
+    type: 'Profiles',
     title:
       'One of the World’s Oldest Drag Queens Shares Memories of Life in Toronto in the 1950s',
     client: 'Fashion Magazine',
@@ -103,22 +103,8 @@ export const data = [
   },
   {
     category: 'work',
-    date: '',
-    type: 'Podcast',
-    title: `Pandora's Box : The Podcast`,
-    client: 'Diva International Inc.',
-    img: img6,
-    description: `A podcast that is on a mission to uncover how periods affect the lives of those that experience them around the globe. Join filmmakers Aine and Cait as they travel the world to find real stories by real people who are championing change and bringing light to the global impact of menstruation.`,
-    quote:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, soluta officia ex mollitia, rerum obcaecati nulla facilis voluptatibus pariatur deserunt a, at sit porro iste veritatis quisquam fugiat hic nihil. Voluptatibus asperiores beatae iste repellendus illo tenetur, fuga hic maxime reiciendis, assumenda alias explicabo unde sit perspiciatis ratione doloribus amet.',
-    website: 'https://www.pandorasboxthefilm.com/podcast',
-    pathName: 'pandoras-box-the-podcast',
-    feature: false,
-  },
-  {
-    category: 'work',
     date: '2017-01-18',
-    type: 'Food & Drink / Travel',
+    type: 'Writing',
     title: `Churros in Madrid result in love at first bite`,
     client: 'The Toronto Star',
     img: img7,
@@ -134,7 +120,7 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-27',
-    type: 'Food & Drink / Travel',
+    type: 'Writing',
     title: `Portugal’s history lies in its pastry`,
     client: 'The Toronto Star',
     img: img8,
@@ -150,7 +136,7 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-27',
-    type: 'Food & Drink / Travel',
+    type: 'Writing',
     title: `Portugal through the belly`,
     client: 'The Toronto Star',
     img: img9,
@@ -165,7 +151,7 @@ export const data = [
   {
     category: 'work',
     date: '2017-01-18',
-    type: 'Food & Drink / Travel',
+    type: 'Writing',
     title: `In Valencia, passion is a paella ingredient`,
     client: 'The Toronto Star',
     img: img10,

@@ -7,22 +7,23 @@ const ContactForm = () => {
 const { currentTheme } = useContext(ThemeContext);
 console.log(currentTheme)
 
-const formContainerVariants = {
-  hidden:{
-    opacity:0,
-    x: '-100%',
-  },
-  visible: {
-    opacity:1,
-    x: 0,
-    transition: { type:'spring', delay: 0.25,duration: 0.75, }
-  }
-}
+// const formVariants = {
+//   hidden:{
+//     opacity:0,
+//     scale: 0,
+//   },
+//   visible: {
+//     opacity:1,
+//     scale: 1,
+//     transition: { type:'spring', delay: 0.25,duration: 0.75, }
+//   }
+// }
 
 
   return (
-    <Styled.FormContainer variants={formContainerVariants}>
+    <Styled.FormContainer >
       <Styled.Form
+      // variants={formVariants}
       currentTheme = {currentTheme}
       // accentColor={'blue'}
       // onSubmit={handleSubmit}
