@@ -13,49 +13,20 @@ const Home = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
   const { categoryList } = props;
   const featureList = data.filter((item) => item.feature === true);
-  const [topOfPage, setTopOfPage] = useState(true);
-  const [bottomOfPage, setBottomOfPage] = useState(false);
-  const sectionContainerRef = useRef(null)
 
-  const handleScroll = (e) => {
-    const bottom =
-      Math.floor(e.target.scrollTop + e.target.clientHeight) >=
-      e.target.scrollHeight - 10;
-    const top = Math.floor(e.target.scrollTop) <= 10;
+  const sectionContainerRef = useRef(null);
 
-    // console.log(e.target.scrollHeight)
-    // console.log(e.target.scrollTop)
-    // console.log(e.target.clientHeight)
-    // console.log(e.target.scrollTop + e.target.clientHeight)
-
-    if (bottom) {
-      setBottomOfPage(true);
-    } else if (top) {
-      setTopOfPage(true);
-    } else {
-      setTopOfPage(false);
-      setBottomOfPage(false);
-    }
-  };
-
-  const headingVariants ={
-
-    hidden:{
+  const headingVariants = {
+    hidden: {
       scale: 0,
-      opacity:0,
+      opacity: 0,
     },
     visible: {
-      opacity:1,
+      opacity: 1,
       scale: 1,
-      transition: {type: 'spring', delay: 0.25, duration: 0.75}
-    }
-
-  }
-
-  // const handleScrollUp = () => {
-  //   console.log(sectionContainerRef)
-  //   sectionContainerRef.scrollTop = 0;
-  // }
+      transition: { type: 'spring', delay: 0.25, duration: 1 },
+    },
+  };
 
   return (
     <GlobalPageContainer
@@ -65,28 +36,7 @@ const Home = (props) => {
       initial="hidden"
       animate="visible"
     >
-      {/* {topOfPage || sideNavbarOpen ? null : (
-        <Styled.ScrollUpButton
-          variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
-          // onClick={handleScrollUp}
-        >
-          <Styled.ArrowUpIcon></Styled.ArrowUpIcon>
-        </Styled.ScrollUpButton>
-      )}
-      {bottomOfPage || sideNavbarOpen ? null : (
-        <Styled.ScrollDownButton
-          variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
-          // onClick={handleScrollDown}
-        >
-          <Styled.ArrowDownIcon></Styled.ArrowDownIcon>
-        </Styled.ScrollDownButton>
-      )} */}
-
-      <Styled.SectionContainer onScroll={handleScroll} ref={sectionContainerRef}>
+      <Styled.SectionContainer ref={sectionContainerRef}>
         <Styled.Section>
           <Styled.HeadingThree variants={headingVariants}>
             Writer, Editor and Digital Content do‑it‑all‑'er.

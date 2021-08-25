@@ -6,7 +6,6 @@ import GlobalStyle, {
 import ViewportProvider from './contexts/ViewportProvider';
 import { ThemeStore, Theme } from './contexts/ThemeStore';
 import Home from './components/pages/home/Home';
-import CategoryShowcase from './components/pages/categoryShowcase/CategoryShowcase';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
@@ -15,16 +14,10 @@ import SideNavbarProvider from './contexts/SideNavbarProvider';
 import { data } from './data';
 import Footer from './components/footer/Footer';
 import ScrollToTop from './components/utils/ScrollToTop';
-// import { useDarkMode } from './hooks/useDarkMode';
+import ItemList from './components/pages/itemList/ItemList';
 
 function App() {
-  // const { componentMounted } = useDarkMode();
-
   const categoryList = [...new Set(data.map((item) => item.category))];
-
-  // if (!componentMounted) {
-  //   return <div></div>
-  // }
 
   const CategoryRoutes = [];
 
@@ -32,7 +25,7 @@ function App() {
     CategoryRoutes.push({
       path: `/${category}`,
       category: `${category}`,
-      Component: CategoryShowcase,
+      Component: ItemList,
     })
   );
 
@@ -43,7 +36,7 @@ function App() {
           <ThemeStore>
             <Theme>
               <Router>
-              <ScrollToTop />
+                <ScrollToTop />
                 <GlobalStyle></GlobalStyle>
                 <GlobalWindowContainer>
                   <Navbar categoryList={categoryList}></Navbar>

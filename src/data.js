@@ -3,23 +3,11 @@ import img2 from './images/fear-and-pride.jpeg';
 import img3 from './images/pandemic-parenting.jpg';
 import img4 from './images/too-drunk-to-consent.jpg';
 import img5 from './images/oldest-drag-queen.jpg';
-import img6 from './images/pandoras-box-the-podcast.jpg';
 import img7 from './images/churros-in-madrid-result-in-love-at-first-bite.jpg';
 import img8 from './images/portugals-history-lies-in-its-pastry.jpg';
 import img9 from './images/portugal-through-the-belly.jpg';
 import img10 from './images/in-valencia-passion-is-a-paella-ingredient.jpg';
 
-export const categoryDescriptions = [
-  {
-    category: 'work',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptate rem dolorem quibusdam nihil unde eaque excepturi, perspiciatis natus neque.',
-  },
-  // {
-  //   category: 'writing',
-  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum aut mollitia saepe modi aliquid voluptate magnam velit corporis nesciunt unde eligendi corrupti perspiciatis voluptatem quis repellat dolorem minima voluptatibus, debitis incidunt id ea. Voluptatibus, impedit, necessitatibus iusto pariatur vel non tenetur, maxime voluptate molestias excepturi facere nam unde! Nesciunt?'
-  // }
-];
 
 export const data = [
   {

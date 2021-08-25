@@ -23,7 +23,7 @@ export const GlobalWindowContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* gap: 4rem; */
   background: ${(props) => props.theme.background1};
 `;
@@ -32,20 +32,24 @@ export const GlobalPageContainer = styled(motion.div)`
   /* z-index: 1; */
   width: 95%;
   max-width: 1200px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: ${props => props.noGap && props.noGap=== true ? '0rem' : '4rem'};
-  /* background: ${(props) => props.theme.background1}; */
+  justify-content: flex-start;
   color: ${(props) => props.theme.text1};
   filter: ${(props) =>
     props.sideNavbarOpen === true && props.sideNavbar === true
       ? 'blur(5px);'
       : null};
+
+      pointer-events: ${(props) =>
+    props.sideNavbarOpen === true && props.sideNavbar === true
+      ? 'none'
+      : null};
+      
   transition: all 0.25s ease-in;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   padding-top: 8rem;
   /* padding-bottom: 6rem; */
 

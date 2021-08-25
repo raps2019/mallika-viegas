@@ -11,37 +11,27 @@ export const TopNavbarContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: transparent;
+  background-color: ${(props) => props.theme.background1};
   position: absolute;
   top: 0;
 `;
 
 export const TopNavbar = styled.nav`
-
   width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* justify-content: ${(props) =>
-    props.sideNavbar === false ? 'space-between' : 'flex-start'}; */
   max-width: 1366px;
-  /* box-shadow: 5px 5px 10px #999; */
 `;
 
 export const LogoNavbarLink = styled(NavLink)`
   color: ${(props) => props.theme.text1};
   font-size: 1.2rem;
-  /* font-family: 'Tourney', cursive;   */
   font-family: 'Assistant', sans-serif;
   font-weight: 300;
   text-decoration: none;
-  transition: all .25s ease-in;
-
-
-  /* &:hover, &.active {
-  text-shadow: 0px 0px 5px ${(props) => props.theme.accent1};
-} */
+  transition: all 0.25s ease-in;
 
   &::after {
     content: '';
@@ -51,7 +41,7 @@ export const LogoNavbarLink = styled(NavLink)`
     background: ${(props) => props.theme.accent1};
     transform: scaleX(0);
     transform-origin: left;
-    transition: all .25s ease-in;
+    transition: all 0.25s ease-in;
   }
 
   &:hover::after {
@@ -63,17 +53,19 @@ export const LogoNavbarLink = styled(NavLink)`
   }
 `;
 
-
 export const NavbarRight = styled.div`
-display: flex;
-align-items: flex-end;
-gap: 50px;
-`
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+`;
 
 export const NavbarLeft = styled.div`
-display: flex;
-align-items: flex-start;
-gap: 50px;
-filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
-transition: all 0.25s ease-in;
-`
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  filter: ${(props) =>
+    props.sideNavbarOpen === true && props.sideNavbar === true
+      ? 'blur(5px);'
+      : null};
+  transition: all 0.25s ease-in;
+`;

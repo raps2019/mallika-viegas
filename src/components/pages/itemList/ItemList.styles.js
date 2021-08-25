@@ -2,10 +2,9 @@ import styled from 'styled-components/macro';
 import { GlobalButton } from '../../../globalStyles/GlobalStyles';
 
 export const HeadingFour = styled.h4``;
-export const ShowcaseContainer = styled.div`
+
+export const Container = styled.div`
   width: 100vw;
-  height: calc(100vh - 8rem);
-  min-height: calc(100vh - 8rem);
   padding-bottom: 5rem;
   overflow-y: scroll;
   background-color: transparent;
@@ -16,7 +15,7 @@ export const ShowcaseContainer = styled.div`
 `;
 
 export const FilterButtonContainer = styled.div`
-  padding: 1.5rem 0;
+  padding: 1rem 0 3rem 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -26,5 +25,7 @@ export const FilterButtonContainer = styled.div`
 `;
 
 export const Button = styled(GlobalButton)`
-background-color: ${props => props.active === true ? props.theme.accent3 : null};
+  background-color: ${(props) =>
+    props.active === true ? props.theme.accent3 : null};
+  font-weight: 500;
 `;

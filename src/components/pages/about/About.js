@@ -13,12 +13,12 @@ const About = () => {
   const textContainerVariants = {
     hidden:{
       opacity:0,
-      x: '100%',
+      y: '100%',
     },
     visible: {
       opacity:1,
-      x: 0,
-      transition: {type: 'spring', delay: 0.25,duration: 0.75}
+      y: 0,
+      transition: {type: 'spring', delay: 0.5,duration: 0.75}
     }
   }
   

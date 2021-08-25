@@ -11,7 +11,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 filter: ${(props) => (props.sideNavbarOpen === true && props.sideNavbar === true ? 'blur(5px);' : null)};
-/* transition: all 0.25s ease-in; */
 z-index: 2;
 background-color: ${props => props.theme.background2};
 border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
@@ -22,6 +21,10 @@ transition: all 0.25s ease-in;
 padding: 0 2rem;
 gap: 1rem;
 bottom: 0;
+pointer-events: ${(props) =>
+    props.sideNavbarOpen === true && props.sideNavbar === true
+      ? 'none'
+      : null};
 
 
 
