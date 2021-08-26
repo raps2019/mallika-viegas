@@ -27,6 +27,7 @@ export const ImageWrapperLink = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+
 `;
 
 export const Image = styled.img`
@@ -36,6 +37,17 @@ export const Image = styled.img`
   filter: ${(props) =>
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   /* border-radius: 20px; */
+  transform: scale(1);
+  /* transition: transfrom 5s ease-in; */
+  transition: all 2s ease-in-out;
+
+
+
+  &:hover {
+    transition: all 10s ease-in-out;
+    transform: scale(1.5);
+    filter: brightness(50%);
+  }
 `;
 
 export const TextWrapper = styled(motion.div)`

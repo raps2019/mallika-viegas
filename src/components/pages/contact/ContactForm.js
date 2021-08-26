@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import * as Styled from './ContactForm.styles';
 import { ThemeContext } from '../../../contexts/ThemeStore';
+import { GlobalHeadingOne } from '../../../globalStyles/GlobalStyles';
 
 const ContactForm = () => {
 
@@ -32,7 +33,7 @@ console.log(currentTheme)
       // initial="hidden"
       // animate="visible"
       >
-        <Styled.HeadingThree>Contact me.</Styled.HeadingThree>
+        <GlobalHeadingOne>contact me.</GlobalHeadingOne>
 
         <Styled.FieldContainer>
           <Styled.Input

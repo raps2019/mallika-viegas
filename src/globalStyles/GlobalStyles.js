@@ -66,12 +66,12 @@ export const GlobalProjectListContainer = styled(motion.div)`
   /* grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr)); */
   align-items: center;
   justify-items: center;
-  grid-gap: 1rem;
+  grid-gap: 0.25rem;
 
   @media screen and (max-width:600px) {
     width: 100%;
     grid-auto-rows: 14rem;
-    grid-gap: 1rem;
+    grid-gap: 0.25rem;
   }
 `;
 
@@ -96,10 +96,15 @@ padding: 0.5rem 0.75rem;
 border-radius: 0.5rem;
 transition: all 0.25s ease-out;
 cursor: pointer;
+letter-spacing: 0.1rem;
 
 &:hover {
   background-color: ${props => props.theme.accent2};
 }
+`
+export const GlobalHeadingOne = styled.h1`
+font-size: 1.5rem;
+font-weight:600;
 `
 
 export default GlobalStyle;

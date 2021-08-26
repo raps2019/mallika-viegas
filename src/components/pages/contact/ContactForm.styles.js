@@ -44,10 +44,6 @@ export const Form = styled.form`
   }
 `;
 
-export const HeadingThree = styled.h3`
-  font-size: 1.5rem;
-`;
-
 export const FieldContainer = styled.div`
   position: relative;
   margin: 15px 0;

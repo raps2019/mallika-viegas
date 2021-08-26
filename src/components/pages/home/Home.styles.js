@@ -40,7 +40,9 @@ padding-bottom: 12rem;
 
 export const HeadingThree = styled(motion.h3)`
 font-weight: 600;
-font-size: 1.4rem;
+font-size: 1rem;
+letter-spacing: 0.05rem;
+
 text-align: center;
 `;
 

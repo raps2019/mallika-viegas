@@ -8,9 +8,17 @@ export const Container = styled(motion.div)`
   height: 100%;
   border-radius: 1.25rem;
   overflow: hidden;
+  border: 0.5rem solid ${(props) => props.theme.background1};
+
+  &:hover {
+    transition: all 0.25s ease-in;
+    border-color: ${(props) => props.theme.accent1};
+  }
 
   @media screen and (max-width: 681px) {
     border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 `;
 
@@ -20,12 +28,13 @@ export const ImageWrapperLink = styled(Link)`
     /* transform: scaleY(1); */
     transform: translateY(0);
     background-color: ${(props) => props.theme.background4};
-    transition: all 0.3s ease-in;
+    transition: all 0.25s ease-in;
   }
 
   &:hover > img {
-    filter: brightness(75%);
-    transition: all 0.3s ease-in;
+    filter: brightness(50%);
+    transition: all 10s ease-in-out;
+    transform: scale(1.5);
   }
 
   /* &:hover > div > h4 {
@@ -66,6 +75,7 @@ export const Image = styled.img`
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: all 1s ease-in-out;
 
   @media (hover: none) {
     /* filter: blur(5px) brightness(50%); */
@@ -94,7 +104,7 @@ export const TextWrapper = styled.div`
   /* transform: scaleY(0); */
   transform: translateY(100%);
   transform-origin: bottom;
-  border-bottom: 0.5rem solid ${(props) => props.theme.accent1};
+  /* border-bottom: 0.5rem solid ${(props) => props.theme.accent1}; */
   /* border-bottom: 0.1rem solid ${(props) => props.theme.accent1}; */
 
   /* border-radius: 1.5rem 1.5rem 0 0; */

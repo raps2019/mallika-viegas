@@ -28,15 +28,16 @@ export const TopNavbar = styled.nav`
 export const LogoNavbarLink = styled(NavLink)`
   color: ${(props) => props.theme.text1};
   font-size: 1.2rem;
-  font-family: 'Assistant', sans-serif;
-  font-weight: 300;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.25s ease-in;
+  letter-spacing: 0.1rem;
 
   &::after {
     content: '';
     width: 100%;
-    height: 0.15rem;
+    height: 0.25rem;
     display: block;
     background: ${(props) => props.theme.accent1};
     transform: scaleX(0);

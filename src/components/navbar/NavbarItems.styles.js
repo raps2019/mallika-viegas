@@ -10,6 +10,8 @@ font-size: 0.8rem;
 font-weight: 400;
 text-decoration:none;
 transition: all 250ms ease-in;
+letter-spacing: 0.1rem;
+
 
 &:hover, &.active {
   /* text-shadow: 1px 1px 2px ${props => props.theme.accent1}; */
@@ -20,7 +22,7 @@ transition: all 250ms ease-in;
 &::after {
   content: '';
   width: 100%;
-  height: 0.15rem;
+  height: 0.25rem;
   display: block;
   background: ${props => props.theme.accent1};
   transform: scaleX(0);

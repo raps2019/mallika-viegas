@@ -8,6 +8,7 @@ import {
 import { SideNavbarContext } from '../../../contexts/SideNavbarProvider';
 import { pageContainerVariants } from '../../variants';
 import * as Styled from './ItemList.styles';
+import { toTitleCase } from '../../utils/toTitleCase';
 
 const ItemList = (props) => {
   const { sideNavbarOpen, sideNavbar } = useContext(SideNavbarContext);
@@ -55,7 +56,7 @@ const ItemList = (props) => {
             onClick={() => handleFilterButtonClick('all')}
             active={typeFilter === 'all' ? true : false}
           >
-            ALL
+            All
           </Styled.Button>
           {typeList.map((type) => {
             return (
@@ -63,7 +64,7 @@ const ItemList = (props) => {
                 onClick={() => handleFilterButtonClick(type)}
                 active={type === typeFilter ? true : false}
               >
-                {type.toUpperCase()}
+                {toTitleCase(type)}
               </Styled.Button>
             );
           })}

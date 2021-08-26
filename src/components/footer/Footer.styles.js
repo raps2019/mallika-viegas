@@ -17,7 +17,6 @@ border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border: 0.25rem solid ${props => props.theme.accent1};
 border-bottom: none;
-transition: all 0.25s ease-in;
 padding: 0 2rem;
 gap: 1rem;
 bottom: 0;
@@ -29,7 +28,9 @@ pointer-events: ${(props) =>
 
 
 &:hover {
+  transition: all 0.25s ease-in;
   background-color: ${props => props.theme.background1};
+  border-color: ${props => props.theme.accent2}
 }
 `;
 

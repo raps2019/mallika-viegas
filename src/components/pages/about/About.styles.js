@@ -39,7 +39,7 @@ export const TextContainer = styled(motion.div)`
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   width: 35%;

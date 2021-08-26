@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Styled from './NavbarItems.styles';
 import ThemeToggleSwitch from '../themeToggleSwitch/ThemeToggleSwitch';
+import { toTitleCase } from '../utils/toTitleCase';
 
 const NavbarItems = (props) => {
   const { handleNavLinkClick, categoryList } = props;
@@ -13,14 +14,14 @@ const NavbarItems = (props) => {
           to={`/${category}`}
           onClick={handleNavLinkClick}
         >
-          {category.toUpperCase()}
+          {toTitleCase(category)}
         </Styled.NavbarLink>
       ))}
       <Styled.NavbarLink to="/about" onClick={handleNavLinkClick}>
-        ABOUT
+        About
       </Styled.NavbarLink>
       <Styled.NavbarLink to="/contact" onClick={handleNavLinkClick}>
-        CONTACT
+        Contact
       </Styled.NavbarLink>
       <Styled.ThemeToggleSwitchContainer>
         <ThemeToggleSwitch></ThemeToggleSwitch>
