@@ -35,6 +35,10 @@ const ProjectFeature = (props) => {
     hidden: {
       opacity: 0,
       y: '100%',
+
+      transition: {
+        duration: 0.5,
+      },
     },
     visible: {
       opacity: 1,
