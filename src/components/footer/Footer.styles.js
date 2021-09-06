@@ -3,7 +3,7 @@ import Linkedin from "./LinkedinLogo";
 import Instagram from "./InstagramLogo"
 
 export const Footer = styled.div`
-position: absolute;
+position: fixed;
 height: 3rem;
 min-height: 3rem;
 display: flex;
