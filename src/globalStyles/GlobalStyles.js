@@ -31,7 +31,7 @@ export const GlobalWindowContainer = styled.div`
 export const GlobalPageContainer = styled(motion.div)`
   /* z-index: 1; */
   width: 95%;
-  max-width: 1200px;
+  max-width: 1048px;
   height: 100vh;
   display: flex;
   flex-direction: column;
