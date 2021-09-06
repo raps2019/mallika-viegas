@@ -18,7 +18,7 @@ border: 0.25rem solid ${props => props.theme.accent1};
 border-bottom: none;
 padding: 0 2rem;
 gap: 1rem;
-bottom: 0;
+bottom: 0%;
 pointer-events: ${(props) =>
     props.sideNavbarOpen === true && props.sideNavbar === true
       ? 'none'
