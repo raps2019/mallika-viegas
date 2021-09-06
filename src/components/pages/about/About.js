@@ -37,7 +37,7 @@ const About = () => {
         </Styled.ImageContainer>
 
         <Styled.TextContainer variants={textContainerVariants}>
-        <GlobalHeadingOne>about me.</GlobalHeadingOne>
+        <GlobalHeadingOne>About me.</GlobalHeadingOne>
           <Styled.Paragraph>
             Mallika Viegas is a content producer based in Toronto. Her work has
             been featured by VICE, CBC, CTV, and other international media

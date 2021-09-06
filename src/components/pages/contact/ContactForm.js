@@ -1,47 +1,41 @@
-import React, {useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import * as Styled from './ContactForm.styles';
 import { ThemeContext } from '../../../contexts/ThemeStore';
 import { GlobalHeadingOne } from '../../../globalStyles/GlobalStyles';
 
 const ContactForm = () => {
+  const { currentTheme } = useContext(ThemeContext);
 
-const { currentTheme } = useContext(ThemeContext);
-console.log(currentTheme)
+  const [inputValues, setInputValues] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+  });
 
-// const formVariants = {
-//   hidden:{
-//     opacity:0,
-//     scale: 0,
-//   },
-//   visible: {
-//     opacity:1,
-//     scale: 1,
-//     transition: { type:'spring', delay: 0.25,duration: 0.75, }
-//   }
-// }
+  const handleChange = (e) => {
+    const value = e.target.value;
 
+    setInputValues({
+      ...inputValues,
+      [e.target.name]: value,
+    });
+  };
 
   return (
-    <Styled.FormContainer >
+    <Styled.FormContainer>
       <Styled.Form
-      // variants={formVariants}
-      currentTheme = {currentTheme}
-      // accentColor={'blue'}
-      // onSubmit={handleSubmit}
-      // disabled={loading}
-      // variants={formContainerVariants}
-      // initial="hidden"
-      // animate="visible"
+        currentTheme={currentTheme}
       >
-        <GlobalHeadingOne>contact me.</GlobalHeadingOne>
+        <GlobalHeadingOne>Contact me.</GlobalHeadingOne>
 
         <Styled.FieldContainer>
           <Styled.Input
             type="text"
             placeholder=" "
             name="name"
-            // value={inputValues.password}
-            // onChange={handleChange}
+            value={inputValues.name}
+            onChange={handleChange}
             required
           ></Styled.Input>
           <Styled.Label>Name</Styled.Label>
@@ -50,11 +44,10 @@ console.log(currentTheme)
         <Styled.FieldContainer>
           <Styled.Input
             type="email"
-            // accentColor={'blue'}
             placeholder=" "
             name="email"
-            // value={inputValues.email}
-            // onChange={handleChange}
+            value={inputValues.email}
+            onChange={handleChange}
             required
           ></Styled.Input>
           <Styled.Label>Email</Styled.Label>
@@ -63,11 +56,10 @@ console.log(currentTheme)
         <Styled.FieldContainer>
           <Styled.Input
             type="text"
-            // accentColor={'blue'}
             placeholder=" "
             name="company"
-            // value={inputValues.confirmPassword}
-            // onChange={handleChange}
+            value={inputValues.company}
+            onChange={handleChange}
             required
           ></Styled.Input>
           <Styled.Label>Company</Styled.Label>
@@ -75,21 +67,16 @@ console.log(currentTheme)
 
         <Styled.TextAreaContainer>
           <Styled.TextArea
-            // accentColor={'blue'}
             placeholder=" "
             name="message"
-            // value={inputValues.confirmPassword}
-            // onChange={handleChange}
+            value={inputValues.message}
+            onChange={handleChange}
             required
           ></Styled.TextArea>
           <Styled.TextAreaLabel>Message</Styled.TextAreaLabel>
         </Styled.TextAreaContainer>
 
-        <Styled.Button
-        type="submit"
-      >
-        SEND
-      </Styled.Button>
+        <Styled.Button type="submit">SEND</Styled.Button>
       </Styled.Form>
     </Styled.FormContainer>
   );

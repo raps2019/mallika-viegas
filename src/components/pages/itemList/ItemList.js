@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { data } from '../../../data';
 import ProjectPreview from '../../utils/projectPreview/ProjectPreview';
 import {
@@ -15,9 +15,23 @@ const ItemList = (props) => {
 
   const [typeFilter, setTypeFilter] = useState('all');
 
+  const [categoryItemsList, setCategoryItemsList] = useState(
+    data
+      .filter(
+        (item) => item.category.toLowerCase() === props.category.toLowerCase()
+      )
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+  );
+
+  const [displayItemsList, setDisplayItemsList] = useState(categoryItemsList);
+
   const handleFilterButtonClick = (filter) => {
     setTypeFilter(filter);
+    // const categoryItemsListCopy = [...categoryItemsList];
+    // console.log(categoryItemsListCopy)
   };
+
+  // console.log(displayItemsList)
 
   const showcaseList = data
     .filter(
@@ -26,6 +40,19 @@ const ItemList = (props) => {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const typeList = [...new Set(data.map((item) => item.typeCategory))];
+
+  useEffect(() => {
+    const typeFilteredItemsList = [];
+    categoryItemsList.forEach((project) => {
+      if (typeFilter === 'all' || project.typeCategory === typeFilter) {
+        typeFilteredItemsList.push(project);
+      } else {
+        return;
+      }
+    });
+    console.log(typeFilteredItemsList);
+    setDisplayItemsList(typeFilteredItemsList);
+  }, [typeFilter, categoryItemsList]);
 
   const listContainerVariants = {
     hidden: {},
@@ -75,19 +102,17 @@ const ItemList = (props) => {
           initial="hidden"
           animate="visible"
         >
-          {showcaseList.map((project) =>
-            typeFilter === 'all' || project.typeCategory === typeFilter ? (
-              <ProjectPreview
-                category={project.category}
-                type={project.type}
-                title={project.title}
-                client={project.client}
-                img={project.img}
-                pathName={project.pathName}
-                alt={project.alt}
-              ></ProjectPreview>
-            ) : null
-          )}
+          {displayItemsList.map((project) => (
+            <ProjectPreview key={project.pathName}
+              category={project.category}
+              type={project.type}
+              title={project.title}
+              client={project.client}
+              img={project.img}
+              pathName={project.pathName}
+              alt={project.alt}
+            ></ProjectPreview>
+          ))}
         </GlobalProjectListContainer>
       </Styled.Container>
     </GlobalPageContainer>

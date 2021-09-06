@@ -4,7 +4,6 @@ import Instagram from "./InstagramLogo"
 
 export const Footer = styled.div`
 position: absolute;
-/* width: 6rem; */
 height: 3rem;
 min-height: 3rem;
 display: flex;
