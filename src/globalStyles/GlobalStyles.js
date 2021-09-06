@@ -18,7 +18,7 @@ body {
 
 export const GlobalWindowContainer = styled.div`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
