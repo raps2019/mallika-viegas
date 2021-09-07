@@ -48,11 +48,9 @@ export const GlobalPageContainer = styled(motion.div)`
       ? 'blur(5px);'
       : null};
 
-      pointer-events: ${(props) =>
-    props.sideNavbarOpen === true && props.sideNavbar === true
-      ? 'none'
-      : null};
-      
+  pointer-events: ${(props) =>
+    props.sideNavbarOpen === true && props.sideNavbar === true ? 'none' : null};
+
   transition: all 0.25s ease-in;
   /* flex-grow: 1; */
   padding-top: 8rem;
@@ -73,7 +71,7 @@ export const GlobalProjectListContainer = styled(motion.div)`
   justify-items: center;
   grid-gap: 0.25rem;
 
-  @media screen and (max-width:600px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
     grid-auto-rows: 14rem;
     grid-gap: 0.25rem;
@@ -92,24 +90,24 @@ export const GlobalTextContainer = styled.div`
 `;
 
 export const GlobalButton = styled.button`
-font-weight: 600;
-font-size: 0.8rem;
-text-decoration: none;
-background-color: ${props => props.theme.accent1};
-color: ${props => props.theme.buttonText};
-padding: 0.5rem 0.75rem;
-border-radius: 0.5rem;
-transition: all 0.25s ease-out;
-cursor: pointer;
-letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  background-color: ${(props) => props.theme.accent1};
+  color: ${(props) => props.theme.buttonText};
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
 
-&:hover {
-  background-color: ${props => props.theme.accent2};
-}
-`
+  &:hover {
+    background-color: ${(props) => props.theme.accent2};
+  }
+`;
 export const GlobalHeadingOne = styled.h1`
-font-size: 1.5rem;
-font-weight:600;
-`
+  font-size: 1.5rem;
+  font-weight: 600;
+`;
 
 export default GlobalStyle;
