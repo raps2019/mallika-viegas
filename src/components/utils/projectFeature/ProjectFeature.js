@@ -23,7 +23,8 @@ const ProjectFeature = (props) => {
 
   const variants = {
     hidden: {
-      opacity: 1,
+      opacity: 0.75,
+      transition: { duration: 0.35 },
     },
     visible: {
       opacity: 1,
@@ -38,6 +39,7 @@ const ProjectFeature = (props) => {
 
       transition: {
         duration: 0.5,
+        delay: 0.5,
       },
     },
     visible: {

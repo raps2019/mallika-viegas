@@ -17,8 +17,7 @@ export const Section = styled.section`
 height: 95%;
 min-height: 95%;
 width: 95%;
-min-width: 95%;
-max-width: 1366px;
+max-width: 1024px;
 margin-left: auto;
 margin-right: auto;
 scroll-snap-align: start;
