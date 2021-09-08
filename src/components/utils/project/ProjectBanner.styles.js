@@ -21,7 +21,7 @@ export const ImageWrapper = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;

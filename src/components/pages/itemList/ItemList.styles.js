@@ -21,7 +21,7 @@ export const FilterButtonContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: 0.75rem;
 `;
 
 export const Button = styled(GlobalButton)`
@@ -30,6 +30,7 @@ export const Button = styled(GlobalButton)`
   background-color: ${(props) =>
     props.active === true ? props.theme.accent3 : null};
   font-weight: 500;
+  padding: 0.75rem 0.5rem;
 
   border: 0.2rem solid ${(props) => props.theme.accent1};
   border-color: ${props => props.active === true ? props => props.theme.accent2 : props.theme.accent3};
