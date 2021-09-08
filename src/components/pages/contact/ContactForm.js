@@ -84,6 +84,7 @@ const ContactForm = () => {
         </Styled.FieldContainer>
 
         <Styled.Button type="submit">SEND</Styled.Button>
+        <input type="hidden" name="contact" value="contact"></input>
       </Styled.Form>
     </Styled.FormContainer>
   );
