@@ -56,7 +56,7 @@ const ContactForm = () => {
           <Styled.Label>Email</Styled.Label>
         </Styled.FieldContainer>
 
-        <Styled.FieldContainer>
+        {/* <Styled.FieldContainer>
           <Styled.Input
             type="text"
             placeholder=" "
@@ -66,7 +66,7 @@ const ContactForm = () => {
             required
           ></Styled.Input>
           <Styled.Label>Company</Styled.Label>
-        </Styled.FieldContainer>
+        </Styled.FieldContainer> */}
 
         <Styled.TextAreaContainer>
           <Styled.TextArea
@@ -84,7 +84,6 @@ const ContactForm = () => {
         </Styled.FieldContainer>
 
         <Styled.Button type="submit">SEND</Styled.Button>
-        <input type="hidden" name="contact" value="contact"></input>
       </Styled.Form>
     </Styled.FormContainer>
   );
