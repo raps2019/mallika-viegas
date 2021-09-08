@@ -26,6 +26,9 @@ const ContactForm = () => {
     <Styled.FormContainer>
       <Styled.Form
         currentTheme={currentTheme}
+        name="contact"
+        method="POST"
+        data-netlify="true"
       >
         <GlobalHeadingOne>Contact me.</GlobalHeadingOne>
 
@@ -75,6 +78,10 @@ const ContactForm = () => {
           ></Styled.TextArea>
           <Styled.TextAreaLabel>Message</Styled.TextAreaLabel>
         </Styled.TextAreaContainer>
+
+        <Styled.FieldContainer>
+        <div data-netlify-recaptcha="true"></div>
+        </Styled.FieldContainer>
 
         <Styled.Button type="submit">SEND</Styled.Button>
       </Styled.Form>
