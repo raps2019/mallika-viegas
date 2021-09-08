@@ -38,7 +38,7 @@ const ProjectFeature = (props) => {
       y: '100%',
 
       transition: {
-        duration: 0.5,
+        duration: 1,
         delay: 0.5,
       },
     },
