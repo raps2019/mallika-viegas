@@ -28,7 +28,7 @@ const ContactForm = () => {
         currentTheme={currentTheme}
         name="contact"
         method="POST"
-        data-netlify="true"
+        // data-netlify="true"
       >
         <GlobalHeadingOne>Contact me.</GlobalHeadingOne>
 
