@@ -10,13 +10,9 @@ export const Container = styled(motion.div)`
   border-radius: 1.5rem;
   overflow: hidden;
 
-  /* @media screen and (max-width: 991px) {
-    grid-column: span 1;
-  } */
-
   @media screen and (max-width: 480px) {
-  min-width: 100vw;
-  border-radius: 0;
+    min-width: 100vw;
+    border-radius: 0;
   }
 `;
 
@@ -27,7 +23,6 @@ export const ImageWrapperLink = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
 `;
 
 export const Image = styled.img`
@@ -36,12 +31,8 @@ export const Image = styled.img`
   height: 100%;
   filter: ${(props) =>
     props.currentTheme === 'dark' ? 'brightness(80%);' : null};
-  /* border-radius: 20px; */
   transform: scale(1);
-  /* transition: transfrom 5s ease-in; */
   transition: all 2s ease-in-out;
-
-
 
   &:hover {
     transition: all 10s ease-in-out;
@@ -62,29 +53,20 @@ export const TextWrapper = styled(motion.div)`
   color: white;
   gap: 1rem;
   padding: 1rem 1rem;
-  background-color: ${props => props.theme.background4};
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.65) 50%,
-    rgba(0, 0, 0, 0.45) 100%
-  ); */
-  /* backdrop-filter: blur(8px); */
+  background-color: ${(props) => props.theme.background4};
 
   @media screen and (max-height: 823px), screen and (max-width: 540px) {
     height: 100%;
     padding: 0.25rem 0.25rem;
   }
-  /* border-radius: 1.5rem; */
-  border-top: 1rem solid ${props => props.theme.accent1};
-  border-bottom: 0.5rem solid ${props => props.theme.accent1};
+  border-top: 1rem solid ${(props) => props.theme.accent1};
+  border-bottom: 0.5rem solid ${(props) => props.theme.accent1};
 `;
 
 export const HeadingFive = styled.h5`
   font-weight: 500;
   font-size: 0.9rem;
   @media screen and (max-height: 823px) {
-    /* height: 100%; */
     padding: 0.25rem 0.25rem;
   }
 `;
@@ -93,7 +75,6 @@ export const HeadingSix = styled.h6`
   font-weight: 300;
   font-size: 0.9rem;
   @media screen and (max-height: 823px) {
-    /* height: 100%; */
     padding: 0.25rem 0.25rem;
   }
 `;
