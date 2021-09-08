@@ -27,17 +27,8 @@ const ItemList = (props) => {
 
   const handleFilterButtonClick = (filter) => {
     setTypeFilter(filter);
-    // const categoryItemsListCopy = [...categoryItemsList];
-    // console.log(categoryItemsListCopy)
+    setDisplayItemsList([]);
   };
-
-  // console.log(displayItemsList)
-
-  const showcaseList = data
-    .filter(
-      (item) => item.category.toLowerCase() === props.category.toLowerCase()
-    )
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const typeList = [...new Set(data.map((item) => item.typeCategory))];
 
@@ -50,7 +41,6 @@ const ItemList = (props) => {
         return;
       }
     });
-    console.log(typeFilteredItemsList);
     setDisplayItemsList(typeFilteredItemsList);
   }, [typeFilter, categoryItemsList]);
 
@@ -103,7 +93,8 @@ const ItemList = (props) => {
           animate="visible"
         >
           {displayItemsList.map((project) => (
-            <ProjectPreview key={project.pathName}
+            <ProjectPreview
+              key={project.pathName}
               category={project.category}
               type={project.type}
               title={project.title}
