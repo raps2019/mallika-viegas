@@ -13,12 +13,10 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   background: ${(props) => props.theme.background2};
+  height:100vh;
+  width: 100vw;
 }
 
-html { 
-  height:100%;
-  width: 100%;
-}
 `;
 
 export const GlobalWindowContainer = styled.div`
