@@ -80,9 +80,9 @@ const ContactForm = () => {
           <Styled.TextAreaLabel>Message</Styled.TextAreaLabel>
         </Styled.TextAreaContainer>
 
-        {/* <Styled.FieldContainer>
+        <Styled.FieldContainer>
           <div data-netlify-recaptcha="true"></div>
-        </Styled.FieldContainer> */}
+        </Styled.FieldContainer>
 
         <Styled.Button type="submit">SEND</Styled.Button>
       </Styled.Form>
